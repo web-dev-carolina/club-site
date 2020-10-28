@@ -1,1 +1,8 @@
-<div class="container"><p>announcement works!</p></div>
+<div class="container">
+    <p>announcement works!</p>
+    <div class='announcement-list'>
+        <div *ngFor="let announcement of announcements">
+            {{announcement.title}}
+        </div>
+    </div>
+</div>

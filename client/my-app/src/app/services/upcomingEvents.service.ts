@@ -5,13 +5,13 @@ import { catchError, retry } from 'rxjs/operators';
 import { map } from 'rxjs/operators';
 
 @Injectable()
-export class ProjectService {
+export class UpcomingEventsService {
   constructor(private http: HttpClient) {
       console.log('working');
   }
 
   // tslint:disable-next-line:typedef
-  getProjects(){
-     return this.http.get('http://localhost:3000/api/projects');
+  getUpcomingEvents(){
+     return this.http.get('http://localhost:3000/api/upcomingEvents');
   }
 }

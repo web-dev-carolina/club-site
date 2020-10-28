@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UpcomingEventsService } from '../../../services/upcomingEvents.service';
+import { UpcomingEvent } from '../../../../UpcomingEvent';
 
 @Component({
   selector: 'app-upcoming-event',
@@ -6,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./upcoming-event.component.css']
 })
 export class UpcomingEventComponent implements OnInit {
+  upcomingEvents: UpcomingEvent[];
 
-  constructor() { }
+  constructor(private upcomingEventService: UpcomingEventsService) {
+    this.upcomingEventService.getUpcomingEvents().subscribe((upcomingEvents: any[]) => {
+      this.upcomingEvents = upcomingEvents;
+    });
+  }
 
   ngOnInit(): void {
   }
