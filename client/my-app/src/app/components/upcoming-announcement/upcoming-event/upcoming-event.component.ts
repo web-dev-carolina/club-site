@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { UpcomingEventsService } from '../../../services/upcomingEvents.service';
 import { UpcomingEvent } from '../../../../UpcomingEvent';
 
@@ -7,7 +7,7 @@ import { UpcomingEvent } from '../../../../UpcomingEvent';
   templateUrl: './upcoming-event.component.html',
   styleUrls: ['./upcoming-event.component.css']
 })
-export class UpcomingEventComponent implements OnInit {
+export class UpcomingEventComponent {
   upcomingEvents: UpcomingEvent[];
 
   constructor(private upcomingEventService: UpcomingEventsService) {
@@ -15,8 +15,4 @@ export class UpcomingEventComponent implements OnInit {
       this.upcomingEvents = upcomingEvents;
     });
   }
-
-  ngOnInit(): void {
-  }
-
 }
