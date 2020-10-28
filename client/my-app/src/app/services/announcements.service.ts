@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
 @Injectable()
 export class AnnouncementService {
   constructor(private http: HttpClient) {
-      console.log('working');
+      console.log('hi');
   }
 
   // tslint:disable-next-line:typedef

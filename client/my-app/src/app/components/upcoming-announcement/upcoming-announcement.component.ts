@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-upcoming-announcement',
   templateUrl: './upcoming-announcement.component.html',
   styleUrls: ['./upcoming-announcement.component.css']
 })
-export class UpcomingAnnouncementComponent implements OnInit {
+export class UpcomingAnnouncementComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
