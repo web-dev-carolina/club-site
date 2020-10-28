@@ -22,9 +22,10 @@ app.use(express.static('client/my-app/dist/my-app'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extende: false}))
 
+//Connect API
 app.use('/api', projects)
 app.use('/api', announcements)
-app.use('/api', announcements)
+app.use('/api', upcomingEvents)
 
 app.listen(port, function(){
     console.log("Server started on port" + port)
