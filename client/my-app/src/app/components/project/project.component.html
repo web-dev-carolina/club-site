@@ -1,6 +1,8 @@
 <div class = "container-fluid">
     <p>Project</p>
     <div class='project-list'>
-        
+        <div *ngFor="let project of projects">
+            {{project.name}}
+        </div>
     </div>
 </div>
