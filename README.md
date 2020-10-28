@@ -10,3 +10,5 @@ The website has been broken down into several major components that different gr
 	app-testimonial,
 	app-project, and
 	app-contact-us
+	
+To run the app make sure you're in the root directory then enter the 'node server' command in the terminal.
