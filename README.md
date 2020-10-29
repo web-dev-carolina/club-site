@@ -23,6 +23,6 @@ The website has been broken down into several major components that different gr
 	
 To run the app make sure you're in the club-site directory then enter the 'nodemon server' command in the terminal.
 If you make changes to the angular code you will have to re-build before your changes will be seen. To do so run this command in the my-app directory.
-'''bash
+```bash
 ng build
-'''
+```
