@@ -12,13 +12,13 @@ In the off chance that does not work, you may also try...
 npm update
 ```
 ## Components
-The website has been broken down into several major components that different group members have been assigned to develop. The app-root calls all of the following components at the moment:
-	app-top-bar,  
-	app-home,  
-	app-announcement,  
-	app-about-us,  
-	app-testimonial,  
-	app-project, and  
+The website has been broken down into several major components that different group members have been assigned to develop. The app-root calls all of the following components at the moment:  
+	app-top-bar  
+	app-home  
+	app-announcement  
+	app-about-us  
+	app-testimonial  
+	app-project  
 	app-contact-us
 	
 To run the app make sure you're in the club-site directory then enter the following command in the terminal.
