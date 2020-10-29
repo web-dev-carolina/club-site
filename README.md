@@ -21,8 +21,13 @@ The website has been broken down into several major components that different gr
 	app-project, and
 	app-contact-us
 	
-To run the app make sure you're in the club-site directory then enter the 'nodemon server' command in the terminal.
-If you make changes to the angular code you will have to re-build before your changes will be seen. To do so run this command in the my-app directory.
+To run the app make sure you're in the club-site directory then enter the following command in the terminal.
+```bash
+nodemon server
+```
+Nodemon will automatically make the updates live when you save, so you don't have to restart your backend everytime you make a change.
+
+Unlike the backend, if you make changes to the angular code you will have to re-build before your changes will be seen. To do so run this command in the my-app directory.
 ```bash
 ng build
 ```
