@@ -19,8 +19,8 @@ The website has been broken down into several major components that different gr
 	- app-about-us  
 	- app-testimonial  
 	- app-project  
-	- app-contact-us
-	
+	- app-contact-us  
+## Running
 To run the app make sure you're in the club-site directory then enter the following command in the terminal.
 ```bash
 nodemon server
