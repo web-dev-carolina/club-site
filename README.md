@@ -20,7 +20,7 @@ The website has been broken down into several major components that different gr
 	- app-testimonial  
 	- app-project  
 	- app-contact-us  
-## Running
+## Development
 To run the app make sure you're in the club-site directory then enter the following command in the terminal.
 ```bash
 nodemon server
@@ -32,3 +32,5 @@ Unlike the backend, if you make changes to the angular code you will have to re-
 ```bash
 ng build
 ```
+
+## Production
