@@ -2,7 +2,7 @@
 
 This website aims to take advantage of the MEAN stack to showcase our organization's projects and community engagement. For styling, we are using bootstrap and our own custom CSS to create a personalized and interactive website.
 
-## Installation
+## Initial setup
 Use npm to install dependencies (make sure you do so in the club-site directory and the my-app directory). 
 ```bash
 npm install
@@ -20,7 +20,7 @@ The website has been broken down into several major components that different gr
 	- app-testimonial  
 	- app-project  
 	- app-contact-us  
-## Development
+## Development Mode
 To run the app make sure you're in the club-site directory then enter the following command in the terminal.
 ```bash
 nodemon server
@@ -33,4 +33,5 @@ Unlike the backend, if you make changes to the angular code you will have to re-
 ng build
 ```
 
-## Production
+## Deployment Process
+## License
