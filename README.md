@@ -28,6 +28,11 @@ nodemon server
 This will run your code on localhost:3000.
 Nodemon will automatically make the updates live when you save, so you don't have to restart your backend everytime you make a change.
 
+If nodemon is giving you a command not found error... Run this command in the club-site directory.
+```bash
+sudo npm install -g --force nodemon
+```
+
 Unlike the backend, if you make changes to the angular code you will have to re-build before your changes will be seen. To do so run this command in the my-app directory.
 ```bash
 ng build
