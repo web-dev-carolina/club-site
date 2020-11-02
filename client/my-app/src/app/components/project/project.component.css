@@ -1,0 +1,107 @@
+body {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    margin: 20px;
+}
+
+.subtitle {
+    font-size: 22px;
+    margin: 15px;
+}
+
+.edu {
+    background-color: white;
+    color: #5262AD;
+    border: 2px solid #5262AD;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 30px;
+    margin: 20px;
+    margin-bottom: 40px;
+}
+
+.edu:hover {
+    background-color: #5262AD;
+    color: white;
+}
+
+.content a {
+    color: white;
+}
+
+.content a:hover {
+    text-decoration: none;
+}
+
+.project {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.small {
+    padding-bottom: 60%;
+}
+
+.medium {
+    padding-bottom: 80%;
+}
+
+.large {
+    padding-bottom: 100%;
+}
+
+.proj1 {
+    background: url(images/proj1.png);
+    background-size: cover;
+}
+
+.proj2 {
+    background: url(images/proj2.png);
+    background-size: cover;
+}
+
+.proj3 {
+    background: url(images/proj3.png);
+    background-size: cover;
+}
+
+.proj4 {
+    background: url(images/proj4.png);
+    background-size: cover;
+}
+
+.proj5 {
+    background: url(images/proj5.png);
+    background-size: cover;
+}
+
+.proj6 {
+    background: url(images/proj6.png);
+    background-size: cover;
+}
+
+.content {
+    text-align: left;
+    color: white;
+}
+
+.text {
+    padding: 1em;
+    background-image: linear-gradient(#3E3E3E, transparent);
+}
+
+.name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+}
+
+.desc {
+    font-size: 20px;
+}
