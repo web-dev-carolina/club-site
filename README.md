@@ -26,17 +26,18 @@ To run the app make sure you're in the club-site directory then enter the follow
 nodemon server
 ```
 This will run your code on localhost:3000.
-Nodemon will automatically make the updates live when you save, so you don't have to restart your backend everytime you make a change.
+Nodemon will automatically make the updates (to the backend) live when you save, so you don't have to restart your backend everytime you make a change.
 
 If nodemon is giving you a command not found error... Run this command in the club-site directory.
 ```bash
 sudo npm install -g --force nodemon
 ```
 
-Unlike the backend, if you make changes to the angular code you will have to re-build before your changes will be seen. To do so run this command in the my-app directory.
+To get the frontend running, type the following command in the my-app directory.
 ```bash
-ng build
+ng build --watch
 ```
+This will build what you have currently in the angular code and watch for changes and display them if you refresh.  
 
 ## Deployment Process
 ## License
