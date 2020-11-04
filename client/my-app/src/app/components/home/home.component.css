@@ -1,0 +1,125 @@
+nav div {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.top-left{
+    position: absolute;
+    top: 100px;
+    left: 16px;
+}
+
+.top-right{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+.centered{
+    position: absolute;
+    top: 50%;
+    left: 500px;
+}
+
+.background {
+    /* The image used */
+    background-image: url("https://cdn.vox-cdn.com/thumbor/pJqgOycNBMP1Jcdblj4gThl6thI=/0x0:6240x4160/1200x800/filters:focal(2621x1581:3619x2579)/cdn.vox-cdn.com/uploads/chorus_image/image/63337265/GettyImages_1132532550.0.jpg");
+  
+    height: 800px;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    /* Needed to position the navbar */
+    position: relative;
+  }
+  /* Position the navbar container inside the image */
+.container {
+    position: absolute;
+    margin: 20px;
+    width: auto;
+    top: 100px;
+  }
+  
+.body{
+    font-family: 'Lato', sans-serif;
+    color: white;
+}
+.nav-style {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    margin: 25px;
+}
+h2{
+    display:inline;
+}
+.nav-link {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.nav-gutter {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.contact {
+    font-family: 'Lato', sans-serif;
+    background-color: #5262AD;
+    color: white;
+    border: none;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 25px;
+}
+
+.contact:hover {
+    background-color: #2F4193;
+    color: white;
+}
+
+a.left {
+    position: relative;
+    color: black;
+    text-decoration: none;
+}
+
+a.left:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 4px;
+  bottom: -5px;
+  left: 0;
+  background: -webkit-linear-gradient(right, #DD579E, #945DA6);
+  -webkit-fill-color: transparent;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+a.left:hover:before {
+    visibility: visible;
+    width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+    .title {margin-left: 100px;}
+    .contact {margin-right: 100px;}
+    #collapsibleNavbar {display: none !important;}
+}
