@@ -11,6 +11,10 @@ In the off chance that does not work, you may also try...
 ```bash
 npm update
 ```
+You may also need the Angular CLI. You can install this by typing this command in the my-app directory.
+```bash
+npm install -g @angular/cli
+```
 ## Components
 The website has been broken down into several major components that different group members have been assigned to develop. The app-root calls all of the following components at the moment:  
 	- app-top-bar  
