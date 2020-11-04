@@ -1,0 +1,77 @@
+
+body {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+.titleContainer {
+  position: absolute;
+  width: 461px;
+  height: 109px;
+  left: 152px;
+  top: 4611px;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 45px;
+  margin: 20px;
+}
+
+.subtitle {
+  font-size: 22px;
+  margin: 15px;
+}
+
+.subsubtitle {
+  font-size: 20px;
+  margin: 15px;
+}
+.project {
+  width: 20%;
+  margin-bottom: 20px;
+}
+
+.small {
+  padding-bottom: 30%;
+}
+
+.medium {
+  padding-bottom: 80%;
+}
+
+.large {
+  padding-bottom: 100%;
+}
+.client {
+  background: url(images/Client.png);
+  background-size: cover;
+}
+
+.email{
+  background: url(images/email.png);
+  background-size: cover;
+}
+
+.github {
+  background: url(images/github.png);
+  background-size: cover;
+}
+
+.insta {
+  background: url(images/insta.png);
+  background-size: cover;
+}
+
+.linkedin {
+  background: url(images/linkedin.png);
+  background-size: cover;
+}
+
+.members {
+  background: url(images/members.png);
+  background-size: cover;
+}
+.questions {
+  background: url(images/questions.png);
+  background-size: cover;
+}

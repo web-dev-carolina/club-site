@@ -72,3 +72,22 @@ box-shadow: 0px 4px 25px #000000;
 border-radius: 15px;
 }
 
+.design {
+  background: url(images/Design.png);
+  background-size: cover;
+}
+
+.develop {
+  background: url(images/Develop.png);
+  background-size: cover;
+}
+
+.maintain{
+  background: url(images/Maintain.png);
+  background-size: cover;
+}
+
+.test {
+  background: url(images/Test.png);
+  background-size: cover;
+}
