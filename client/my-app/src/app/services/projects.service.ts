@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class ProjectService {
   constructor(private http: HttpClient) {
-      console.log('working');
+      console.log('Project service working');
   }
 
   // tslint:disable-next-line:typedef
