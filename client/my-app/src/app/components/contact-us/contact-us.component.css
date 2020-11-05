@@ -1,6 +1,5 @@
-
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   text-align: center;
 }
 .titleContainer {
@@ -12,7 +11,7 @@ body {
 }
 
 .title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 45px;
   margin: 20px;
 }
@@ -47,7 +46,7 @@ body {
   background-size: cover;
 }
 
-.email{
+.email {
   background: url(images/email.png);
   background-size: cover;
 }
