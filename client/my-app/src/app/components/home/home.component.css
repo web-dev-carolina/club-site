@@ -1,3 +1,121 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.bg-img {
+  /* The image used */
+  background-image: url("https://media.npr.org/assets/img/2016/06/03/1_blackmencode-reddingrucker_computer-edit_wide-9f1fbcd2af0a9ebdd4a081fe27ac1ea6bfb95256.jpg?s=1400");
+
+  width: 100%;
+  min-height: 800px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+.bg-img:after{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:rgba(203, 108, 226, 0.7);
+}
+/* Position the navbar container inside the image */
+.container {
+    position: absolute;
+    margin: auto;
+    width: auto;
+    top: 65px;
+    left: 4%;
+}
+
+.containerino {
+    position: absolute;
+    margin: auto;
+    width: auto;
+    top: 400px;
+    left:20%;
+    right:20%;
+  }
+
+.containeritis{
+    position: absolute;
+    margin: auto;
+    width: auto;
+    top: 550px;
+    left: 45%;
+}
+
+.containerman{
+    position: absolute;
+    margin: auto;
+    width: auto;
+    top: 265px;
+    left: 44%;
+}
+
+.contanner{
+    position: absolute;
+    margin: auto;
+    width: auto;
+    top: 100px;
+    left: 85%;
+}
+
+/* The navbar */
+.topnav {
+  overflow: hidden;
+}
+
+.body{
+    font-family: 'Lato', sans-serif;
+    color: #f2f2f2;
+    text-align: center;
+}
+
+/* Navbar links */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 18px 22px;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    margin: 15px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: white;
+}
+
+a.left {
+    position: relative;
+    color: black;
+    text-decoration: none;
+}
+
+a.left:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 4px;
+  bottom: -5px;
+  left: 0;
+  background: -webkit-linear-gradient(right, #DD579E, #945DA6);
+  -webkit-fill-color: transparent;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+a.left:hover:before {
+    visibility: visible;
+    width: 100%;
+}
 nav div {
     display: inline-block;
 }
@@ -8,61 +126,18 @@ nav a {
 
 .title {
     font-family: 'Montserrat', sans-serif;
-    color: white;
+    background: -webkit-linear-gradient(right, #DD579E, #945DA6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.top-left{
-    position: absolute;
-    top: 100px;
-    left: 16px;
-}
-
-.top-right{
-    position: absolute;
-    top: 8px;
-    right: 16px;
-}
-
-.centered{
-    position: absolute;
-    top: 50%;
-    left: 500px;
-}
-
-.background {
-    /* The image used */
-    background-image: url("https://cdn.vox-cdn.com/thumbor/pJqgOycNBMP1Jcdblj4gThl6thI=/0x0:6240x4160/1200x800/filters:focal(2621x1581:3619x2579)/cdn.vox-cdn.com/uploads/chorus_image/image/63337265/GettyImages_1132532550.0.jpg");
-  
-    height: 800px;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  
-    /* Needed to position the navbar */
-    position: relative;
-  }
-  /* Position the navbar container inside the image */
-.container {
-    position: absolute;
-    margin: 20px;
-    width: auto;
-    top: 100px;
-  }
-  
-.body{
-    font-family: 'Lato', sans-serif;
-    color: white;
-}
 .nav-style {
     color: white;
     font-family: 'Lato', sans-serif;
     margin: 25px;
 }
-h2{
-    display:inline;
-}
+
 .nav-link {
     text-decoration: none;
     color: white;
@@ -116,10 +191,4 @@ a.left:before {
 a.left:hover:before {
     visibility: visible;
     width: 100%;
-}
-
-@media screen and (min-width: 992px) {
-    .title {margin-left: 100px;}
-    .contact {margin-right: 100px;}
-    #collapsibleNavbar {display: none !important;}
 }
