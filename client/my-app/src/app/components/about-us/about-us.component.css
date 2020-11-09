@@ -1,4 +1,11 @@
 
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 45px;
+  margin: 20px;
+  text-align: center;
+}
+
 primaryHeader {
 position: absolute;
 width: 214px;
@@ -20,74 +27,39 @@ text-align: center;
 color: #202020;
 
 }
-
-.title {
-  position: absolute;
-width: 214px;
-height: 55px;
-left: 612px;
-top: 1569px;
-
-font-family: Montserrat;
-font-style: normal;
-font-weight: bold;
-font-size: 30px;
-line-height: 55px;
-/* identical to box height */
-
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #202020;
-}
 secondaryHeader {
-position: absolute;
-width: 1107px;
-height: 260px;
-left: 166px;
-top: 1634px;
-
-font-family: Lato;
-font-style: normal;
-font-weight: 500;
-font-size: 30px;
-line-height: 25px;
-/* or 83% */
-text-align: center;
-color: #000000;
-}
-#index h1 {
-  color:red;
-}
-rectangle {
   position: absolute;
-width: 280px;
-height: 400px;
-left: 125px;
-top: 1967px;
+  width: 1107px;
+  height: 260px;
+  left: 166px;
+  top: 1634px;
 
-background: #F8F8FB;
-box-shadow: 0px 4px 25px #000000;
-border-radius: 15px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 25px;
+  /* or 83% */
+  text-align: center;
+  color: #000000;
+  }
+  #index h1 {
+    color:red;
+  }
+
+.column {
+  float: left;
+  width: 23%;
+  padding-block-start: 5px;
+  margin: 1% 1% 70px 1%;
+  position: relative;
+  text-align: center;
 }
 
-.design {
-  background: url(images/Design.png);
-  background-size: cover;
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
-.develop {
-  background: url(images/Develop.png);
-  background-size: cover;
-}
-
-.maintain{
-  background: url(images/Maintain.png);
-  background-size: cover;
-}
-
-.test {
-  background: url(images/Test.png);
-  background-size: cover;
-}
