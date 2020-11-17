@@ -2,12 +2,9 @@ body {
   font-family: "Lato", sans-serif;
   text-align: center;
 }
-.titleContainer {
-  position: absolute;
-  width: 461px;
-  height: 109px;
-  left: 152px;
-  top: 4611px;
+.secondaryContainer {
+  padding-left: 100px;
+  text-align: left;
 }
 
 .title {
@@ -17,25 +14,29 @@ body {
 }
 
 .subtitle {
+  font-family: 'Montserrat', sans-serif;
   font-size: 22px;
   margin: 15px;
 }
 
 .subsubtitle {
-  font-size: 20px;
+  font-size: 18px;
   margin: 15px;
 }
 .project {
+  size: 20%;
   width: 20%;
   margin-bottom: 20px;
 }
 
 .small {
   padding-bottom: 30%;
+  size: 20%;
 }
 
 .medium {
   padding-bottom: 80%;
+  size: 20%;
 }
 
 .large {
