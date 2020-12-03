@@ -82,3 +82,7 @@ a.left:hover:before {
     .contact {margin-right: 100px;}
     #collapsibleNavbar {display: none !important;}
 }
+
+.navbar{
+    display: none;
+}
