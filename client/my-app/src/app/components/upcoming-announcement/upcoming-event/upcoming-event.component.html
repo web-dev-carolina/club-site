@@ -1,8 +1,8 @@
 <div class="container">
-    <p>upcoming-event works!</p>
     <div class='upcoming-event-list'>
         <div *ngFor="let upcomingEvent of upcomingEvents">
-            {{upcomingEvent.body}}
+            <h1>{{upcomingEvent.title}}</h1><br>
+            <h2>{{upcomingEvent.body}}</h2>
         </div>
     </div>
 </div>
