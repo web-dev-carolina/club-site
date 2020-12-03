@@ -5,7 +5,6 @@ var db = mongojs('mongodb+srv://cnell:0nYzjTCvuLi23pkU@cluster0.tak5v.mongodb.ne
 
 router.get('/announcements', function(req, res, next){
     db.announcements.find(function(err, announcements){
-        console.log('here');
         if(err){
             res.send(err);
         }
