@@ -1,4 +1,3 @@
-
 .carousel-control-next-icon:after
 {
   content: '>';
@@ -10,4 +9,10 @@
   content: '<';
   font-size: 55px;
   color: purple;
+}
+
+.card {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
 }
