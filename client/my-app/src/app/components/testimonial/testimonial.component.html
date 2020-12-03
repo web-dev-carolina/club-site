@@ -1,30 +1,18 @@
 <div class = "container-fluid">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
-        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        <div *ngFor="let testimonial of testimonials; index as i; first as isFirst">
+          <li *ngIf="isFirst" data-target="#carouselExampleCaptions" data-slide-to={{i}} class="active"></li>
+        </div>
       </ol>
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://static-18.sinclairstoryline.com/resources/media/c16fa250-f008-4576-9d75-a4b3dc29c280-large16x9_UNCChapelHill_Facebook.jpg?1449066341454" class="d-block w-100">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Example Testimonial 1</h5>
-            <p>Web Dev Carolina is the best</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="https://static-18.sinclairstoryline.com/resources/media/c16fa250-f008-4576-9d75-a4b3dc29c280-large16x9_UNCChapelHill_Facebook.jpg?1449066341454" class="d-block w-100">
-          <div class="carousel-caption d-none d-md-block">
-              <h5>Example Testimonial 2</h5>
-              <p>People in Web Dev Carolina are cool</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="https://static-18.sinclairstoryline.com/resources/media/c16fa250-f008-4576-9d75-a4b3dc29c280-large16x9_UNCChapelHill_Facebook.jpg?1449066341454" class="d-block w-100">
-          <div class="carousel-caption d-none d-md-block">
-              <h5>Example Testimonial 3</h5>
-              <p>Web Dev Carolina rocks</p>
+        <div *ngFor="let testimonial of testimonials">
+          <div class="carousel-item active">
+            <img src="https://static-18.sinclairstoryline.com/resources/media/c16fa250-f008-4576-9d75-a4b3dc29c280-large16x9_UNCChapelHill_Facebook.jpg?1449066341454" class="d-block w-100">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>{{testimonial.title}}</h5>
+              <p>{{testimonial.body}}</p>
+            </div>
           </div>
         </div>
       </div>
