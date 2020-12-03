@@ -2,8 +2,10 @@
     <div class='upcoming-event-list'>
         <h2>Upcoming Events</h2>
         <div *ngFor="let upcomingEvent of upcomingEvents">
-            <h3>{{upcomingEvent.title}}</h3>
-            <h4>{{upcomingEvent.body}}</h4><br>
+            <div class="container bg-secondary">
+                <h3>{{upcomingEvent.title}}</h3>
+                <h4>{{upcomingEvent.body}}</h4><br>
+            </div>
         </div>
     </div>
 </div>
