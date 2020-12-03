@@ -14,13 +14,11 @@
             <p>Body</p>
           </div>
         </div>
-        <div *ngFor="let testimonial of testimonials">
-          <div class="carousel-item">
-            <img src="https://static-18.sinclairstoryline.com/resources/media/c16fa250-f008-4576-9d75-a4b3dc29c280-large16x9_UNCChapelHill_Facebook.jpg?1449066341454" class="d-block w-100">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>{{testimonial.title}}</h5>
-              <p>{{testimonial.body}}</p>
-            </div>
+        <div *ngFor="let testimonial of testimonials" class="carousel-item">
+          <img src="https://static-18.sinclairstoryline.com/resources/media/c16fa250-f008-4576-9d75-a4b3dc29c280-large16x9_UNCChapelHill_Facebook.jpg?1449066341454" class="d-block w-100">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>{{testimonial.title}}</h5>
+            <p>{{testimonial.body}}</p>
           </div>
         </div>
       </div>
