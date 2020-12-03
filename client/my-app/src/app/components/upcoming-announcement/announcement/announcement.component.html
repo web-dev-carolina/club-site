@@ -4,7 +4,8 @@
         <div class="container bg-secondary">
             <div *ngFor="let announcement of announcements">
                 <h3>{{announcement.title}}</h3>
-                <h4>{{announcement.body}}</h4>
+                <h6>{{announcement.date}}</h6>
+                <p>{{announcement.body}}</p>
             </div>
         </div>
     </div>
