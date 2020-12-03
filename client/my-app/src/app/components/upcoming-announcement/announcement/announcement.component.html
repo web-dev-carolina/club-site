@@ -1,7 +1,9 @@
 <div class="container">
     <div class='announcement-list'>
+        <h2>Announcements</h2>
         <div *ngFor="let announcement of announcements">
-            {{announcement.title}}
+            <h3>{{announcement.title}}</h3>
+            <h4>{{announcement.body}}</h4>
         </div>
     </div>
 </div>
