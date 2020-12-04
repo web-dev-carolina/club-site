@@ -1,15 +1,6 @@
 import { Component, AfterContentInit } from '@angular/core';
 import { MemberFormService } from '../../services/memberForm.service';
 
-window.addEventListener('click', (e) => {
-  e.preventDefault();
-  console.log((event.target as HTMLElement).id);
-  /*
-  if (e.target.id === 'memberSubmit') {
-      console.log('hi');
-  }*/
-});
-
 @Component({
   selector: 'app-contact-us',
   templateUrl: 'contact-us.component.html',
@@ -20,7 +11,21 @@ export class ContactUsComponent implements AfterContentInit {
   post;
   constructor(private memberFormService: MemberFormService){
     this.state = 'potenital member';
-    this.post = this.memberFormService.postForm();
+    window.addEventListener('click', (e) => {
+      e.preventDefault();
+      const id = (event.target as HTMLElement).id;
+      if (id === 'memberSubmit'){
+        const firstName = (document.getElementById('inputFirstName') as HTMLInputElement).value;
+        const lastName = (document.getElementById('inputLastName') as HTMLInputElement).value;
+        const email = (document.getElementById('inputEmail') as HTMLInputElement).value;
+        const message = (document.getElementById('inputMessage') as HTMLInputElement).value;
+        this.memberFormService.postForm(firstName, lastName, email, message);
+      } else if (id === 'clientSubmit') {
+        console.log(id);
+      } else if (id === 'generalSubmit') {
+        console.log(id);
+      }
+    });
   }
   ngAfterContentInit(): void{
     window.onload = () => {
