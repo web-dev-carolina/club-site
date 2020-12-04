@@ -9,7 +9,7 @@ export class ClientFormService {
 
   // tslint:disable-next-line:typedef
   postForm(n, b, e, m, s){
-    this.http.post('http://localhost:3000/api/clientForm', { name: n, business: b, email: e, message: m, service: s })
+    return this.http.post('http://localhost:3000/api/clientForm', { name: n, business: b, email: e, message: m, service: s })
     .toPromise();
   }
 }

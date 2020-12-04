@@ -38,13 +38,31 @@ export class ContactUsComponent implements AfterContentInit {
         const email = (document.getElementById('inputEmail') as HTMLInputElement).value;
         const message = (document.getElementById('inputMessage') as HTMLInputElement).value;
         const service = 'CHANGE THIS! HARD CODED!';
-        this.clientFormService.postForm(name, business, email, message, service);
+        const resp = this.clientFormService.postForm(name, business, email, message, service);
+        resp.then(data => {if (data !== false){
+          if (!document.getElementById('divSuccess')){
+            const div = document.createElement('div');
+            div.setAttribute('class', 'alert alert-success');
+            div.setAttribute('id', 'divSuccess');
+            div.innerHTML = 'You\'ve contacted us. We\'ll get back to you as soon as possible';
+            document.getElementById('memberForm').appendChild(div);
+          }
+        }});
       } else if (id === 'generalSubmit') {
         const name = (document.getElementById('inputName') as HTMLInputElement).value;
         const affiliation = (document.getElementById('Affiliation') as HTMLInputElement).value;
         const email = (document.getElementById('inputEmail') as HTMLInputElement).value;
         const message = (document.getElementById('inputMessage') as HTMLInputElement).value;
-        this.generalFormService.postForm(name, affiliation, email, message);
+        const resp = this.generalFormService.postForm(name, affiliation, email, message);
+        resp.then(data => {if (data !== false){
+          if (!document.getElementById('divSuccess')){
+            const div = document.createElement('div');
+            div.setAttribute('class', 'alert alert-success');
+            div.setAttribute('id', 'divSuccess');
+            div.innerHTML = 'You\'ve contacted us. We\'ll get back to you as soon as possible';
+            document.getElementById('memberForm').appendChild(div);
+          }
+        }});
       }
     });
   }
