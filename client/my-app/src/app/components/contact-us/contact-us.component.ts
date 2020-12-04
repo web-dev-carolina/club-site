@@ -8,7 +8,6 @@ import { MemberFormService } from '../../services/memberForm.service';
 })
 export class ContactUsComponent implements AfterContentInit {
   state = '';
-  post;
   constructor(private memberFormService: MemberFormService){
     this.state = 'potenital member';
     window.addEventListener('click', (e) => {
