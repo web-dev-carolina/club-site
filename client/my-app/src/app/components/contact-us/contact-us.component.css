@@ -28,3 +28,17 @@ body {
   width: 20%;
   margin-bottom: 20px;
 }
+
+.small {
+  padding-bottom: 30%;
+  size: 20%;
+}
+
+.medium {
+  padding-bottom: 80%;
+  size: 20%;
+}
+
+.large {
+  padding-bottom: 100%;
+}
