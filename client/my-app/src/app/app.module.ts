@@ -15,6 +15,7 @@ import { TestimonialComponent } from './components/testimonial/testimonial.compo
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { UpcomingAnnouncementComponent } from './components/upcoming-announcement/upcoming-announcement.component';
 import { UpcomingEventComponent } from './components/upcoming-announcement/upcoming-event/upcoming-event.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { UpcomingEventComponent } from './components/upcoming-announcement/upcom
     ContactUsComponent,
     UpcomingAnnouncementComponent,
     UpcomingEventComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
