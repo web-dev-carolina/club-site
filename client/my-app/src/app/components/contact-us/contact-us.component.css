@@ -42,3 +42,8 @@ body {
 .large {
   padding-bottom: 100%;
 }
+
+#contactLink {
+  font-family: "Lato", sans-serif;
+  text-align: left;
+}
