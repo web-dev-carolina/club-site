@@ -55,9 +55,9 @@
           </div>
         </div>
         <div class="col-lg">
-          <form>
+          <form *ngIf="this.state == 'potenital member' || this.state == ''">
             <div class="form-row justify-content-center">
-              <a id="potentialMemberLink" href="#">
+              <a id="potentialMemberLink">
                 <img src="assets/images/members.png">
                 <div class="project medium">
                   <div class="text">
@@ -65,7 +65,7 @@
                   </div>
                 </div>
               </a>
-              <a id="potentialClientLink" href="#">
+              <a id="potentialClientLink">
                 <img src="assets/images/client.png">
                 <div class="project medium">
                   <div class="text">
@@ -73,7 +73,7 @@
                   </div>
                 </div>
               </a>
-              <a id="generalLink" href="#">
+              <a id="generalLink">
                 <img src="assets/images/questions.png">
                 <div class="project medium">
                   <div class="text">
