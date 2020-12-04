@@ -7,7 +7,7 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <div class="card w-50">
+          <div id="crd" class="card w-25">
             <div class="card-body">
               <img src="assets/images/quote.png">
               <p class="card-text">This is an example testimonial. Here is some text to fill in where someone will put words. I hope this is long enough now.</p>
@@ -16,7 +16,7 @@
           </div>
         </div>
         <div *ngFor="let testimonial of testimonials" class="carousel-item">
-          <div class="card w-50">
+          <div id="crd" class="card w-25">
             <div class="card-body">
               <img src="assets/images/quote.png">
               <p class="card-text">{{testimonial.body}}</p>
