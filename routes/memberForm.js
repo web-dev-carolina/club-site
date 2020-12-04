@@ -5,7 +5,6 @@ var db = mongojs('mongodb+srv://cnell:0nYzjTCvuLi23pkU@cluster0.tak5v.mongodb.ne
 var bodyParser = require('body-parser')
 
 router.post('/memberForm', bodyParser.json(), function(req, res, next){
-    console.log(req.body);
     db.memberForm.insert(req.body, function(err, memberForm){
         if(err){
             res.send(err);

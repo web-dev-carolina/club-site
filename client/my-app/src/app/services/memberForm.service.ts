@@ -9,10 +9,6 @@ export class MemberFormService {
 
   // tslint:disable-next-line:typedef
   postForm(f, l, e, m){
-    console.log('postForm');
-    this.http.post('http://localhost:3000/api/memberForm', { firstName: f, lastName: l, email: e, message: m }).toPromise().then(data => {
-      console.log(data);
-    });
-    return;
+    return this.http.post('http://localhost:3000/api/memberForm', { firstName: f, lastName: l, email: e, message: m }).toPromise();
   }
 }
