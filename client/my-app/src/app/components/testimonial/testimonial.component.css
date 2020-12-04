@@ -26,3 +26,15 @@
   font-size: 45px;
   margin: 20px;
 }
+
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #000000;
+}
+
+.carousel-indicators .active {
+  background-color: rgba(187, 90, 162, 0.9);
+}
+
