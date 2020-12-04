@@ -58,27 +58,21 @@
           <div class="row justify-content-center">
             <a id="potentialMemberLink">
               <img id="memberImg" src="assets/images/members.png">
-              <div class="project medium">
                 <div class="text">
                   <span class="name">Potential Member</span>
                 </div>
-              </div>
             </a>
             <a id="potentialClientLink">
               <img id="clientImg" src="assets/images/client.png">
-              <div class="project medium">
                 <div class="text">
                   <span class="name">Potential Client</span>
                 </div>
-              </div>
             </a>
             <a id="generalLink">
               <img id="generalImg" src="assets/images/questions.png">
-              <div class="project medium">
                 <div class="text">
                   <span class="name">General Inquires</span>
                 </div>
-              </div>
             </a>
           </div>
           <form *ngIf="this.state == 'potenital member' || this.state == ''" id='memberForm'>
@@ -126,9 +120,9 @@
               <textarea class="form-control" id="inputMessage" rows="3" placeholder="How do I get involved?"></textarea>
             </div>
             <div class="form-group">
-              <button id="serviceBtn" type="button" class="btn btn-dark" data-toggle="button" aria-pressed="false"></button>
-              <button id="serviceBtn" type="button" class="btn btn-dark" data-toggle="button" aria-pressed="false"></button>
-              <button id="serviceBtn" type="button" class="btn btn-dark" data-toggle="button" aria-pressed="false"></button>
+              <button id="serviceBtn" type="button" class="btn btn-dark" data-toggle="button" aria-pressed="false">Build from scratch</button>
+              <button id="serviceBtn" type="button" class="btn btn-dark" data-toggle="button" aria-pressed="false">Redesign</button>
+              <button id="serviceBtn" type="button" class="btn btn-dark" data-toggle="button" aria-pressed="false">Other</button>
             </div>
             <button id="clientSubmit" type="submit" class="btn btn-primary">Submit</button>
           </form>
