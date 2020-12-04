@@ -3,6 +3,8 @@
 }
 
 #day {
+    align-items: center;
+    text-align: center;
     font-family: Lato;
     font-style: normal;
     font-weight: bold;
@@ -14,7 +16,7 @@
     font-family: Lato;
     font-style: normal;
     font-weight: 500;
-    font-size: 32px;
+    font-size: 40px;
     line-height: 38px;
     display: flex;
     align-items: center;
