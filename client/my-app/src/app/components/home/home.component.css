@@ -6,7 +6,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   background-image: url("https://media.npr.org/assets/img/2016/06/03/1_blackmencode-reddingrucker_computer-edit_wide-9f1fbcd2af0a9ebdd4a081fe27ac1ea6bfb95256.jpg?s=1400");
 
   width: 100%;
-  min-height: 800px;
+  min-height: 810px;
 
   /* Center and scale the image nicely */
   background-position: center;
