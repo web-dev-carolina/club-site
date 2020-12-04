@@ -8,8 +8,10 @@ import { MemberFormService } from '../../services/memberForm.service';
 })
 export class ContactUsComponent implements AfterContentInit {
   state = '';
-  constructor(){
+  post;
+  constructor(private memberFormService: MemberFormService){
     this.state = 'potenital member';
+    this.post = this.memberFormService.postForm();
   }
   ngAfterContentInit(): void{
     window.onload = () => {
@@ -34,6 +36,6 @@ export class ContactUsComponent implements AfterContentInit {
     };
   }
   memberClick(): void {
-    MemberFormService.postForm();
+    this.post();
   }
 }
