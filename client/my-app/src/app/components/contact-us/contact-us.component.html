@@ -55,33 +55,79 @@
           </div>
         </div>
         <div class="col-lg">
+          <div class="row justify-content-center">
+            <a id="potentialMemberLink">
+              <img src="assets/images/members.png">
+              <div class="project medium">
+                <div class="text">
+                  <span class="name">Potential Member</span>
+                </div>
+              </div>
+            </a>
+            <a id="potentialClientLink">
+              <img src="assets/images/client.png">
+              <div class="project medium">
+                <div class="text">
+                  <span class="name">Potential Client</span>
+                </div>
+              </div>
+            </a>
+            <a id="generalLink">
+              <img src="assets/images/questions.png">
+              <div class="project medium">
+                <div class="text">
+                  <span class="name">General Inquires</span>
+                </div>
+              </div>
+            </a>
+          </div>
           <form *ngIf="this.state == 'potenital member' || this.state == ''">
-            <div class="form-row justify-content-center">
-              <a id="potentialMemberLink">
-                <img src="assets/images/members.png">
-                <div class="project medium">
-                  <div class="text">
-                    <span class="name">Potential Member</span>
-                  </div>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="inputFirstName">First name</label>
+                  <input type="email" class="form-control" id="inputFirstName" placeholder="Jane">
                 </div>
-              </a>
-              <a id="potentialClientLink">
-                <img src="assets/images/client.png">
-                <div class="project medium">
-                  <div class="text">
-                    <span class="name">Potential Client</span>
-                  </div>
+                <div class="col-md-6">
+                  <label for="inputLastName">Last name</label>
+                  <input type="password" class="form-control" id="inputLastName" placeholder="Doe">
                 </div>
-              </a>
-              <a id="generalLink">
-                <img src="assets/images/questions.png">
-                <div class="project medium">
-                  <div class="text">
-                    <span class="name">General Inquires</span>
-                  </div>
-                </div>
-              </a>
+              </div>
             </div>
+            <div class="form-group">
+              <label for="inputEmail">Email address</label>
+              <input type="text" class="form-control" id="inputEmail" placeholder="1234 Main St">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Message</label>
+              <textarea class="form-control" id="inputMessage" rows="3" placeholder="How do I get involved?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <form *ngIf="this.state == 'potential client' || this.state == ''">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="inputFirstName">Your Name</label>
+                  <input type="email" class="form-control" id="inputFirstName" placeholder="Jane">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputLastName">Your Business</label>
+                  <input type="password" class="form-control" id="inputLastName" placeholder="Doe">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail">Email address</label>
+              <input type="text" class="form-control" id="inputEmail" placeholder="1234 Main St">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Message</label>
+              <textarea class="form-control" id="inputMessage" rows="3" placeholder="How do I get involved?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <form *ngIf="this.state == 'general' || this.state == ''">
             <div class="form-group">
               <div class="row">
                 <div class="col-md-6">
