@@ -20,3 +20,9 @@
 #crd {
   height: 20rem;
 }
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 45px;
+  margin: 20px;
+}
