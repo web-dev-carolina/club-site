@@ -17,21 +17,18 @@ export class ContactUsComponent implements AfterContentInit {
         document.getElementById('memberImg').setAttribute('src', 'assets/images/members.png');
         document.getElementById('clientImg').setAttribute('src', 'assets/images/Client.png');
         document.getElementById('generalImg').setAttribute('src', 'assets/images/questions.png');
-        console.log(this.state);
       };
       document.getElementById('potentialClientLink').onclick = () => {
         this.state = 'potential client';
         document.getElementById('clientImg').setAttribute('src', 'assets/images/ClickedClient.png');
         document.getElementById('memberImg').setAttribute('src', 'assets/images/UnclickedMember.png');
         document.getElementById('generalImg').setAttribute('src', 'assets/images/questions.png');
-        console.log(this.state);
       };
       document.getElementById('generalLink').onclick = () => {
         this.state = 'general';
         document.getElementById('generalImg').setAttribute('src', 'assets/images/ClickedGeneral.png');
         document.getElementById('memberImg').setAttribute('src', 'assets/images/UnclickedMember.png');
         document.getElementById('clientImg').setAttribute('src', 'assets/images/Client.png');
-        console.log(this.state);
       };
     };
   }
