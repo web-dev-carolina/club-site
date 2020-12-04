@@ -26,9 +26,20 @@ export class ContactUsComponent implements AfterContentInit {
         resp.then(data => {if (data !== false){
           if (!document.getElementById('divSuccess')){
             const div = document.createElement('div');
-            div.setAttribute('class', 'alert alert-success');
+            const del = document.createElement('button');
+            const span = document.createElement('span');
+            div.setAttribute('class', 'alert alert-success alert-dismissible fade show');
             div.setAttribute('id', 'divSuccess');
             div.innerHTML = 'You\'ve contacted us. We\'ll get back to you as soon as possible';
+            del.setAttribute('type', 'button');
+            del.setAttribute('class', 'close');
+            del.setAttribute('data-dismiss', 'alert');
+            del.setAttribute('aria-label', 'Close');
+            del.setAttribute('id', 'delNoti');
+            span.setAttribute('aria-hidden', 'true');
+            span.innerHTML = '&times;';
+            del.appendChild(span);
+            div.appendChild(del);
             document.getElementById('memberForm').appendChild(div);
           }
         }});
@@ -42,9 +53,20 @@ export class ContactUsComponent implements AfterContentInit {
         resp.then(data => {if (data !== false){
           if (!document.getElementById('divSuccess')){
             const div = document.createElement('div');
-            div.setAttribute('class', 'alert alert-success');
+            const del = document.createElement('button');
+            const span = document.createElement('span');
+            div.setAttribute('class', 'alert alert-success alert-dismissible fade show');
             div.setAttribute('id', 'divSuccess');
             div.innerHTML = 'You\'ve contacted us. We\'ll get back to you as soon as possible';
+            del.setAttribute('type', 'button');
+            del.setAttribute('class', 'close');
+            del.setAttribute('data-dismiss', 'alert');
+            del.setAttribute('aria-label', 'Close');
+            del.setAttribute('id', 'delNoti');
+            span.setAttribute('aria-hidden', 'true');
+            span.innerHTML = '&times;';
+            del.appendChild(span);
+            div.appendChild(del);
             document.getElementById('memberForm').appendChild(div);
           }
         }});
@@ -57,9 +79,20 @@ export class ContactUsComponent implements AfterContentInit {
         resp.then(data => {if (data !== false){
           if (!document.getElementById('divSuccess')){
             const div = document.createElement('div');
-            div.setAttribute('class', 'alert alert-success');
+            const del = document.createElement('button');
+            const span = document.createElement('span');
+            div.setAttribute('class', 'alert alert-success alert-dismissible fade show');
             div.setAttribute('id', 'divSuccess');
             div.innerHTML = 'You\'ve contacted us. We\'ll get back to you as soon as possible';
+            del.setAttribute('type', 'button');
+            del.setAttribute('class', 'close');
+            del.setAttribute('data-dismiss', 'alert');
+            del.setAttribute('aria-label', 'Close');
+            del.setAttribute('id', 'delNoti');
+            span.setAttribute('aria-hidden', 'true');
+            span.innerHTML = '&times;';
+            del.appendChild(span);
+            div.appendChild(del);
             document.getElementById('memberForm').appendChild(div);
           }
         }});
