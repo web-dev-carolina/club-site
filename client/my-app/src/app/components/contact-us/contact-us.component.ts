@@ -22,7 +22,13 @@ export class ContactUsComponent implements AfterContentInit {
         const lastName = (document.getElementById('inputLastName') as HTMLInputElement).value;
         const email = (document.getElementById('inputEmail') as HTMLInputElement).value;
         const message = (document.getElementById('inputMessage') as HTMLInputElement).value;
-        this.memberFormService.postForm(firstName, lastName, email, message);
+        const resp = this.memberFormService.postForm(firstName, lastName, email, message);
+        resp.then(data => {if (data !== false){
+          const div = document.createElement('div');
+          div.setAttribute('class', 'alert alert-success');
+          div.innerHTML = 'You\'ve contacted us. We\'ll get back to you as soon as possible';
+          document.getElementById('memberForm').appendChild(div);
+        }});
       } else if (id === 'clientSubmit') {
         const name = (document.getElementById('inputName') as HTMLInputElement).value;
         const business = (document.getElementById('inputLastName') as HTMLInputElement).value;
