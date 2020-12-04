@@ -1,6 +1,15 @@
 import { Component, AfterContentInit } from '@angular/core';
 import { MemberFormService } from '../../services/memberForm.service';
 
+window.addEventListener('click', (e) => {
+  e.preventDefault();
+  console.log((event.target as HTMLElement).id);
+  /*
+  if (e.target.id === 'memberSubmit') {
+      console.log('hi');
+  }*/
+});
+
 @Component({
   selector: 'app-contact-us',
   templateUrl: 'contact-us.component.html',
@@ -34,8 +43,5 @@ export class ContactUsComponent implements AfterContentInit {
         document.getElementById('clientImg').setAttribute('src', 'assets/images/Client.png');
       };
     };
-  }
-  memberClick(): void {
-    this.post();
   }
 }
