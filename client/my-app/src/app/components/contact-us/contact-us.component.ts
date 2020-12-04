@@ -1,4 +1,5 @@
 import { Component, AfterContentInit } from '@angular/core';
+import { MemberFormService } from '../../services/memberForm.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -31,5 +32,8 @@ export class ContactUsComponent implements AfterContentInit {
         document.getElementById('clientImg').setAttribute('src', 'assets/images/Client.png');
       };
     };
+  }
+  memberClick(): void {
+    MemberFormService.postForm();
   }
 }

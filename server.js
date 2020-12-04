@@ -11,6 +11,7 @@ var projects = require('./routes/project')
 var announcements = require('./routes/announcement')
 var upcomingEvents = require('./routes/upcomingEvent')
 var testimonials = require('./routes/testimonial')
+var memberForm = require('./routes/memberForm')
 
 //View Engine
 app.set('view engine', 'ejs')
@@ -28,6 +29,7 @@ app.use('/api', projects)
 app.use('/api', announcements)
 app.use('/api', upcomingEvents)
 app.use('/api', testimonials)
+app.use('/api', memberForm)
 
 app.listen(port, function(){
     console.log("Server started on port" + port)

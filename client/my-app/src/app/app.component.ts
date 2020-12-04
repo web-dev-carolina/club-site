@@ -3,6 +3,7 @@ import { ProjectService } from './services/projects.service';
 import { AnnouncementService } from './services/announcements.service';
 import { UpcomingEventsService } from './services/upcomingEvents.service';
 import { TestimonialService } from './services/testimonials.service';
+import { MemberFormService } from './services/memberForm.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,8 @@ import { TestimonialService } from './services/testimonials.service';
   providers: [ProjectService,
   AnnouncementService,
   UpcomingEventsService,
-  TestimonialService]
+  TestimonialService,
+  MemberFormService]
 })
 export class AppComponent {
   title = 'my-app';

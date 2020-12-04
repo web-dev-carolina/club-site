@@ -102,7 +102,7 @@
               <label for="exampleFormControlTextarea1">Message</label>
               <textarea class="form-control" id="inputMessage" rows="3" placeholder="How do I get involved?"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button onclick="{{this.memberClick()}}" id="memberSubmit" type="submit" class="btn btn-primary">Submit</button>
           </form>
           <form *ngIf="this.state == 'potential client' || this.state == ''">
             <div class="form-group">
@@ -125,7 +125,7 @@
               <label for="exampleFormControlTextarea1">Message</label>
               <textarea class="form-control" id="inputMessage" rows="3" placeholder="How do I get involved?"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button id="clientSubmit" type="submit" class="btn btn-primary">Submit</button>
           </form>
           <form *ngIf="this.state == 'general' || this.state == ''">
             <div class="form-group">
@@ -148,7 +148,7 @@
               <label for="exampleFormControlTextarea1">Message</label>
               <textarea class="form-control" id="inputMessage" rows="3" placeholder="How do I get involved?"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button id="generalSubmit" type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>
       </div>
