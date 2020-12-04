@@ -24,6 +24,6 @@ export class ContactUsComponent implements AfterContentInit {
         this.state = 'general';
         console.log(this.state);
       };
-    }
+    };
   }
 }
