@@ -1,5 +1,6 @@
 export class UpcomingEvent {
     title: string;
     body: string;
-    date: string;
+    day: string;
+    month: string;
 }

@@ -1,0 +1,24 @@
+#eventDate {
+    background-color: #5262AD;
+}
+
+#day {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    color: #FFFFFF;
+}
+
+#month {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #FFFFFF;
+}
