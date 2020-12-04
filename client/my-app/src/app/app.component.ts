@@ -4,6 +4,8 @@ import { AnnouncementService } from './services/announcements.service';
 import { UpcomingEventsService } from './services/upcomingEvents.service';
 import { TestimonialService } from './services/testimonials.service';
 import { MemberFormService } from './services/memberForm.service';
+import { ClientFormService } from './services/clientForm.service';
+import { GeneralFormService } from './services/generalForm.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +15,9 @@ import { MemberFormService } from './services/memberForm.service';
   AnnouncementService,
   UpcomingEventsService,
   TestimonialService,
-  MemberFormService]
+  MemberFormService,
+  ClientFormService,
+  GeneralFormService]
 })
 export class AppComponent {
   title = 'my-app';

@@ -1,5 +1,7 @@
 import { Component, AfterContentInit } from '@angular/core';
 import { MemberFormService } from '../../services/memberForm.service';
+import { ClientFormService } from '../../services/clientForm.service';
+import { GeneralFormService } from '../../services/generalForm.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -8,7 +10,9 @@ import { MemberFormService } from '../../services/memberForm.service';
 })
 export class ContactUsComponent implements AfterContentInit {
   state = '';
-  constructor(private memberFormService: MemberFormService){
+  constructor(private memberFormService: MemberFormService,
+              private clientFormService: ClientFormService,
+              private generalFormService: GeneralFormService){
     this.state = 'potenital member';
     window.addEventListener('click', (e) => {
       e.preventDefault();
@@ -20,9 +24,18 @@ export class ContactUsComponent implements AfterContentInit {
         const message = (document.getElementById('inputMessage') as HTMLInputElement).value;
         this.memberFormService.postForm(firstName, lastName, email, message);
       } else if (id === 'clientSubmit') {
-        console.log(id);
+        const name = (document.getElementById('inputName') as HTMLInputElement).value;
+        const business = (document.getElementById('inputLastName') as HTMLInputElement).value;
+        const email = (document.getElementById('inputEmail') as HTMLInputElement).value;
+        const message = (document.getElementById('inputMessage') as HTMLInputElement).value;
+        const service = 'CHANGE THIS! HARD CODED!';
+        this.clientFormService.postForm(name, business, email, message, service);
       } else if (id === 'generalSubmit') {
-        console.log(id);
+        const name = (document.getElementById('inputName') as HTMLInputElement).value;
+        const affiliation = (document.getElementById('Affiliation') as HTMLInputElement).value;
+        const email = (document.getElementById('inputEmail') as HTMLInputElement).value;
+        const message = (document.getElementById('inputMessage') as HTMLInputElement).value;
+        this.generalFormService.postForm(name, affiliation, email, message);
       }
     });
   }
