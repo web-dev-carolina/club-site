@@ -5,7 +5,7 @@
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-        <li *ngFor="let testimonial of testimonials; index as i; first as isFirst" data-target="#carouselExampleCaptions" data-slide-to={{i}}></li>
+        <li *ngFor="let testimonial of testimonials; index as i; first as isFirst" data-target="#carouselExampleCaptions" data-slide-to="i"></li>
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
