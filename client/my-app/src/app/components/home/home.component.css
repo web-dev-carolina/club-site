@@ -5,7 +5,7 @@
 .bg-img {
     position: relative;
     height: 750px;
-    background: linear-gradient(to left, #DD579E, #945DA6);
+    background: linear-gradient(#DD579E, #5262AD);
 }
 
 .bg-img::before {
@@ -16,7 +16,8 @@
     background-image: url("https://media.npr.org/assets/img/2016/06/03/1_blackmencode-reddingrucker_computer-edit_wide-9f1fbcd2af0a9ebdd4a081fe27ac1ea6bfb95256.jpg?s=1400");
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.3;
+    filter: blur(3px);
+    opacity: 0.5;
 }
 
 .bg-img-content {

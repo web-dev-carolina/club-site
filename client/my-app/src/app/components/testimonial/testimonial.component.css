@@ -1,5 +1,4 @@
-#carousel-control-next-icon:after
-{
+#carousel-control-next-icon:after {
   content: '>';
   font-size: 55px;
   color: #5262AD;
@@ -11,10 +10,13 @@
   color: #5262AD;
 }
 
-.card {
-  margin: 0 auto; /* Added */
-  float: none; /* Added */
-  margin-bottom: 10px; /* Added */
+.testimonial {
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 5px 10px 5px #e2e2e9;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #crd {
@@ -24,7 +26,10 @@
 .title {
   font-family: 'Montserrat', sans-serif;
   font-size: 45px;
-  margin: 20px;
+}
+
+.subtitle {
+  margin: 2em;
 }
 
 .carousel-indicators li {
