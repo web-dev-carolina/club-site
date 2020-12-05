@@ -23,3 +23,8 @@
 .pillar {
   height: 125px;
 }
+
+.develop {
+  position: relative;
+  top: 12px;
+}

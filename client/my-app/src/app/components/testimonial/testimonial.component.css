@@ -1,3 +1,7 @@
+* {
+  font-family: 'Lato', sans-serif;
+}
+
 #carousel-control-next-icon:after {
   content: '>';
   font-size: 55px;
@@ -13,10 +17,23 @@
 .testimonial {
   border-radius: 20px;
   border: none;
-  box-shadow: 0 5px 10px 5px #e2e2e9;
+  box-shadow: 0 10px 15px 5px #e2e2e9;
   margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.card-text {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.card-text {
+  font-size: large;
 }
 
 #crd {
@@ -30,16 +47,20 @@
 
 .subtitle {
   margin: 2em;
+  font-size: large;
 }
 
 .carousel-indicators li {
-  width: 10px;
-  height: 10px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  border: 1px solid #000000;
+  border: 1px solid #C4C4C4;
+  position: relative;
+  top: 50px;
 }
 
 .carousel-indicators .active {
-  background-color: rgba(187, 90, 162, 0.9);
+  background-color: #BB5AA2;
+  border: none;
 }
 

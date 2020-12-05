@@ -1,6 +1,8 @@
 body {
     font-family: 'Lato', sans-serif;
     text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .title {
