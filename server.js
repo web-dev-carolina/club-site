@@ -20,7 +20,7 @@ app.set('view engine', 'ejs')
 app.engine('html', require('ejs').renderFile)
 
 //Set Static Folder
-app.use(express.static('client/my-app/dist/my-app'))
+app.use(express.static('public/my-app/dist/my-app'))
 
 //Body Parser MW
 app.use(bodyParser.json())
