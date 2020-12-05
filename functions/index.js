@@ -2,7 +2,6 @@ const functions = require('firebase-functions');
 var express = require('express')
 var path = require('path')
 var bodyParser = require('body-parser')
-
 var port = 3000;
 
 var app = express()
@@ -21,7 +20,7 @@ app.set('view engine', 'ejs')
 app.engine('html', require('ejs').renderFile)
 
 //Set Static Folder
-app.use(express.static('../public/my-app/dist'))
+app.use(express.static('../public/dist/my-app'))
 
 //Body Parser MW
 app.use(bodyParser.json())
