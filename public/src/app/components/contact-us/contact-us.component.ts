@@ -18,24 +18,36 @@ export class ContactUsComponent implements AfterContentInit {
       e.preventDefault();
       const id = (event.target as HTMLElement).id;
       if (id === 'memberSubmit'){
-        const firstName = (document.getElementById('inputFirstName') as HTMLInputElement).value;
-        const lastName = (document.getElementById('inputLastName') as HTMLInputElement).value;
-        const email = (document.getElementById('inputEmail') as HTMLInputElement).value;
-        const message = (document.getElementById('inputMessage') as HTMLInputElement).value;
-        if (firstName.length === 0){
-          (document.getElementById('inputFirstName') as HTMLInputElement).setAttribute('class', 'form-control is-invalid');
+        const firstName = (document.getElementById('inputFirstName') as HTMLInputElement);
+        const firstNameVal = firstName.value;
+        const lastName = (document.getElementById('inputLastName') as HTMLInputElement);
+        const lastNameVal = lastName.value;
+        const email = (document.getElementById('inputEmail') as HTMLInputElement);
+        const emailVal = email.value;
+        const message = (document.getElementById('inputMessage') as HTMLInputElement);
+        const messageVal = message.value;
+        if (firstNameVal.length === 0){
+          firstName.setAttribute('class', 'form-control is-invalid');
+        } else {
+          firstName.setAttribute('class', 'form-control is-valid');
         }
-        if (lastName.length === 0) {
-          (document.getElementById('inputLastName') as HTMLInputElement).setAttribute('class', 'form-control is-invalid');
+        if (lastNameVal.length === 0) {
+          lastName.setAttribute('class', 'form-control is-invalid');
+        } else {
+          lastName.setAttribute('class', 'form-control is-valid');
         }
-        if (email.length === 0) {
-          (document.getElementById('inputEmail') as HTMLInputElement).setAttribute('class', 'form-control is-invalid');
+        if (emailVal.length === 0) {
+          email.setAttribute('class', 'form-control is-invalid');
+        } else {
+          email.setAttribute('class', 'form-control is-valid');
         }
-        if (message.length === 0) {
-          (document.getElementById('inputMessage') as HTMLInputElement).setAttribute('class', 'form-control is-invalid');
+        if (messageVal.length === 0) {
+          message.setAttribute('class', 'form-control is-invalid');
+        } else {
+          message.setAttribute('class', 'form-control is-valid');
         }
-        if (firstName.length !== 0 || lastName.length !== 0 || email.length !== 0 || message.length !== 0) {
-          const resp = this.memberFormService.postForm(firstName, lastName, email, message);
+        if (firstNameVal.length !== 0 && lastNameVal.length !== 0 && emailVal.length !== 0 && messageVal.length !== 0) {
+          const resp = this.memberFormService.postForm(firstNameVal, lastNameVal, emailVal, messageVal);
           resp.then(data => {if (data !== false){
             if (!document.getElementById('divSuccess')){
               const div = document.createElement('div');
