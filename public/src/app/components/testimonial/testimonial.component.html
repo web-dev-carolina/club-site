@@ -1,7 +1,6 @@
-<div id="offContainer" class = "container-fluid">
-  <a name="testimonials"></a>
+<div id="offContainer" class="container-fluid">
   <h1 class="title text-center">Testimonials</h1>
-  <p class="text-center">Peer reviews of Web Dev Carolina.</p>
+  <p class="subtitle text-center">See what clients and club members have to say about us!</p>
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -9,23 +8,21 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <div id="crd" class="card w-25">
+          <div id="crd" class="testimonial card w-25">
             <div class="card-body">
               <img src="assets/images/quote.png">
               <p class="card-text">This is an example testimonial. Here is some text to fill in where someone will put words. I hope this is long enough now.</p>
-              <h4 class="card-title">Christian Nell</h4>
+              <h4 class="card-title"><strong>Christian Nell</strong></h4>
             </div>
           </div>
         </div>
         <div *ngFor="let testimonial of testimonials" class="carousel-item">
-          <div id="crd" class="card w-25">
+          <div id="crd" class="testimonial card w-25">
             <div class="card-body">
               <img src="assets/images/quote.png">
               <p class="card-text">{{testimonial.body}}</p>
-              <h4 class="card-title">{{testimonial.title}}</h4>
+              <h4 class="card-title"><strong>{{testimonial.title}}</strong></h4>
             </div>
-          </div>
-          <div class="carousel-caption d-none d-md-block">
           </div>
         </div>
       </div>
