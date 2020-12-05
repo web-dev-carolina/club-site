@@ -5,7 +5,6 @@
 .bg-img {
     position: relative;
     height: 750px;
-    /* background: rgba(147, 46, 172, 0.7); */
     background: linear-gradient(to left, #DD579E, #945DA6);
 }
 
@@ -22,16 +21,14 @@
 
 .bg-img-content {
     position: relative;
-    top: 125px;
+    top: 150px;
     text-align: center;
 }
 
 .hero-content {
-    margin: 2em;
-    padding-left: 4em;
-    padding-right: 4em;
     color: white;
     font-family: 'Montserrat', sans-serif;
+    margin: 1.5em;
 }
 
 .contact {
