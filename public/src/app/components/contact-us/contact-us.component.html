@@ -5,13 +5,20 @@
   <a name="contactUs"></a>
   <div id="offContainer" class="container-fluid">
     <div class="container">
+
       <h1 class="title">Contact Us</h1>
+
       <div class="row">
-        <div class="col-lg">
+
+        <div class="col-lg mt-5">
           <div class="container">
             <p class="subtitle">Get In Touch!</p>
-            <p class = "subsubtitle">Interested in Wed Dev Carolina or have any questions for us? Fill out this form and we’ll get back to you soon.</p>
+            <p class = "subsubtitle">
+              Interested in Wed Dev Carolina or have any questions for us? 
+              Fill out this form and we’ll get back to you soon.
+            </p>
             <p class="subtitle">Our social channels</p>
+            
             <div class="row mb-4">
               <div class="col col-lg-2">
                 <a href="https://www.instagram.com/webdevcarolina/" target="_blank">
@@ -22,6 +29,7 @@
                 <p id="contactLink">@webdevcarolina</p>
               </div>
             </div>
+            
             <div class="row mb-4">
               <div class="col col-lg-2">
                 <a href="https://www.linkedin.com/company/web-dev-carolina/" target="_blank">
@@ -32,6 +40,7 @@
                 <p id="contactLink">https://www.linkedin.com/company/web-dev-carolina/</p>
               </div>
             </div>
+            
             <div class="row mb-4">
               <div class="col col-lg-2">
                 <a href="https://github.com/web-dev-carolina" target="_blank">
@@ -42,9 +51,10 @@
                 <p id="contactLink">@webdevcarolina</p>
               </div>
             </div>
+            
             <div class="row mb-4">
               <div class="col col-lg-2">
-                <a>
+                <a href="mailto:webdevcarolina@gmail.com">
                   <img src="assets/images/email.png">
                 </a>
               </div>
@@ -52,30 +62,35 @@
                 <p id="contactLink">webdevcarolina@gmail.com</p>
               </div>
             </div>
+
           </div>
         </div>
-        <div class="col-lg">
-          <div class="row justify-content-center">
-            <a id="potentialMemberLink">
-              <img id="memberImg" src="assets/images/members.png">
-                <div class="text">
-                  <span class="name">Potential Member</span>
-                </div>
-            </a>
-            <a id="potentialClientLink">
-              <img id="clientImg" src="assets/images/Client.png">
-                <div class="text">
-                  <span class="name">Potential Client</span>
-                </div>
-            </a>
-            <a id="generalLink">
-              <img id="generalImg" src="assets/images/questions.png">
-                <div class="text">
-                  <span class="name">General Inquires</span>
-                </div>
-            </a>
+
+        <div class="col-lg mt-5">
+          <div class="row justify-content-center mb-5">
+            <div class="col">
+              <a class="contact-icon" id="potentialMemberLink">
+                <img id="memberImg" src="assets/images/members.png">
+                <div>Potential Member</div>
+              </a>
+            </div>
+            
+            <div class="col">
+              <a class="contact-icon down" id="potentialClientLink">
+                <img id="clientImg" src="assets/images/Client.png">
+                <div>Potential Client</div>
+              </a>
+            </div>
+            
+            <div class="col">
+              <a class="contact-icon down" id="generalLink">
+                <img id="generalImg" src="assets/images/questions.png">
+                <div>General Inquires</div>
+              </a>
+            </div>
           </div>
-          <form *ngIf="this.state == 'potenital member' || this.state == ''" id='memberForm'>
+
+          <form *ngIf="this.state == 'potenital member' || this.state == ''" id='memberForm' class="contact-form">
             <div class="form-group">
               <div class="row">
                 <div class="col-md-6">
@@ -96,17 +111,18 @@
               <label for="exampleFormControlTextarea1">Message</label>
               <textarea class="form-control" id="inputMessage" rows="3" placeholder="How do I get involved?"></textarea>
             </div>
-            <button id="memberSubmit" type="submit" class="btn btn-primary">Submit</button>
+            <button id="memberSubmit" type="submit" class="btn contact">Submit</button>
           </form>
-          <form *ngIf="this.state == 'potential client' || this.state == ''" id='clientForm'>
+          
+          <form *ngIf="this.state == 'potential client' || this.state == ''" id='clientForm' class="contact-form">
             <div class="form-group">
               <div class="row">
                 <div class="col-md-6">
-                  <label for="inputName">Your Name</label>
+                  <label for="inputName">Your name</label>
                   <input type="email" class="form-control" id="inputFirstName" placeholder="Jane Doe">
                 </div>
                 <div class="col-md-6">
-                  <label for="inputLastName">Your Business</label>
+                  <label for="inputLastName">Your business</label>
                   <input type="password" class="form-control" id="inputLastName" placeholder="Busy Corp.">
                 </div>
               </div>
@@ -124,13 +140,14 @@
               <button id="serviceBtn" type="button" class="btn btn-dark" data-toggle="button" aria-pressed="false">Redesign</button>
               <button id="serviceBtn" type="button" class="btn btn-dark ml-2" data-toggle="button" aria-pressed="false">Other</button>
             </div>
-            <button id="clientSubmit" type="submit" class="btn btn-primary">Submit</button>
+            <button id="clientSubmit" type="submit" class="btn contact">Submit</button>
           </form>
-          <form *ngIf="this.state == 'general' || this.state == ''" id='generalForm'>
+          
+          <form *ngIf="this.state == 'general' || this.state == ''" id='generalForm' class="contact-form">
             <div class="form-group">
               <div class="row">
                 <div class="col-md-6">
-                  <label for="inputName">Your Name</label>
+                  <label for="inputName">Your name</label>
                   <input type="email" class="form-control" id="inputFirstName" placeholder="Jane Doe">
                 </div>
                 <div class="col-md-6">
@@ -147,9 +164,10 @@
               <label for="exampleFormControlTextarea1">Message</label>
               <textarea class="form-control" id="inputMessage" rows="3" placeholder="How do I get involved?"></textarea>
             </div>
-            <button id="generalSubmit" type="submit" class="btn btn-primary">Submit</button>
+            <button id="generalSubmit" type="submit" class="btn contact">Submit</button>
           </form>
         </div>
+
       </div>
     </div>
   </div>
