@@ -10,9 +10,9 @@ router.get('/testimonials', async function(req, res, next){
       
       collection.find({}).toArray((err, data) => {
         if(err){
-          res.send(err);
+          res.json(err);
         }
-        res.send(data);
+        res.json(data);
       });    
     } catch (err) {
           res.status(500).send('Something broke!');
