@@ -9,7 +9,7 @@ export class ClientFormService {
 
   // tslint:disable-next-line:typedef
   postForm(n, b, e, m, s){
-    return this.http.post('https://cors-anywhere.herokuapp.com/https://us-central1-home-c6ab1.cloudfunctions.net/api/clientForm',
+    return this.http.post('https://us-central1-home-c6ab1.cloudfunctions.net/api/clientForm',
     { name: n, business: b, email: e, message: m, service: s })
     .toPromise();
   }
