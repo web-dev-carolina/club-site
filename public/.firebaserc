@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "home-c6ab1": {
+      "hosting": {
+        "my-app": [
+          "home-c6ab1"
+        ]
+      }
+    }
+  }
+}
