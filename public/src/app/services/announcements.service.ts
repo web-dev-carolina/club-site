@@ -9,6 +9,6 @@ export class AnnouncementService {
 
   // tslint:disable-next-line:typedef
   getAnnouncements(){
-     return this.http.get('http://localhost:3000/api/announcements');
+     return this.http.get('https://webdevcarolina.com/api/announcements');
   }
 }

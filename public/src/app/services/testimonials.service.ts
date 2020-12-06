@@ -9,6 +9,6 @@ export class TestimonialService {
 
   // tslint:disable-next-line:typedef
   getTestimonials(){
-     return this.http.get('http://localhost:3000/api/testimonials');
+     return this.http.get('https://webdevcarolina.com/api/testimonials');
   }
 }

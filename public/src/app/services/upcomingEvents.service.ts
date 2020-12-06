@@ -9,6 +9,6 @@ export class UpcomingEventsService {
 
   // tslint:disable-next-line:typedef
   getUpcomingEvents(){
-     return this.http.get('http://localhost:3000/api/upcomingEvents');
+     return this.http.get('https://webdevcarolina.com/api/upcomingEvents');
   }
 }

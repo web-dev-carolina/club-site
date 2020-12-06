@@ -9,6 +9,6 @@ export class ProjectService {
 
   // tslint:disable-next-line:typedef
   getProjects(){
-     return this.http.get('http://localhost:3000/api/projects');
+     return this.http.get('https://webdevcarolina.com/api/projects');
   }
 }
