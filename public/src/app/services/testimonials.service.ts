@@ -9,6 +9,6 @@ export class TestimonialService {
 
   // tslint:disable-next-line:typedef
   getTestimonials(){
-     return this.http.get('https://us-central1-home-c6ab1.cloudfunctions.net/api/testimonials');
+     return this.http.get('https://cors-anywhere.herokuapp.com/https://us-central1-home-c6ab1.cloudfunctions.net/api/testimonials');
   }
 }

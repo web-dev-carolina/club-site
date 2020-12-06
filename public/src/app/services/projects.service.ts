@@ -9,6 +9,6 @@ export class ProjectService {
 
   // tslint:disable-next-line:typedef
   getProjects(){
-     return this.http.get('https://us-central1-home-c6ab1.cloudfunctions.net/api/projects');
+     return this.http.get('https://cors-anywhere.herokuapp.com/https://us-central1-home-c6ab1.cloudfunctions.net/api/projects');
   }
 }
