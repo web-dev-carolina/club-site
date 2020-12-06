@@ -40,21 +40,3 @@ app.listen(port, function(){
 })
 
 exports.app = functions.https.onRequest(app);
-
-
-
-
-/*
-
-try {
-    const client = await getClient();
-    const db = client.db("club-site");
-    const collection = db.collection("announcements");
-  
-  collection.find({}).toArray((err, data) => {
-    res.send(data);
-  });    
-} catch (err) {
-      res.status(500).send('Something broke!');
-}
-*/
