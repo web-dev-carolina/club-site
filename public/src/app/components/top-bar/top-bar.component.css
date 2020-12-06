@@ -53,11 +53,6 @@ nav a {
     color: white;
 }
 
-.contact a:hover {
-    text-decoration: none;
-    color: white;
-}
-
 a.left {
     position: relative;
     color: black;

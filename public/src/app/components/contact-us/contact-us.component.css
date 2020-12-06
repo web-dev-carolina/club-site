@@ -16,12 +16,12 @@ body {
 .subtitle {
   font-family: 'Montserrat', sans-serif;
   font-size: 22px;
-  margin: 15px;
+  margin-bottom: 30px;
 }
 
 .subsubtitle {
   font-size: 18px;
-  margin: 15px;
+  margin: 30px;
 }
 .project {
   size: 20%;
@@ -50,5 +50,40 @@ body {
 }
 
 #serviceBtn {
-  background-color: blueviolet;
+  background-color: #3844ad;
+}
+
+.contact-icon {
+  cursor: pointer;
+}
+
+.contact-icon:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.down {
+  position: relative;
+  top: 13px;
+}
+
+.contact-form {
+  text-align: left;
+}
+
+.contact {
+  font-family: 'Lato', sans-serif;
+  background-color: #BB5AA2;
+  color: white;
+  border: none;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 25px;
+}
+
+.contact:hover {
+  background-color: #944781;
+  color: white;
 }
