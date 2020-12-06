@@ -124,31 +124,57 @@ export class ContactUsComponent implements AfterContentInit {
         }});
         }
       } else if (id === 'generalSubmit') {
-        const name = (document.getElementById('inputName') as HTMLInputElement).value;
-        const affiliation = (document.getElementById('Affiliation') as HTMLInputElement).value;
-        const email = (document.getElementById('inputEmail') as HTMLInputElement).value;
-        const message = (document.getElementById('inputMessage') as HTMLInputElement).value;
-        const resp = this.generalFormService.postForm(name, affiliation, email, message);
-        resp.then(data => {if (data !== false){
-          if (!document.getElementById('divSuccess')){
-            const div = document.createElement('div');
-            const del = document.createElement('button');
-            const span = document.createElement('span');
-            div.setAttribute('class', 'alert alert-success alert-dismissible fade show');
-            div.setAttribute('id', 'divSuccess');
-            div.innerHTML = 'You\'ve contacted us. We\'ll get back to you as soon as possible';
-            del.setAttribute('type', 'button');
-            del.setAttribute('class', 'close');
-            del.setAttribute('data-dismiss', 'alert');
-            del.setAttribute('aria-label', 'Close');
-            del.setAttribute('id', 'delNoti');
-            span.setAttribute('aria-hidden', 'true');
-            span.innerHTML = '&times;';
-            del.appendChild(span);
-            div.appendChild(del);
-            document.getElementById('memberForm').appendChild(div);
-          }
-        }});
+        const name = (document.getElementById('inputFirstName') as HTMLInputElement);
+        const nameVal = name.value;
+        const affiliation = (document.getElementById('Affiliation') as HTMLInputElement);
+        const affiliationVal = affiliation.value;
+        const email = (document.getElementById('inputEmail') as HTMLInputElement);
+        const emailVal = email.value;
+        const message = (document.getElementById('inputMessage') as HTMLInputElement);
+        const messageVal = message.value;
+        const resp = this.generalFormService.postForm(nameVal, affiliationVal, emailVal, messageVal);
+        if (nameVal.length === 0) {
+          this.setInputClass(name, 'form-control is-invalid');
+        } else {
+          this.setInputClass(name, 'form-control is-valid');
+        }
+        if (affiliationVal.length === 0) {
+          this.setInputClass(affiliation, 'form-control is-invalid');
+        } else {
+          this.setInputClass(affiliation, 'form-control is-valid');
+        }
+        if (emailVal.length === 0) {
+          this.setInputClass(email, 'form-control is-invalid');
+        } else {
+          this.setInputClass(email, 'form-control is-valid');
+        }
+        if (messageVal.length === 0){
+          this.setInputClass(message, 'form-control is-invalid');
+        } else {
+          this.setInputClass(message, 'form-control is-valid');
+        }
+        if (nameVal.length !== 0 && affiliationVal.length !== 0 && emailVal.length !== 0 && messageVal.length !== 0) {
+          resp.then(data => {if (data !== false){
+            if (!document.getElementById('divSuccess')){
+              const div = document.createElement('div');
+              const del = document.createElement('button');
+              const span = document.createElement('span');
+              div.setAttribute('class', 'alert alert-success alert-dismissible fade show');
+              div.setAttribute('id', 'divSuccess');
+              div.innerHTML = 'You\'ve contacted us. We\'ll get back to you as soon as possible';
+              del.setAttribute('type', 'button');
+              del.setAttribute('class', 'close');
+              del.setAttribute('data-dismiss', 'alert');
+              del.setAttribute('aria-label', 'Close');
+              del.setAttribute('id', 'delNoti');
+              span.setAttribute('aria-hidden', 'true');
+              span.innerHTML = '&times;';
+              del.appendChild(span);
+              div.appendChild(del);
+              document.getElementById('generalForm').appendChild(div);
+            }
+          }});
+        }
       }
     });
   }
