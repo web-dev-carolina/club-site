@@ -79,8 +79,14 @@ export class ContactUsComponent implements AfterContentInit {
         const message = (document.getElementById('inputMessage') as HTMLInputElement);
         const messageVal = message.value;
         const serviceButtons = document.getElementsByClassName('serviceBtn');
-        console.log(serviceButtons);
-        const serviceVal = 'CHANGE THIS! HARD CODED!';
+        let serviceButtonsVal = false;
+        let serviceButtonsId = '';
+        Array.from(serviceButtons).forEach((element) => {
+          if (element.getAttribute('aria-pressed') === 'true') {
+            serviceButtonsVal = true;
+            serviceButtonsId = element.getAttribute('id');
+          }
+        });
         if (nameVal.length === 0) {
           this.setInputClass(name, 'form-control is-invalid');
         } else {
@@ -102,8 +108,8 @@ export class ContactUsComponent implements AfterContentInit {
           this.setInputClass(message, 'form-control is-valid');
         }
         if (nameVal.length !== 0 && businessVal.length !== 0 && emailVal.length !== 0 &&
-            messageVal.length !== 0 && serviceVal.length !== 0){
-          const resp = this.clientFormService.postForm(nameVal, businessVal, emailVal, messageVal, serviceVal);
+            messageVal.length !== 0 && serviceButtonsVal !== false){
+          const resp = this.clientFormService.postForm(nameVal, businessVal, emailVal, messageVal, serviceButtonsId);
           resp.then(data => {if (data !== false){
             if (!document.getElementById('divSuccess')){
               const div = document.createElement('div');
