@@ -49,7 +49,7 @@ body {
   font-size: 17px;
 }
 
-#serviceBtn {
+#build, #redesign, #other {
   background-color: #3844ad;
 }
 
