@@ -9,7 +9,8 @@ export class GeneralFormService {
 
   // tslint:disable-next-line:typedef
   postForm(n, a, e, m){
-    return this.http.post('https://webdevcarolina.com/api/generalForm', { name: n, affiliation: a, email: e, message: m })
+    return this.http.post('https://us-central1-home-c6ab1.cloudfunctions.net/api/generalForm',
+    { name: n, affiliation: a, email: e, message: m })
     .toPromise();
   }
 }
