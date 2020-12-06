@@ -27,24 +27,24 @@ export class ContactUsComponent implements AfterContentInit {
         const message = (document.getElementById('inputMessage') as HTMLInputElement);
         const messageVal = message.value;
         if (firstNameVal.length === 0){
-          firstName.setAttribute('class', 'form-control is-invalid');
+          this.setInputClass(firstName, 'form-control is-invalid');
         } else {
-          firstName.setAttribute('class', 'form-control is-valid');
+          this.setInputClass(firstName, 'form-control is-valid');
         }
         if (lastNameVal.length === 0) {
-          lastName.setAttribute('class', 'form-control is-invalid');
+          this.setInputClass(lastName, 'form-control is-invalid');
         } else {
-          lastName.setAttribute('class', 'form-control is-valid');
+          this.setInputClass(lastName, 'form-control is-invalid')
         }
         if (emailVal.length === 0) {
-          email.setAttribute('class', 'form-control is-invalid');
+          this.setInputClass(email, 'form-control is-invalid');
         } else {
-          email.setAttribute('class', 'form-control is-valid');
+          this.setInputClass(email, 'form-control is-valid');
         }
         if (messageVal.length === 0) {
-          message.setAttribute('class', 'form-control is-invalid');
+          this.setInputClass(message, 'form-control is-invalid');
         } else {
-          message.setAttribute('class', 'form-control is-valid');
+          this.setInputClass(message, 'form-control is-valid');
         }
         if (firstNameVal.length !== 0 && lastNameVal.length !== 0 && emailVal.length !== 0 && messageVal.length !== 0) {
           const resp = this.memberFormService.postForm(firstNameVal, lastNameVal, emailVal, messageVal);
@@ -70,32 +70,59 @@ export class ContactUsComponent implements AfterContentInit {
           }});
         }
       } else if (id === 'clientSubmit') {
-        const name = (document.getElementById('inputName') as HTMLInputElement).value;
-        const business = (document.getElementById('inputLastName') as HTMLInputElement).value;
-        const email = (document.getElementById('inputEmail') as HTMLInputElement).value;
-        const message = (document.getElementById('inputMessage') as HTMLInputElement).value;
-        const service = 'CHANGE THIS! HARD CODED!';
-        const resp = this.clientFormService.postForm(name, business, email, message, service);
-        resp.then(data => {if (data !== false){
-          if (!document.getElementById('divSuccess')){
-            const div = document.createElement('div');
-            const del = document.createElement('button');
-            const span = document.createElement('span');
-            div.setAttribute('class', 'alert alert-success alert-dismissible fade show');
-            div.setAttribute('id', 'divSuccess');
-            div.innerHTML = 'You\'ve contacted us. We\'ll get back to you as soon as possible';
-            del.setAttribute('type', 'button');
-            del.setAttribute('class', 'close');
-            del.setAttribute('data-dismiss', 'alert');
-            del.setAttribute('aria-label', 'Close');
-            del.setAttribute('id', 'delNoti');
-            span.setAttribute('aria-hidden', 'true');
-            span.innerHTML = '&times;';
-            del.appendChild(span);
-            div.appendChild(del);
-            document.getElementById('memberForm').appendChild(div);
-          }
+        const name = (document.getElementById('inputFirstName') as HTMLInputElement);
+        const nameVal = name.value;
+        const business = (document.getElementById('inputLastName') as HTMLInputElement);
+        const businessVal = business.value;
+        const email = (document.getElementById('inputEmail') as HTMLInputElement);
+        const emailVal = email.value;
+        const message = (document.getElementById('inputMessage') as HTMLInputElement);
+        const messageVal = message.value;
+        const serviceVal = 'CHANGE THIS! HARD CODED!';
+        if (nameVal.length === 0) {
+          this.setInputClass(name, 'form-control is-invalid');
+        } else {
+          this.setInputClass(name, 'form-control is-valid');
+        }
+        if (businessVal.length === 0) {
+          this.setInputClass(business, 'form-control is-invalid');
+        } else {
+          this.setInputClass(business, 'form-control is-valid');
+        }
+        if (emailVal.length === 0) {
+          this.setInputClass(email, 'form-control is-invalid');
+        } else {
+          this.setInputClass(email, 'form-control is-valid');
+        }
+        if (messageVal.length === 0 ){
+          this.setInputClass(message, 'form-control is-invalid');
+        } else {
+          this.setInputClass(message, 'form-control is-valid');
+        }
+        if (nameVal.length !== 0 && businessVal.length !== 0 && emailVal.length !== 0 &&
+            messageVal.length !== 0 && serviceVal.length !== 0){
+          const resp = this.clientFormService.postForm(nameVal, businessVal, emailVal, messageVal, serviceVal);
+          resp.then(data => {if (data !== false){
+            if (!document.getElementById('divSuccess')){
+              const div = document.createElement('div');
+              const del = document.createElement('button');
+              const span = document.createElement('span');
+              div.setAttribute('class', 'alert alert-success alert-dismissible fade show');
+              div.setAttribute('id', 'divSuccess');
+              div.innerHTML = 'You\'ve contacted us. We\'ll get back to you as soon as possible';
+              del.setAttribute('type', 'button');
+              del.setAttribute('class', 'close');
+              del.setAttribute('data-dismiss', 'alert');
+              del.setAttribute('aria-label', 'Close');
+              del.setAttribute('id', 'delNoti');
+              span.setAttribute('aria-hidden', 'true');
+              span.innerHTML = '&times;';
+              del.appendChild(span);
+              div.appendChild(del);
+              document.getElementById('clientForm').appendChild(div);
+            }
         }});
+        }
       } else if (id === 'generalSubmit') {
         const name = (document.getElementById('inputName') as HTMLInputElement).value;
         const affiliation = (document.getElementById('Affiliation') as HTMLInputElement).value;
@@ -146,5 +173,8 @@ export class ContactUsComponent implements AfterContentInit {
         document.getElementById('clientImg').setAttribute('src', 'assets/images/Client.png');
       };
     };
+  }
+  setInputClass(input, isValid): void {
+    input.setAttribute('class', isValid);
   }
 }
