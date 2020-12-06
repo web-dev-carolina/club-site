@@ -34,7 +34,7 @@ export class ContactUsComponent implements AfterContentInit {
         if (lastNameVal.length === 0) {
           this.setInputClass(lastName, 'form-control is-invalid');
         } else {
-          this.setInputClass(lastName, 'form-control is-invalid');
+          this.setInputClass(lastName, 'form-control is-valid');
         }
         if (emailVal.length === 0) {
           this.setInputClass(email, 'form-control is-invalid');
