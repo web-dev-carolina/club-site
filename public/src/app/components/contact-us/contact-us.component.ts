@@ -78,6 +78,8 @@ export class ContactUsComponent implements AfterContentInit {
         const emailVal = email.value;
         const message = (document.getElementById('inputMessage') as HTMLInputElement);
         const messageVal = message.value;
+        const serviceButtons = document.getElementsByClassName('serviceBtn');
+        console.log(serviceButtons);
         const serviceVal = 'CHANGE THIS! HARD CODED!';
         if (nameVal.length === 0) {
           this.setInputClass(name, 'form-control is-invalid');
