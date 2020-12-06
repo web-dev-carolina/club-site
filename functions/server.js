@@ -6,6 +6,10 @@ var cors = require('cors')
 var port = 3000;
 
 var app = express()
+const cors_options = {
+    origin: 'http://webdevcarolina.com/',
+    credentials: true
+}
 
 var projects = require('./routes/project')
 var announcements = require('./routes/announcement')
@@ -25,6 +29,7 @@ app.use(express.static('../public/dist/my-app'))
 //Body Parser MW
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extende: false}))
+app.use(cors(cors_options));
 
 //Connect API
 app.use('/api', projects)

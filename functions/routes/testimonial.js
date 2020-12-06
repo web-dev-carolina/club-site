@@ -3,6 +3,7 @@ var router = express.Router();
 const getClient = require("../db"); 
 
 router.get('/testimonials', async function(req, res, next){
+  res.header('Access-Control-Allow-Origin', '*');
     try {
         const client = await getClient();
         const db = client.db("club-site");
