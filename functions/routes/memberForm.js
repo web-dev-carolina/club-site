@@ -4,7 +4,6 @@ var bodyParser = require('body-parser')
 const getClient = require("../db"); 
 
 router.post('/memberForm', bodyParser.json(), async function(req, res, next){
-    res.header('Access-Control-Allow-Origin', '*');
     db.memberForm.insert(req.body, function(err, memberForm){
         if(err){
             res.send(err);
