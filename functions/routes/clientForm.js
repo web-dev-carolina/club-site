@@ -5,12 +5,20 @@ const getClient = require("../db");
 
 
 router.post('/clientForm', bodyParser.json(), async function(req, res, next){
-    db.clientForm.insert(req.body, function(err, clientForm){
+    try {
+        const client = await getClient();
+        const db = client.db("club-site");
+        const collection = db.collection("clientForm");
+      
+      collection.insert(req.body, function(err, clientForm){
         if(err){
             res.send(err);
         }
         res.json(clientForm);
     })
+    } catch (err) {
+          res.status(500).send('Something broke!');
+    }
 })
 
 module.exports = router;

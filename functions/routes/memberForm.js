@@ -4,12 +4,20 @@ var bodyParser = require('body-parser')
 const getClient = require("../db"); 
 
 router.post('/memberForm', bodyParser.json(), async function(req, res, next){
-    db.memberForm.insert(req.body, function(err, memberForm){
+    try {
+        const client = await getClient();
+        const db = client.db("club-site");
+        const collection = db.collection("memberForm");
+      
+      collection.insert(req.body, function(err, memberForm){
         if(err){
             res.send(err);
         }
         res.json(memberForm);
     })
+    } catch (err) {
+          res.status(500).send('Something broke!');
+    }
 })
 
 module.exports = router;
