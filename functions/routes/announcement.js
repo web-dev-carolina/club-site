@@ -1,15 +1,23 @@
 var express = require('express');
 var router = express.Router();
-var mongojs = require('mongojs')
-var db = mongojs('mongodb+srv://cnell:0nYzjTCvuLi23pkU@cluster0.tak5v.mongodb.net/club-site?retryWrites=true&w=majority', ['announcements']);
+const getClient = require("../db"); 
 
-router.get('/announcements', function(req, res, next){
-    db.announcements.find(function(err, announcements){
+router.get('/announcements', async function(req, res, next){
+    try {
+        const client = await getClient();
+        const db = client.db("club-site");
+        const collection = db.collection("announcements");
+      
+      collection.find({}).toArray((err, data) => {
         if(err){
-            res.send(err);
+          res.send(err);
         }
-        res.json(announcements);
-    })
+        res.send(data);
+      });    
+    } catch (err) {
+          res.status(500).send('Something broke!');
+    }
+
 })
 
 module.exports = router;

@@ -2,10 +2,10 @@ const functions = require('firebase-functions');
 var express = require('express')
 var path = require('path')
 var bodyParser = require('body-parser')
+var cors = require('cors')
 var port = 3000;
 
 var app = express()
-var router = express.Router();
 
 var projects = require('./routes/project')
 var announcements = require('./routes/announcement')
@@ -38,5 +38,23 @@ app.use('/api', generalForm)
 app.listen(port, function(){
     console.log("Server started on port" + port)
 })
+
 exports.app = functions.https.onRequest(app);
 
+
+
+
+/*
+
+try {
+    const client = await getClient();
+    const db = client.db("club-site");
+    const collection = db.collection("announcements");
+  
+  collection.find({}).toArray((err, data) => {
+    res.send(data);
+  });    
+} catch (err) {
+      res.status(500).send('Something broke!');
+}
+*/

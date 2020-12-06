@@ -1,10 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var mongojs = require('mongojs')
-var db = mongojs('mongodb+srv://cnell:0nYzjTCvuLi23pkU@cluster0.tak5v.mongodb.net/club-site?retryWrites=true&w=majority', ['generalForm'])
 var bodyParser = require('body-parser')
+const getClient = require("../db"); 
 
-router.post('/generalForm', bodyParser.json(), function(req, res, next){
+router.post('/generalForm', bodyParser.json(), async function(req, res, next){
     db.generalForm.insert(req.body, function(err, generalForm){
         if(err){
             res.send(err);
