@@ -107,6 +107,26 @@ export class ContactUsComponent implements AfterContentInit {
         } else {
           this.setInputClass(message, 'form-control is-valid');
         }
+        if (!serviceButtonsVal) {
+          if (!document.getElementById('divBad')){
+            const div = document.createElement('div');
+            const del = document.createElement('button');
+            const span = document.createElement('span');
+            div.setAttribute('class', 'alert alert-danger alert-dismissible fade show');
+            div.setAttribute('id', 'divBad');
+            div.innerHTML = 'Please select a service.';
+            del.setAttribute('type', 'button');
+            del.setAttribute('class', 'close');
+            del.setAttribute('data-dismiss', 'alert');
+            del.setAttribute('aria-label', 'Close');
+            del.setAttribute('id', 'delNoti');
+            span.setAttribute('aria-hidden', 'true');
+            span.innerHTML = '&times;';
+            del.appendChild(span);
+            div.appendChild(del);
+            document.getElementById('clientForm').appendChild(div);
+          }
+        }
         if (nameVal.length !== 0 && businessVal.length !== 0 && emailVal.length !== 0 &&
             messageVal.length !== 0 && serviceButtonsVal !== false){
           const resp = this.clientFormService.postForm(nameVal, businessVal, emailVal, messageVal, serviceButtonsId);
