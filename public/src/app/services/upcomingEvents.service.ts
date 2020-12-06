@@ -9,6 +9,6 @@ export class UpcomingEventsService {
 
   // tslint:disable-next-line:typedef
   getUpcomingEvents(){
-     return this.http.get('https://us-central1-home-c6ab1.cloudfunctions.net/api/upcomingEvents');
+     return this.http.get('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/upcomingEvents');
   }
 }
