@@ -59,7 +59,7 @@ input, textarea {
   border-radius: 10%;
 }
 
-.focus {
+.active {
   background-color:#945DA6;
   color: white;
 }

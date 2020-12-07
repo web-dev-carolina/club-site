@@ -17,7 +17,21 @@ export class ContactUsComponent implements AfterContentInit {
     window.addEventListener('click', (e) => {
       e.preventDefault();
       const id = (e.target as HTMLElement).id;
-      if (id === 'memberSubmit'){
+      const clas = (e.target as HTMLElement).getAttribute('class');
+      if (clas.includes('serviceBtn')){
+        const btns = document.getElementsByClassName('serviceBtn');
+        Array.from(btns).forEach((element) => {
+          if (element.id !== id){
+            if (element.id === 'build'){
+              element.setAttribute('class', 'btn mr-2 serviceBtn');
+            } else if (element.id === 'redesign'){
+              element.setAttribute('class', 'btn serviceBtn');
+            } else {
+              element.setAttribute('class', 'btn ml-2 serviceBtn');
+            }
+          }
+        });
+      } else if (id === 'memberSubmit'){
         const firstName = (document.getElementById('inputFirstName') as HTMLInputElement);
         const firstNameVal = firstName.value;
         const lastName = (document.getElementById('inputLastName') as HTMLInputElement);
@@ -82,7 +96,8 @@ export class ContactUsComponent implements AfterContentInit {
         let serviceButtonsVal = false;
         let serviceButtonsId = '';
         Array.from(serviceButtons).forEach((element) => {
-          if (element.getAttribute('class').includes('true')) {
+          console.log(element.getAttribute('class'));
+          if (element.getAttribute('class').includes('active')) {
             serviceButtonsVal = true;
             serviceButtonsId = element.getAttribute('id');
           }
