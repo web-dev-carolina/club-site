@@ -96,7 +96,6 @@ export class ContactUsComponent implements AfterContentInit {
         let serviceButtonsVal = false;
         let serviceButtonsId = '';
         Array.from(serviceButtons).forEach((element) => {
-          console.log(element.getAttribute('class'));
           if (element.getAttribute('class').includes('active')) {
             serviceButtonsVal = true;
             serviceButtonsId = element.getAttribute('id');
