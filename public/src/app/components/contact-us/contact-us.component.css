@@ -82,6 +82,7 @@ input, textarea {
   text-align: left;
   background-color: white;
   padding: 5%;
+  border-radius: 25px;
 }
 
 .contact {
