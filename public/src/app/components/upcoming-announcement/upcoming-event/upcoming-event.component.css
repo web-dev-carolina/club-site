@@ -1,5 +1,6 @@
 #eventDate {
     background-color: #5262AD;
+    border-radius: 20px;
 }
 
 #day {
@@ -13,15 +14,13 @@
 }
 
 #month {
+    align-items: center;
+    text-align: center;
     font-family: Lato;
     font-style: normal;
     font-weight: 500;
     font-size: 28px;
     line-height: 38px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    
     color: #FFFFFF;
 }
 
