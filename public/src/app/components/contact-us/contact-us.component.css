@@ -87,3 +87,17 @@ body {
   background-color: #944781;
   color: white;
 }
+
+.icon {
+  color: rgb(65,76,157);
+  font-size: 150%;
+}
+
+.typeIcon {
+  font-size: 240%;
+  color: black;
+}
+
+#memberImg {
+  color: rgb(65,76,157);
+}

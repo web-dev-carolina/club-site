@@ -8,7 +8,7 @@
     font-family: Lato;
     font-style: normal;
     font-weight: bold;
-    font-size: 45px;
+    font-size: 30px;
     color: #FFFFFF;
 }
 
@@ -16,11 +16,17 @@
     font-family: Lato;
     font-style: normal;
     font-weight: 500;
-    font-size: 40px;
+    font-size: 28px;
     line-height: 38px;
     display: flex;
     align-items: center;
     text-align: center;
     
     color: #FFFFFF;
+}
+
+.event {
+    background-color: #FFFFFF;
+    border: 2px solid #5262AD;
+    border-radius: 5px;
 }

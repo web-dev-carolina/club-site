@@ -28,3 +28,8 @@
   position: relative;
   top: 12px;
 }
+
+.pillar {
+  color: rgb(128,70,149);
+  font-size: 60px;
+}

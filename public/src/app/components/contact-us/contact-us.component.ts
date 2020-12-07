@@ -13,10 +13,10 @@ export class ContactUsComponent implements AfterContentInit {
   constructor(private memberFormService: MemberFormService,
               private clientFormService: ClientFormService,
               private generalFormService: GeneralFormService){
-    this.state = 'potenital member';
+    this.state = 'potential member';
     window.addEventListener('click', (e) => {
       e.preventDefault();
-      const id = (event.target as HTMLElement).id;
+      const id = (e.target as HTMLElement).id;
       if (id === 'memberSubmit'){
         const firstName = (document.getElementById('inputFirstName') as HTMLInputElement);
         const firstNameVal = firstName.value;
@@ -209,22 +209,22 @@ export class ContactUsComponent implements AfterContentInit {
   ngAfterContentInit(): void{
     window.onload = () => {
       document.getElementById('potentialMemberLink').onclick = () => {
-        this.state = 'potenital member';
-        document.getElementById('memberImg').setAttribute('src', 'assets/images/members.png');
-        document.getElementById('clientImg').setAttribute('src', 'assets/images/Client.png');
-        document.getElementById('generalImg').setAttribute('src', 'assets/images/questions.png');
+        this.state = 'potential member';
+        document.getElementById('memberImg').setAttribute('style', 'color: rgb(65,76,157)');
+        document.getElementById('clientImg').setAttribute('style', 'color: black');
+        document.getElementById('generalImg').setAttribute('style', 'color: black');
       };
       document.getElementById('potentialClientLink').onclick = () => {
         this.state = 'potential client';
-        document.getElementById('clientImg').setAttribute('src', 'assets/images/ClickedClient.png');
-        document.getElementById('memberImg').setAttribute('src', 'assets/images/UnclickedMember.png');
-        document.getElementById('generalImg').setAttribute('src', 'assets/images/questions.png');
+        document.getElementById('clientImg').setAttribute('style', 'color: rgb(65,76,157)');
+        document.getElementById('memberImg').setAttribute('style', 'color: black');
+        document.getElementById('generalImg').setAttribute('style', 'color: black');
       };
       document.getElementById('generalLink').onclick = () => {
         this.state = 'general';
-        document.getElementById('generalImg').setAttribute('src', 'assets/images/ClickedGeneral.png');
-        document.getElementById('memberImg').setAttribute('src', 'assets/images/UnclickedMember.png');
-        document.getElementById('clientImg').setAttribute('src', 'assets/images/Client.png');
+        document.getElementById('generalImg').setAttribute('style', 'color: rgb(65,76,157)');
+        document.getElementById('memberImg').setAttribute('style', 'color: black');
+        document.getElementById('clientImg').setAttribute('style', 'color: black');
       };
     };
   }

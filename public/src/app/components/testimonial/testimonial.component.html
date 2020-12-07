@@ -1,3 +1,8 @@
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+</head>
+
 <a name="testimonials"></a>
 <div id="offContainer" class="container-fluid">
   <h1 class="title text-center">Testimonials</h1>
@@ -11,7 +16,7 @@
         <div class="carousel-item active">
           <div id="crd" class="testimonial card w-25">
             <div class="card-body">
-              <img src="assets/images/quote.png">
+              <i class="fas fa-quote-left"></i>
               <p class="card-text">This is an example testimonial. Here is some text to fill in where someone will put words. I hope this is long enough now.</p>
               <h4 class="card-title"><strong>Christian Nell</strong></h4>
             </div>
@@ -20,7 +25,7 @@
         <div *ngFor="let testimonial of testimonials" class="carousel-item">
           <div id="crd" class="testimonial card w-25">
             <div class="card-body">
-              <img src="assets/images/quote.png">
+              <i class="fas fa-quote-left"></i>
               <p class="card-text">{{testimonial.body}}</p>
               <h4 class="card-title"><strong>{{testimonial.title}}</strong></h4>
             </div>

@@ -20,9 +20,9 @@
             <p class="subtitle">Our social channels</p>
             
             <div class="row mb-4">
-              <div class="col col-lg-2">
+              <div class="col col-lg-2 icon">
                 <a onclick="window.open('https://www.instagram.com/webdevcarolina/', '_blank')" target="_blank">
-                  <img src="assets/images/insta.png">
+                  <i class="fab fa-instagram"></i>
                 </a>
               </div>
               <div class="col-md-auto">
@@ -31,20 +31,20 @@
             </div>
             
             <div class="row mb-4">
-              <div class="col col-lg-2">
+              <div class="col col-lg-2 icon">
                 <a onclick="window.open('https://www.linkedin.com/company/web-dev-carolina/', '_blank')" target="_blank">
-                  <img src="assets/images/linkedin.png">
+                  <i class="fab fa-linkedin"></i>
                 </a>
               </div>
               <div class="col-md-auto">
-                <p id="contactLink">https://www.linkedin.com/company/web-dev-carolina/</p>
+                <p id="contactLink">linkedin.com/company/web-dev-carolina/</p>
               </div>
             </div>
             
             <div class="row mb-4">
-              <div class="col col-lg-2">
+              <div class="col col-lg-2 icon">
                 <a onclick="window.open('https://github.com/web-dev-carolina', '_blank')" target="_blank">
-                  <img src="assets/images/github.png">
+                  <i class="fab fa-github"></i>
                 </a>
               </div>
               <div class="col-md-auto">
@@ -53,9 +53,9 @@
             </div>
             
             <div class="row mb-4">
-              <div class="col col-lg-2">
+              <div class="col col-lg-2 icon">
                 <a href="mailto:webdevcarolina@gmail.com">
-                  <img src="assets/images/email.png">
+                  <i class="far fa-envelope"></i>
                 </a>
               </div>
               <div class="col-md-auto">
@@ -69,28 +69,31 @@
         <div class="col-lg mt-5">
           <div class="row justify-content-center mb-5">
             <div class="col">
-              <a class="contact-icon" id="potentialMemberLink">
-                <img id="memberImg" src="assets/images/members.png">
+              <a class="contact-icon down" id="potentialMemberLink">
+                <div class="typeIcon" >
+                <i class="fas fa-user-graduate" id="memberImg"></i></div>
                 <div>Potential Member</div>
               </a>
             </div>
             
             <div class="col">
               <a class="contact-icon down" id="potentialClientLink">
-                <img id="clientImg" src="assets/images/Client.png">
+                <div class="typeIcon">
+                <i class="fas fa-briefcase" id="clientImg"></i></div>
                 <div>Potential Client</div>
               </a>
             </div>
             
             <div class="col">
               <a class="contact-icon down" id="generalLink">
-                <img id="generalImg" src="assets/images/questions.png">
+                <div class="typeIcon">
+                <i class="far fa-question-circle" id="generalImg"></i></div>
                 <div>General Inquires</div>
               </a>
             </div>
           </div>
 
-          <form *ngIf="this.state == 'potenital member' || this.state == ''" id='memberForm' class="contact-form">
+          <form *ngIf="this.state == 'potential member' || this.state == ''" id='memberForm' class="contact-form">
             <div class="form-group">
               <div class="row">
                 <div class="col-md-6">
