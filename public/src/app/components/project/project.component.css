@@ -107,3 +107,8 @@ body {
 .desc {
     font-size: 20px;
 }
+
+.icon {
+    color: rgb(65,76,157);
+    font-size: 150%;
+}
