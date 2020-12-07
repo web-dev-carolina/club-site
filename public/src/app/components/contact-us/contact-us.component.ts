@@ -82,7 +82,7 @@ export class ContactUsComponent implements AfterContentInit {
         let serviceButtonsVal = false;
         let serviceButtonsId = '';
         Array.from(serviceButtons).forEach((element) => {
-          if (element.getAttribute('aria-pressed') === 'true') {
+          if (element.getAttribute('class').includes('true')) {
             serviceButtonsVal = true;
             serviceButtonsId = element.getAttribute('id');
           }

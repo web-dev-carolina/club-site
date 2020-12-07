@@ -59,6 +59,11 @@ input, textarea {
   border-radius: 10%;
 }
 
+.focus {
+  background-color:#945DA6;
+  color: white;
+}
+
 .contact-icon {
   cursor: pointer;
 }
@@ -76,6 +81,7 @@ input, textarea {
 .contact-form {
   text-align: left;
   background-color: white;
+  padding: 5%;
 }
 
 .contact {
