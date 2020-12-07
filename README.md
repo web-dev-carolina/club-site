@@ -43,5 +43,26 @@ ng build --watch
 ```
 This will build what you have currently in the angular code and watch for changes and display them if you refresh.  
 
-## Deployment Process
-## License
+## Production Mode
+Run this command in the public directory to deploy the hosting.
+```bash
+firebase deploy
+```
+Run this command in the root directory to deploy the functions.
+```bash
+firebase deploy --only functions
+```
+Backend is deployed at the following url...
+```bash
+https://us-central1-home-c6ab1.cloudfunctions.net/app
+```
+Frontend is deploy at the following url...
+```bash
+https://webdevcarolina.com/
+```
+# Contributors
+
+## Christian Nell
+## Addison West
+## Tatiana Kelliher
+## Advaith Deo
