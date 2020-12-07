@@ -2,6 +2,10 @@ body {
   font-family: "Lato", sans-serif;
   text-align: center;
 }
+
+input, textarea {
+  border: 2px solid #5262AD;
+}
 .secondaryContainer {
   padding-left: 100px;
   text-align: left;
@@ -49,8 +53,10 @@ body {
   font-size: 17px;
 }
 
-#build, #redesign, #other {
-  background-color: #3844ad;
+.serviceBtn {
+  background-color: white;
+  border: 2px solid #5262AD;
+  border-radius: 10%;
 }
 
 .contact-icon {
@@ -69,6 +75,7 @@ body {
 
 .contact-form {
   text-align: left;
+  background-color: white;
 }
 
 .contact {
