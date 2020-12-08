@@ -33,3 +33,12 @@
   color: rgb(128,70,149);
   font-size: 60px;
 }
+
+.break {
+  width: 75%;
+  height: 10px;
+  border-radius: 5px;
+  background: -webkit-linear-gradient(right, #DD579E, #945DA6);
+  opacity: 0.75;
+  margin-bottom: 50px;
+}

@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container margin">
     <div class='announcement-list'>
-        <h2 class="text-center">Announcements</h2>
+        <h2 class="text-center title">Announcements</h2>
         <div class="container bg-secondary announcementsList">
             <div *ngFor="let announcement of announcements; last as isLast;">
                 <div *ngIf="isLast; then thenBlock else elseBlock"></div>
