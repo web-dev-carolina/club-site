@@ -16,10 +16,12 @@ import { ContactUsComponent } from './components/landing/contact-us/contact-us.c
 import { UpcomingAnnouncementComponent } from './components/landing/upcoming-announcement/upcoming-announcement.component';
 import { UpcomingEventComponent } from './components/landing/upcoming-announcement/upcoming-event/upcoming-event.component';
 import { FooterComponent } from './components/landing/footer/footer.component';
+import { LandingComponent } from './components/landing/landing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    LandingComponent,
     TopBarComponent,
     AnnouncementComponent,
     HomeComponent,
@@ -35,7 +37,7 @@ import { FooterComponent } from './components/landing/footer/footer.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    RouterModule.forRoot([{ path: '', component: HomeComponent }]),
+    RouterModule.forRoot([{ path: '', component: LandingComponent}]),
   ],
   providers: [],
   bootstrap: [AppComponent],
