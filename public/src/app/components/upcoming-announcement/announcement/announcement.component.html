@@ -2,11 +2,19 @@
     <div class='announcement-list'>
         <h2 class="text-center">Announcements</h2>
         <div class="container bg-secondary announcementsList">
-            <div *ngFor="let announcement of announcements">
-                <h3>{{announcement.title}}</h3>
-                <h6>{{announcement.date}}</h6>
-                <p>{{announcement.body}}</p>
-                <hr>
+            <div *ngFor="let announcement of announcements; last as isLast;">
+                <div *ngIf="isLast; then thenBlock else elseBlock"></div>
+                <ng-template #thenBlock>
+                    <h3>{{announcement.title}}</h3>
+                    <h6>{{announcement.date}}</h6>
+                    <p>{{announcement.body}}</p>
+                </ng-template>
+                <ng-template #elseBlock>
+                    <h3>{{announcement.title}}</h3>
+                    <h6>{{announcement.date}}</h6>
+                    <p>{{announcement.body}}</p>
+                    <hr>
+                </ng-template>
             </div>
         </div>
     </div>
