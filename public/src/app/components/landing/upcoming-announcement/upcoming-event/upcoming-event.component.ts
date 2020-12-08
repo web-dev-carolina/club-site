@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { UpcomingEventsService } from '../../../services/upcomingEvents.service';
-import { UpcomingEvent } from '../../../../UpcomingEvent';
+import { UpcomingEventsService } from '../../../../services/upcomingEvents.service';
+import { UpcomingEvent } from '../../../../../UpcomingEvent';
 
 @Component({
   selector: 'app-upcoming-event',
