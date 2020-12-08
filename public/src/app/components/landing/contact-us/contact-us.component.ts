@@ -1,7 +1,7 @@
 import { Component, AfterContentInit } from '@angular/core';
-import { MemberFormService } from '../../services/memberForm.service';
-import { ClientFormService } from '../../services/clientForm.service';
-import { GeneralFormService } from '../../services/generalForm.service';
+import { MemberFormService } from '../../../services/memberForm.service';
+import { ClientFormService } from '../../../services/clientForm.service';
+import { GeneralFormService } from '../../../services/generalForm.service';
 
 @Component({
   selector: 'app-contact-us',
