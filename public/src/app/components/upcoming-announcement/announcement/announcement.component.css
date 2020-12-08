@@ -1,7 +1,8 @@
 .announcementsList {
     background-color: #EFEFF6 !important;
-    border: 2px solid #5262AD;
+    /* border: 2px solid #5262AD; */
     border-radius: 30px;
+    padding: 2em;
 }
 
 hr {
