@@ -36,10 +36,13 @@ export class ContactUsComponent implements AfterContentInit {
             if (element.id !== id){
               if (element.id === 'build'){
                 element.setAttribute('class', 'btn mr-2 serviceBtn');
+                element.setAttribute('aria-pressed', 'false');
               } else if (element.id === 'redesign'){
                 element.setAttribute('class', 'btn serviceBtn');
+                element.setAttribute('aria-pressed', 'false');
               } else {
                 element.setAttribute('class', 'btn ml-2 serviceBtn');
+                element.setAttribute('aria-pressed', 'false');
               }
             } else {
                 if (element.id === 'build'){
