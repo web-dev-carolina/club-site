@@ -11,7 +11,7 @@ In the off chance that does not work, you may also try...
 ```bash
 npm update
 ```
-You may also need the Angular CLI. You can install this by typing this command in the my-app directory.
+You may also need the Angular CLI. You can install this by typing this command in the public directory.
 ```bash
 npm install -g @angular/cli
 ```
