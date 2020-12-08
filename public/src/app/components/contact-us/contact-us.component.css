@@ -115,3 +115,9 @@ input, textarea {
 #memberImg {
   color: rgb(65,76,157);
 }
+
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: 30px;
+  }
+}

@@ -71,8 +71,21 @@ a.left:hover:before {
     width: 100%;
 }
 
+#smallContact {
+    display: none;
+}
+
 @media screen and (min-width: 992px) {
     .title {margin-left: 100px;}
     .contact {margin-right: 100px;}
     #collapsibleNavbar {display: none !important;}
+}
+
+@media screen and (max-width: 576px) {
+    #largeContact {
+        display: none;
+    }
+    #smallContact {
+        display: inline-block;
+    }
 }

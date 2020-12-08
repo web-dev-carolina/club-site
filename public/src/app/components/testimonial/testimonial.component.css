@@ -68,3 +68,18 @@
   font-size: 150%;
   color: #BB5AA2;
 }
+
+@media screen and (max-width: 992px) and (min-width: 576px) {
+  #crd {
+    width: 50% !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #crd {
+    width: 75% !important;
+  }
+  .title {
+    font-size: 30px;
+  }
+}

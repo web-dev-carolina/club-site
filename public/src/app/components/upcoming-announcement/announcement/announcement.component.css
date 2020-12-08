@@ -19,3 +19,18 @@ hr {
     font-size: 40px;
     margin: 1em;
   }
+
+@media screen and (max-width: 576px) {
+    #blurb {
+        font-size: 160% !important;
+    }
+    .title {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #announcementsContainer {
+        margin-top: 0px !important;
+    }
+}

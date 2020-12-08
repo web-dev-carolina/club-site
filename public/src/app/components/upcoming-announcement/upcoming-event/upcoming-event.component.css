@@ -46,4 +46,60 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 40px;
     margin: 1em;
+}
+
+.break {
+    display: none;
+}
+
+@media screen and (max-width: 576px) {
+    .title {
+        font-size: 30px;
+    }
+    #day {
+        font-size: 33px;
+        line-height: 33px;
+        padding-top: 5px;
+    }
+    #month {
+        font-size: 25px;
+        line-height: 25px;
+    }
+    #eventDate {
+        line-height: 10px;
+    }
+    .eventInfo {
+        padding: 0px 20px !important;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    #day {
+        font-size: 33px;
+        line-height: 33px;
+        padding-top: 5px;
+    }
+    #month {
+        font-size: 25px;
+        line-height: 25px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #eventsContainer {
+        margin-top: 0px !important;
+    }
+    .break {
+        display: inline-block;
+    }
+}
+
+.break {
+    width: 75%;
+    height: 10px;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(right, #DD579E, #945DA6);
+    opacity: 0.75;
+    margin-bottom: 50px;
   }
+

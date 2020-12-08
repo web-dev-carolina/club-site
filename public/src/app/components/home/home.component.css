@@ -9,7 +9,7 @@
 }
 
 .bg-img::before {
-    content:'';
+    content: '';
     position: absolute;
     width: 100%;
     height: 100%;
@@ -48,4 +48,16 @@
 .contact:hover {
     background-color: #2F4193;
     color: white;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    #blurb {
+        font-size: 180% !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #blurb {
+        font-size: 160% !important;
+    }
 }

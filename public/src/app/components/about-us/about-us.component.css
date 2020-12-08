@@ -42,3 +42,9 @@
   opacity: 0.75;
   margin-bottom: 50px;
 }
+
+@media screen and (max-width: 576px) {
+  .title {
+      font-size: 30px;
+  }
+}
