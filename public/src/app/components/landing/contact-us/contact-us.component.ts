@@ -1,7 +1,7 @@
 import { Component, AfterContentInit } from '@angular/core';
-import { MemberFormService } from '../../services/memberForm.service';
-import { ClientFormService } from '../../services/clientForm.service';
-import { GeneralFormService } from '../../services/generalForm.service';
+import { MemberFormService } from '../../../services/memberForm.service';
+import { ClientFormService } from '../../../services/clientForm.service';
+import { GeneralFormService } from '../../../services/generalForm.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -19,18 +19,45 @@ export class ContactUsComponent implements AfterContentInit {
       const id = (e.target as HTMLElement).id;
       const clas = (e.target as HTMLElement).getAttribute('class');
       if (clas.includes('serviceBtn')){
-        const btns = document.getElementsByClassName('serviceBtn');
-        Array.from(btns).forEach((element) => {
-          if (element.id !== id){
-            if (element.id === 'build'){
-              element.setAttribute('class', 'btn mr-2 serviceBtn');
-            } else if (element.id === 'redesign'){
-              element.setAttribute('class', 'btn serviceBtn');
-            } else {
-              element.setAttribute('class', 'btn ml-2 serviceBtn');
-            }
+        if ((e.target as HTMLElement).getAttribute('aria-pressed') === 'true') {
+          if (id === 'build'){
+            (e.target as HTMLElement).setAttribute('class', 'btn mr-2 serviceBtn');
+            (e.target as HTMLElement).setAttribute('aria-pressed', 'false');
+          } else if (id === 'redesign'){
+            (e.target as HTMLElement).setAttribute('class', 'btn serviceBtn');
+            (e.target as HTMLElement).setAttribute('aria-pressed', 'false');
+          } else {
+            (e.target as HTMLElement).setAttribute('class', 'btn ml-2 serviceBtn');
+            (e.target as HTMLElement).setAttribute('aria-pressed', 'false');
           }
-        });
+        } else {
+          const btns = document.getElementsByClassName('serviceBtn');
+          Array.from(btns).forEach((element) => {
+            if (element.id !== id){
+              if (element.id === 'build'){
+                element.setAttribute('class', 'btn mr-2 serviceBtn');
+                element.setAttribute('aria-pressed', 'false');
+              } else if (element.id === 'redesign'){
+                element.setAttribute('class', 'btn serviceBtn');
+                element.setAttribute('aria-pressed', 'false');
+              } else {
+                element.setAttribute('class', 'btn ml-2 serviceBtn');
+                element.setAttribute('aria-pressed', 'false');
+              }
+            } else {
+                if (element.id === 'build'){
+                  element.setAttribute('class', 'btn active mr-2 serviceBtn');
+                  element.setAttribute('aria-pressed', 'true');
+                } else if (element.id === 'redesign'){
+                  element.setAttribute('class', 'btn active serviceBtn');
+                  element.setAttribute('aria-pressed', 'true');
+                } else {
+                  element.setAttribute('class', 'btn active ml-2 serviceBtn');
+                  element.setAttribute('aria-pressed', 'true');
+                }
+            }
+          });
+        }
       } else if (id === 'memberSubmit'){
         const firstName = (document.getElementById('inputFirstName') as HTMLInputElement);
         const firstNameVal = firstName.value;

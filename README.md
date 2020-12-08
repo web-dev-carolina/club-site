@@ -3,7 +3,7 @@
 This website aims to take advantage of the MEAN stack to showcase our organization's projects and community engagement. For styling, we are using bootstrap and our own custom CSS to create a personalized and interactive website.
 
 ## Initial setup
-Use npm to install dependencies (make sure you do so in the club-site directory and the my-app directory). 
+Use npm to install dependencies (make sure you do so in the public directory and the functions directory). 
 ```bash
 npm install
 ```
