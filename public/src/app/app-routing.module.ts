@@ -8,13 +8,13 @@ import { LoggedInComponent } from './components/logged-in/logged-in.component';
 
 const routes: Routes = [
   {path: '**', redirectTo: 'landing'},
-  {path: 'landing', component: LandingComponent, children: [{path: '', component: SinglePComponent},
+  {path: '', component: LandingComponent, children: [{path: '', component: SinglePComponent},
     {path: 'login', component: LoginComponent}]},
   {path: 'loggedIn', component: LoggedInComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
