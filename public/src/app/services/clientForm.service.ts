@@ -15,6 +15,6 @@ export class ClientFormService {
   }
   // tslint:disable-next-line:typedef
   getForms(){
-    return this.http.get('https://us-central1-home-c6ab1.cloudfunctions.net/app/clientForm');
+    return this.http.get('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/clientForm');
   }
 }
