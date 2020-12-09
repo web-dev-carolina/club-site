@@ -4,7 +4,6 @@ const getClient = require("../db");
 
 router.get('/upcomingEvents', async function(req, res, next){
     try {
-        res.header('Access-Control-Allow-Origin', '*');
         const client = await getClient();
         const db = client.db("club-site");
         const collection = db.collection("upcomingEvents");
