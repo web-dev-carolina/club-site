@@ -8,7 +8,6 @@ router.post('/login', bodyParser.json(), async (req,res) => {
     let user = req.body.user;
     let password = req.body.password;
     let user_data;
-    console.log(req.body);
     const client = await getClient();
     const db = client.db("club-site");
     const collection = db.collection("users");

@@ -1,22 +1,21 @@
 // Angular Imports
 import { NgModule } from '@angular/core';
-
-// This Module's Components
-import { LoginComponent } from './login.component';
 import { RouterModule } from '@angular/router';
 
+// This Module's Components
+import { TopBarLoggedInComponent } from './top-bar-logged-in.component';
 
 @NgModule({
     imports: [
         RouterModule
     ],
     declarations: [
-        LoginComponent,
+        TopBarLoggedInComponent,
     ],
     exports: [
-        LoginComponent,
+        TopBarLoggedInComponent,
     ]
 })
-export class LoginModule {
+export class TopBarLoggedInModule {
 
 }
