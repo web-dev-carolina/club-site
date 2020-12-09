@@ -1,10 +1,42 @@
-<p>Home</p><br>
-<p>Home</p><br>
-<p>Home</p><br>
-<p>Home</p><br>
-<p>Home</p><br>
-<p>Home</p><br>
-<a routerLink='/loggedIn/admin/create'>Create</a><br>
-<a routerLink='/loggedIn/admin/inquiries'>Inquiries</a><br>
-<a routerLink='/loggedIn/admin/members'>Members</a><br>
-<a routerLink='/loggedIn/admin/projects'>Projects</a>
+<div class="dashboard">
+
+    <h1 class="title">Hi, Addison.</h1>
+    <h3 class="subtitle">What would you like to work on?</h3>
+
+    <div class="tiles">
+
+        <a routerLink='/loggedIn/admin/create' class="tile">
+            <i class="fas fa-edit"></i>
+            <h3 class="subtitle">Create</h3>
+            <p>
+                Add announcements, upcoming events, or testimonials to the site.
+            </p>
+        </a>
+
+        <a routerLink='/loggedIn/admin/inquiries' class="tile">      
+            <i class="far fa-question-circle"></i>
+            <h3 class="subtitle">Inquiries</h3>
+            <p>
+                View, edit, or delete inquiry forms from students or clients.
+            </p>
+        </a>
+
+        <a routerLink='/loggedIn/admin/members' class="tile">
+            <i class="fas fa-user-graduate"></i>
+            <h3 class="subtitle">Members</h3>
+            <p>
+                Add or remove current members. Add or remove current members.
+            </p>
+        </a>
+
+        <a routerLink='/loggedIn/admin/projects' class="tile">
+            <i class="fas fa-code"></i>
+            <h3 class="subtitle">Projects</h3>
+            <p>
+                Add, edit, or remove existing projects. Add or remove current members.
+            </p>
+        </a>
+
+    </div>
+    
+</div>
