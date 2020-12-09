@@ -21,6 +21,7 @@ import { LoginComponent } from './components/landing/login/login.component';
 import { LoggedInComponent } from './components/logged-in/logged-in.component';
 import { TopBarLoggedInComponent } from './components/logged-in/top-bar-logged-in/top-bar-logged-in.component';
 import { CreateComponent } from './components/logged-in/create/create.component';
+import { HomeLoggedComponent } from './components/logged-in/home-logged/home-logged.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { CreateComponent } from './components/logged-in/create/create.component'
     LoggedInComponent,
     LoginComponent,
     TopBarLoggedInComponent,
-    CreateComponent
+    CreateComponent,
+    HomeLoggedComponent
   ],
   imports: [
     BrowserModule,

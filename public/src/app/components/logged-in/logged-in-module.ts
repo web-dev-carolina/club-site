@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { LoggedInComponent } from './logged-in.component';
 import { TopBarLoggedInComponent } from './top-bar-logged-in/top-bar-logged-in.component';
 import { CreateComponent } from './create/create.component';
+import { HomeLoggedComponent } from './home-logged/home-logged.component';
 
 @NgModule({
     imports: [
@@ -18,7 +19,8 @@ import { CreateComponent } from './create/create.component';
     declarations: [
         LoggedInComponent,
         TopBarLoggedInComponent,
-        CreateComponent
+        CreateComponent,
+        HomeLoggedComponent
     ],
     exports: [
         LoggedInComponent,
