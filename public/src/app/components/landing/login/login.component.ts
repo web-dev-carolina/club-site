@@ -32,7 +32,7 @@ export class LoginComponent {
                         span.innerHTML = '&times;';
                         del.appendChild(span);
                         div.appendChild(del);
-                        document.getElementById('loginForm').appendChild(div);
+                        document.getElementById('loginForm').append(div);
                     }
                     return;
                 }
