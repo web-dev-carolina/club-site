@@ -3,6 +3,29 @@
 <p>Inquiries</p><br>
 <p>Inquiries</p><br>
 <p>Inquiries</p><br>
-<ng-container *ngFor="let memberForm of memberForms">
-    <p>{{memberForm.firstName}}</p>
+<div class="row">
+    <button id="memberForm" type="button" class="formToggle btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+        Member Form
+    </button>
+    <button id="clientForm" type="button" class="formToggle btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+        Client Form
+    </button>
+    <button id="generalForm" type="button" class="formToggle btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+        General Form
+    </button>
+</div>
+<ng-container *ngIf="this.display === 'memberForm'">
+    <ng-container *ngFor="let memberForm of memberForms">
+        <p>{{memberForm.firstName}}</p>
+    </ng-container>
+</ng-container>
+<ng-container *ngIf="this.display === 'clientForm'">
+    <ng-container *ngFor="let clientForm of clientForms">
+        <p>{{clientForm.name}}</p>
+    </ng-container>
+</ng-container>
+<ng-container *ngIf="this.display === 'generalForm'">
+    <ng-container *ngFor="let generalForm of generalForms">
+        <p>{{generalForm.name}}</p>
+    </ng-container>
 </ng-container>
