@@ -16,11 +16,11 @@ const routes: Routes = [
   {path: '**', redirectTo: 'landing'},
   {path: '', component: LandingComponent, children: [{path: '', component: SinglePComponent},
     {path: 'signIn', component: LoginComponent}]},
-  {path: 'loggedIn', component: LoggedInComponent, children: [{path: 'admin', children: [
-    {path: '**', redirectTo: 'home', pathMatch: 'full'},
-    {path: '', redirectTo: 'home', pathMatch: 'full'},
-    {path: 'home', component: AdminComponent, children: [{path: '', component: HomeLoggedComponent}]}
-  ]}]}
+  {path: 'loggedIn', component: LoggedInComponent, children: [{path: 'admin', component: AdminComponent, children: [
+    {path: '**', redirectTo: 'home', pathMatch: 'full'}, {path: '', redirectTo: 'home', pathMatch: 'full'},
+    {path: 'home', component: HomeLoggedComponent}, {path: 'create', component: CreateComponent},
+    {path: 'inquiries', component: InquiriesComponent}, {path: 'members', component: MembersComponent},
+    {path: 'projects', component: ProjectsLoggedComponent}]}]}
 ];
 
 @NgModule({
