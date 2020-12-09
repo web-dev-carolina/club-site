@@ -8,7 +8,6 @@ var port = 3000;
 
 var app = express()
 const cors_options = {
-    origin: 'http://webdevcarolina.com',
     credentials: true
 }
 app.use(cors(cors_options));
