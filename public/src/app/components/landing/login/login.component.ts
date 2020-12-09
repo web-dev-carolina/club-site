@@ -14,7 +14,24 @@ export class LoginComponent {
                 const inputPass = (document.getElementById('passwordInput') as HTMLInputElement).value;
                 const resp = await this.loginService.login(inputUser, inputPass);
                 if (!resp){
-                    console.log('bad login');
+                    if (!document.getElementById('divBad')){
+                        const div = document.createElement('div');
+                        const del = document.createElement('button');
+                        const span = document.createElement('span');
+                        div.setAttribute('class', 'alert alert-danger alert-dismissible fade show');
+                        div.setAttribute('id', 'divBad');
+                        div.innerHTML = 'Invalid credentials.';
+                        del.setAttribute('type', 'button');
+                        del.setAttribute('class', 'close');
+                        del.setAttribute('data-dismiss', 'alert');
+                        del.setAttribute('aria-label', 'Close');
+                        del.setAttribute('id', 'delNoti');
+                        span.setAttribute('aria-hidden', 'true');
+                        span.innerHTML = '&times;';
+                        del.appendChild(span);
+                        div.appendChild(del);
+                        document.getElementById('loginForm').appendChild(div);
+                    }
                     return;
                 }
                 console.log('good login');
