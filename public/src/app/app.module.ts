@@ -19,6 +19,7 @@ import { FooterComponent } from './components/landing/single-page/footer/footer.
 import { LandingComponent } from './components/landing/landing.component';
 import { LoginComponent } from './components/landing/login/login.component';
 import { LoggedInComponent } from './components/logged-in/logged-in.component';
+import { TopBarLoggedInComponent } from './components/logged-in/top-bar-logged-in/top-bar-logged-in.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { LoggedInComponent } from './components/logged-in/logged-in.component';
     UpcomingEventComponent,
     FooterComponent,
     LoggedInComponent,
-    LoginComponent
+    LoginComponent,
+    TopBarLoggedInComponent
   ],
   imports: [
     BrowserModule,

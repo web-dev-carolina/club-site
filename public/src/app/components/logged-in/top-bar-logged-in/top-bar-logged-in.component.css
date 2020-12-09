@@ -1,0 +1,91 @@
+nav a {
+    text-decoration: none;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    background: -webkit-linear-gradient(right, #DD579E, #945DA6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-style {
+    color: black;
+    font-family: 'Lato', sans-serif;
+    margin: 25px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-link:hover {
+    color: black;
+}
+
+.nav-gutter {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.contact {
+    font-family: 'Lato', sans-serif;
+    background-color: #5262AD;
+    color: white;
+    border: none;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 25px;
+}
+
+.contact:hover {
+    background-color: #2F4193;
+    color: white;
+}
+
+a.left {
+    position: relative;
+    color: black;
+    text-decoration: none;
+}
+
+a.left:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 4px;
+  bottom: -5px;
+  left: 0;
+  background: -webkit-linear-gradient(right, #DD579E, #945DA6);
+  -webkit-fill-color: transparent;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+a.left:hover:before {
+    visibility: visible;
+    width: 100%;
+}
+
+#smallContact {
+    display: none;
+}
+
+@media screen and (min-width: 992px) {
+    .title {margin-left: 100px;}
+    .contact {margin-right: 100px;}
+    #collapsibleNavbar {display: none !important;}
+}
+
+@media screen and (max-width: 576px) {
+    #largeContact {
+        display: none;
+    }
+    #smallContact {
+        display: inline-block;
+    }
+}
