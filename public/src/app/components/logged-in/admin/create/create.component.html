@@ -6,10 +6,6 @@
 <p>Create</p><br>
 <p>Create</p><br>
 <p>Create</p><br>
-<p>Create</p><br>
-<p>Create</p><br>
-<p>Create</p><br>
-<p>Create</p><br>
-<p>Create</p><br>
-<p>Create</p><br>
-<p>Create</p><br>
+<ng-container *ngFor="let upcomingEvent of upcomingEvents">
+    <p>{{upcomingEvent.title}}</p>
+</ng-container>
