@@ -8,7 +8,9 @@ export class LoginService {
   }
 
   // tslint:disable-next-line:typedef
-  login(user, password){
-     return this.http.get('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/login');
+  login(u, p){
+    console.log(u, p);
+    return this.http.post('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/login',
+    {user: u, password: p}).toPromise();
   }
 }

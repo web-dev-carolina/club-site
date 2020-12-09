@@ -10,7 +10,10 @@ export class LoginComponent {
     constructor(private loginService: LoginService){
         window.addEventListener('click', (e) => {
             if ((e.target as HTMLElement).id === 'submitLogin'){
-                console.log('here');
+                const inputUser = (document.getElementById('usernameInput') as HTMLInputElement).value;
+                const inputPass = (document.getElementById('passwordInput') as HTMLInputElement).value;
+                const resp = this.loginService.login(inputUser, inputPass);
+                console.log(resp);
             }
         });
     }
