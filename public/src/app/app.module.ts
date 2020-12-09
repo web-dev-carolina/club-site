@@ -19,6 +19,7 @@ import { UpcomingEventComponent } from './components/landing/single-page/upcomin
 import { FooterComponent } from './components/landing/single-page/footer/footer.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { LoginComponent } from './components/landing/login/login.component';
+import { LoggedInComponent } from './components/logged-in/logged-in.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { LoginComponent } from './components/landing/login/login.component';
     ContactUsComponent,
     UpcomingAnnouncementComponent,
     UpcomingEventComponent,
-    FooterComponent
+    FooterComponent,
+    LoggedInComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,7 @@ import { LoginComponent } from './components/landing/login/login.component';
     AppRoutingModule,
     RouterModule.forRoot([
       { path: '', component: LandingComponent},
-      { path: 'login', component: LoginComponent}]),
+      { path: 'logged-in', component: LoggedInComponent}]),
   ],
   providers: [],
   bootstrap: [AppComponent],
