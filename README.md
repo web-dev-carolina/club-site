@@ -63,6 +63,7 @@ https://webdevcarolina.com/
 # Contributors
 
 - Christian Nell (Project Lead)
-- Addison West (Frontend Lead)
+- Addison West (Frontend Lead)  
+- Rushil Shah
 - Tatiana Kelliher 
 - Advaith Deo
