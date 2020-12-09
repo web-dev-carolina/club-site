@@ -22,6 +22,9 @@ import { LoggedInComponent } from './components/logged-in/logged-in.component';
 import { TopBarLoggedInComponent } from './components/logged-in/top-bar-logged-in/top-bar-logged-in.component';
 import { CreateComponent } from './components/logged-in/create/create.component';
 import { HomeLoggedComponent } from './components/logged-in/home-logged/home-logged.component';
+import { InquiriesComponent } from './components/logged-in/inquiries/inquiries.component';
+import { MembersComponent } from './components/logged-in/members/members.component';
+import { ProjectsLoggedComponent } from './components/logged-in/projects-logged/projects-logged.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { HomeLoggedComponent } from './components/logged-in/home-logged/home-log
     LoginComponent,
     TopBarLoggedInComponent,
     CreateComponent,
-    HomeLoggedComponent
+    HomeLoggedComponent,
+    InquiriesComponent,
+    MembersComponent,
+    ProjectsLoggedComponent
   ],
   imports: [
     BrowserModule,
