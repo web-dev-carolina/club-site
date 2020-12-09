@@ -1,19 +1,27 @@
-<div class="loginSection">
-    <div class="signInContain container">
+<body>
+  
+  <div class="signInContain container-fluid">
+    <div class="text-center">
       <img src="assets/images/circle-logo.png" width="150" height="150">
-      <h1 class="hero-content" id="blurb">
+      <h1 class="title" id="blurb">
         Sign In
       </h1>
-      <div id="loginForm" class="form">
-        <div class="row">
-          <input id="usernameInput" class="input" type="text">
-        </div>
-        <div class="row">
-          <input id="passwordInput" class="input" type="text">
-        </div>
-        <div class="row">
-          <button id="submitLogin"></button>
-        </div>
-      </div>
     </div>
-</div> 
+  
+    <div class="d-flex justify-content-center">
+      <form class="form">
+        <div class="form-group">
+          <label for="usernameInput" class="text-muted">Username</label>
+          <input class="form-control form-custom" id="usernameInput">
+        </div>
+        <div class="form-group">
+          <label for="passwordInput" class="text-muted">Password</label>
+          <input class="form-control form-custom" id="passwordInput">
+        </div>
+        <button type="submit" class="btn submit" id="submitLogin">Submit</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+
