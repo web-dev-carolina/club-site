@@ -15,9 +15,11 @@ export class CreateComponent {
     upcomingEvents: UpcomingEvent[];
     announcements: Announcement[];
     testimonials: Testimonial[];
+    display: string;
 
     constructor(private upcomingEventService: UpcomingEventsService, private annoucementService: AnnouncementService,
                 private testimonialService: TestimonialService) {
+      this.display = 'upcomingEvent';
       this.upcomingEventService.getUpcomingEvents().subscribe((upcomingEvents: any[]) => {
         this.upcomingEvents = upcomingEvents;
       });
@@ -26,6 +28,20 @@ export class CreateComponent {
       });
       this.testimonialService.getTestimonials().subscribe((testimonials: any[]) => {
         this.testimonials = testimonials;
+      });
+      window.addEventListener('click', (e) => {
+        const element = (e.target as HTMLElement);
+        const clas = element.getAttribute('class');
+        const id = element.id;
+        if (clas.includes('createToggle')){
+          if (id === 'upcomingEvent'){
+            this.display = 'upcomingEvent';
+          } else if (id === 'announcement'){
+            this.display = 'announcement';
+          } else if (id === 'testimonial'){
+            this.display = 'testimonial';
+          }
+        }
       });
     }
 }
