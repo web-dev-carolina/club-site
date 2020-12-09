@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -36,16 +35,13 @@ import { LoggedInComponent } from './components/logged-in/logged-in.component';
     UpcomingAnnouncementComponent,
     UpcomingEventComponent,
     FooterComponent,
-    LoggedInComponent
+    LoggedInComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule,
-    RouterModule.forRoot([
-      { path: '', component: LandingComponent, children: [{ path: '', component: SinglePComponent},
-        { path: 'login', component: LoginComponent}]},
-      { path: 'logged-in', component: LoggedInComponent}]),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent],
