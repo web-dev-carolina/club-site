@@ -1,8 +1,3 @@
-const getClient = require("../db"); 
-const client = await getClient();
-const db = client.db("club-site");
-const collection = db.collection("users");
-
 class User {
 
     constructor (id, user, password, type) {
@@ -19,12 +14,6 @@ class User {
 
     delete () {
         collection.del(this.id.toString());
-    }
-
-    addWin () {
-        this.totalWins++;
-        collection.set(this.id.toString(), this);
-        return true;
     }
 } 
 
