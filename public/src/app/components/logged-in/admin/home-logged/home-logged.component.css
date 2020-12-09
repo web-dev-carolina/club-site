@@ -1,0 +1,40 @@
+.dashboard {
+    position: relative;
+    top: 150px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.tiles {
+    margin: 3em;
+}
+
+.tile {
+    background-color: #EFEFF6;
+    color: black;
+    transition: 0.3s;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 1em;
+    padding-top: 2em;
+}
+
+.tile:hover {
+    background-color: #e0e0e7;
+}
+
+.tile h3 {
+    color: #2F4193;
+    margin: 0.75em;
+}
+
+i {
+    font-size: 40px;
+    color: #2F4193;
+}
