@@ -12,7 +12,8 @@ const routes: Routes = [
   {path: '**', redirectTo: 'landing'},
   {path: '', component: LandingComponent, children: [{path: '', component: SinglePComponent},
     {path: 'signIn', component: LoginComponent}]},
-  {path: 'loggedIn', component: LoggedInComponent, children: [{path: '', component: HomeLoggedComponent}]}
+  {path: 'loggedIn', component: LoggedInComponent, children: [{path: '', component: HomeLoggedComponent},
+    {path: 'create', component: CreateComponent}]}
 ];
 
 @NgModule({
