@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { TopBarComponent } from './components/landing/top-bar/top-bar.component';
+import { SinglePComponent } from './components/landing/single-page/single-p.component';
 import { AnnouncementComponent } from './components/landing/single-page/upcoming-announcement/announcement/announcement.component';
 import { HomeComponent } from './components/landing/single-page/home/home.component';
 import { AboutUsComponent } from './components/landing/single-page/about-us/about-us.component';
@@ -24,6 +25,7 @@ import { LoginComponent } from './components/landing/login/login.component';
     AppComponent,
     LandingComponent,
     TopBarComponent,
+    SinglePComponent,
     AnnouncementComponent,
     HomeComponent,
     AboutUsComponent,
