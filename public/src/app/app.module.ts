@@ -43,7 +43,8 @@ import { LoggedInComponent } from './components/logged-in/logged-in.component';
     HttpClientModule,
     AppRoutingModule,
     RouterModule.forRoot([
-      { path: '', component: LandingComponent},
+      { path: '', component: LandingComponent, children: [{ path: '', component: SinglePComponent},
+        { path: 'login', component: LoginComponent}]},
       { path: 'logged-in', component: LoggedInComponent}]),
   ],
   providers: [],
