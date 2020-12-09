@@ -6,3 +6,14 @@
     text-align: center;
     padding-top: 10%;
 }
+
+#signInLogo {
+    padding-top: 10%;
+}
+
+.signInContain {
+    position: relative;
+    top: 150px;
+    text-align: center;
+    box-sizing: border-box;
+}
