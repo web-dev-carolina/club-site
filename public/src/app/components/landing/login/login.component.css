@@ -2,18 +2,16 @@
     background-color: #F3F3FA;
 }
 
-.loginTitle {
-    text-align: center;
-    padding-top: 10%;
-}
-
-#signInLogo {
-    padding-top: 10%;
-}
 
 .signInContain {
     position: relative;
     top: 150px;
     text-align: center;
     box-sizing: border-box;
+}
+
+input[type=text] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
 }
