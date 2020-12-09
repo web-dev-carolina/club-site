@@ -37,7 +37,7 @@ export class LoginComponent {
                     return;
                 }
                 if (resp[0].type === 'admin'){
-                    this.router.navigateByUrl('/loggedIn/admin');
+                    this.router.navigateByUrl('/loggedIn/admin/home');
                 }
                 return;
             }
