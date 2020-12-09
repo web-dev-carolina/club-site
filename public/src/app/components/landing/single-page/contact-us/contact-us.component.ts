@@ -18,7 +18,7 @@ export class ContactUsComponent implements AfterContentInit {
       e.preventDefault();
       const id = (e.target as HTMLElement).id;
       const clas = (e.target as HTMLElement).getAttribute('class');
-      if (clas.includes('serviceBtn')){
+      if (clas && clas.includes('serviceBtn')){
         if ((e.target as HTMLElement).getAttribute('aria-pressed') === 'true') {
           if (id === 'build'){
             (e.target as HTMLElement).setAttribute('class', 'btn mr-2 serviceBtn');
