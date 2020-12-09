@@ -9,8 +9,9 @@ export class LoginService {
 
   // tslint:disable-next-line:typedef
   login(u, p){
-    console.log(u, p);
     return this.http.post('http://localhost:3000/api/login',
-    {user: u, password: p}).toPromise();
+    {user: u, password: p}).toPromise().catch(err => {
+      return false;
+    });
   }
 }
