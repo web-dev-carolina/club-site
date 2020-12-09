@@ -7,28 +7,18 @@ router.post('/login', bodyParser.json(), async (req,res) => {
 
     let user = req.body.user;
     let password = req.body.password;
-    let user_data = {};
+    let user_data;
     console.log(req.body);
-    try {
-        const client = await getClient();
-        const db = client.db("club-site");
-        const collection = db.collection("users");
-      
-        let user_data = collection.find({username: user}).toArray((err, data) => {
-        if(err){
-          res.json(err);
-        }
-        console.log(data, 'jere');
-      });    
-    } catch (err) {
-          res.status(500).send('Something broke!');
-    }
-    console.log(user_data, 'noo');
+    const client = await getClient();
+    const db = client.db("club-site");
+    const collection = db.collection("users");
+  
+    user_data = await collection.find({username: user}).toArray();  
     if (user_data == null || user_data === undefined || Object.keys(user_data).length == 0) {
         res.status(404).send("Not found");
         return;
     }
-    if (user_data.password == password) {
+    if (user_data[0].password == password) {
         console.log("User " + user + " credentials valid");
         req.session.user = user;
         res.json(true);
