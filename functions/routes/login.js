@@ -3,7 +3,7 @@ var router = express.Router();
 var bodyParser = require('body-parser')
 const getClient = require("../db"); 
 
-app.post('/login', (req,res) => {
+router.post('/login', (req,res) => {
 
     let user = req.body.user;
     let password = req.body.password;
