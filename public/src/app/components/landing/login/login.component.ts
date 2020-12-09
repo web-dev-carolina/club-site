@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { LoginService } from '../../../services/login.service';
+import { Router } from '@angular/router';
+
 
 @Component({
     selector: 'app-login',
@@ -7,7 +9,7 @@ import { LoginService } from '../../../services/login.service';
     styleUrls: ['login.component.css']
 })
 export class LoginComponent {
-    constructor(private loginService: LoginService){
+    constructor(private loginService: LoginService, private router: Router){
         window.addEventListener('click', async (e) => {
             if ((e.target as HTMLElement).id === 'submitLogin'){
                 const inputUser = (document.getElementById('usernameInput') as HTMLInputElement).value;
@@ -34,7 +36,8 @@ export class LoginComponent {
                     }
                     return;
                 }
-                console.log('good login');
+                this.router.navigateByUrl('/loggedIn');
+                return;
             }
         });
     }
