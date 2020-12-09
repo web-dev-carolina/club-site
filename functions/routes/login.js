@@ -14,17 +14,17 @@ router.post('/login', bodyParser.json(), async (req,res) => {
         const db = client.db("club-site");
         const collection = db.collection("users");
       
-        let user_data = collection.find({username: 'cnell'}).toArray((err, data) => {
+        let user_data = collection.find({username: user}).toArray((err, data) => {
         if(err){
           res.json(err);
         }
-        console.log(data);
+        console.log(data, 'jere');
       });    
     } catch (err) {
           res.status(500).send('Something broke!');
     }
-    console.log(user_data);
-    if (user_data == null || user_data === undefined) {
+    console.log(user_data, 'noo');
+    if (user_data == null || user_data === undefined || Object.keys(user_data).length == 0) {
         res.status(404).send("Not found");
         return;
     }
