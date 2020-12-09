@@ -9,7 +9,7 @@ import { LoggedInComponent } from './components/logged-in/logged-in.component';
 const routes: Routes = [
   {path: '**', redirectTo: 'landing'},
   {path: '', component: LandingComponent, children: [{path: '', component: SinglePComponent},
-    {path: 'login', component: LoginComponent}]},
+    {path: 'signIn', component: LoginComponent}]},
   {path: 'loggedIn', component: LoggedInComponent}
 ];
 
