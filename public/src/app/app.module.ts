@@ -17,6 +17,7 @@ import { UpcomingAnnouncementComponent } from './components/landing/upcoming-ann
 import { UpcomingEventComponent } from './components/landing/upcoming-announcement/upcoming-event/upcoming-event.component';
 import { FooterComponent } from './components/landing/footer/footer.component';
 import { LandingComponent } from './components/landing/landing.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,9 @@ import { LandingComponent } from './components/landing/landing.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    RouterModule.forRoot([{ path: '', component: LandingComponent}]),
+    RouterModule.forRoot([
+      { path: '', component: LandingComponent},
+      { path: 'login', component: LoginComponent}]),
   ],
   providers: [],
   bootstrap: [AppComponent],
