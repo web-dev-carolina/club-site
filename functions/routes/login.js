@@ -13,11 +13,11 @@ router.post('/login', bodyParser.json(), async (req,res) => {
     const collection = db.collection("users");
   
     user_data = await collection.find({username: user}).toArray();  
-    if (user_data == null || user_data === undefined || Object.keys(user_data).length == 0) {
+    if (user_data === null || user_data === undefined || Object.keys(user_data).length === 0) {
         res.status(404).send("Not found");
         return;
     }
-    if (user_data[0].password == password) {
+    if (user_data[0].password === password) {
         console.log("User " + user + " credentials valid");
         req.session.user = user;
         res.json(user_data);

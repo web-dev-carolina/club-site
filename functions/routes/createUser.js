@@ -9,14 +9,14 @@ router.post('/createUser', (req,res) => {
     let password = req.body.password;
     let type = req.body.type;
 
-    if(User.getAllIDsForOwner(user).length != 0){
+    if(User.getAllIDsForOwner(user).length !== 0){
         res.status(403).send("User taken");
         return;
     }
 
     let u = User.create(user, password, type);
 
-    if(u != null){
+    if(u !== null){
         req.session.user = user;
         res.json(true);
         return;

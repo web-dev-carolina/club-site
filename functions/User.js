@@ -22,7 +22,7 @@ User.getAllIDs = () => {
 };
 
 User.getAllIDsForOwner = (user) => {
-    return Object.keys(collection.data).filter(id => collection.get(id).user == user).map(id => parseInt(id));
+    return Object.keys(collection.data).filter(id => collection.get(id).user === user).map(id => parseInt(id));
 }
 
 User.getTotalWinsForOwner = (u) => {
@@ -32,7 +32,7 @@ User.getTotalWinsForOwner = (u) => {
 
 User.findByID = (id) => {
     let udata = collection.get(id);
-    if (udata != null) {
+    if (udata !== null) {
         return new User(udata.id, udata.user, udata.password, udata.totalWins);
     }
     return null;
