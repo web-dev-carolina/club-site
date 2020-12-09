@@ -64,6 +64,6 @@ https://webdevcarolina.com/
 
 - Christian Nell (Project Lead)
 - Addison West (Frontend Lead)  
-- Rushil Shah
+- Rushil Shah (Treasurer)
 - Tatiana Kelliher 
 - Advaith Deo
