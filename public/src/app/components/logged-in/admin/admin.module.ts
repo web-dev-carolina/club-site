@@ -5,7 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 // This Module's Components
-import { LoggedInComponent } from './logged-in.component';
+import { AdminComponent } from './admin.component';
+import { TopBarLoggedInComponent } from './top-bar-logged-in/top-bar-logged-in.component'
 
 @NgModule({
     imports: [
@@ -14,12 +15,13 @@ import { LoggedInComponent } from './logged-in.component';
         RouterModule
     ],
     declarations: [
-        LoggedInComponent
+        AdminComponent,
+        TopBarLoggedInComponent
     ],
     exports: [
-        LoggedInComponent,
+        AdminComponent,
     ]
 })
-export class LandingModule {
+export class AdminModule {
 
 }

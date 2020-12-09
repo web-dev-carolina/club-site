@@ -20,7 +20,7 @@ router.post('/login', bodyParser.json(), async (req,res) => {
     if (user_data[0].password == password) {
         console.log("User " + user + " credentials valid");
         req.session.user = user;
-        res.json(true);
+        res.json(user_data);
         return;
     }
     res.status(403).send("Unauthorized");
