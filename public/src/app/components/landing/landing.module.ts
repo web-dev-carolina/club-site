@@ -16,9 +16,7 @@ import { LoginComponent } from './login/login.component';
         BrowserModule,
         HttpClientModule,
         AppRoutingModule,
-        RouterModule.forRoot([
-        { path: '', component: SinglePComponent},
-        { path: 'login', component: LoginComponent}]),
+        RouterModule.forRoot([]),
     ],
     declarations: [
         LandingComponent,
