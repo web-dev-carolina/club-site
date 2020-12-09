@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AnnouncementService } from '../../../../services/announcements.service';
-import { Announcement } from '../../../../../Announcement';
+import { AnnouncementService } from '../../../../../services/announcements.service';
+import { Announcement } from '../../../../../../Announcement';
 
 
 @Component({

@@ -4,13 +4,13 @@ import { NgModule } from '@angular/core';
 // This Module's Components
 import { LandingComponent } from './landing.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { HomeComponent } from './home/home.component';
-import { AboutUsComponent } from './about-us/about-us.component';
-import { TestimonialComponent } from './testimonial/testimonial.component';
-import { UpcomingAnnouncementComponent } from './upcoming-announcement/upcoming-announcement.component';
-import { ProjectComponent } from './project/project.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
-import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './single-page/home/home.component';
+import { AboutUsComponent } from './single-page/about-us/about-us.component';
+import { TestimonialComponent } from './single-page/testimonial/testimonial.component';
+import { UpcomingAnnouncementComponent } from './single-page/upcoming-announcement/upcoming-announcement.component';
+import { ProjectComponent } from './single-page/project/project.component';
+import { ContactUsComponent } from './single-page/contact-us/contact-us.component';
+import { FooterComponent } from './single-page/footer/footer.component';
 
 @NgModule({
     imports: [

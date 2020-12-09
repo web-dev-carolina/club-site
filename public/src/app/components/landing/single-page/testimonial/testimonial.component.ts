@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { TestimonialService } from '../../../services/testimonials.service';
-import { Testimonial } from '../../../../Testimonial';
+import { TestimonialService } from '../../../../services/testimonials.service';
+import { Testimonial } from '../../../../../Testimonial';
 
 @Component({
   selector: 'app-testimonial',

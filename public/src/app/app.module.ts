@@ -7,15 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { TopBarComponent } from './components/landing/top-bar/top-bar.component';
-import { AnnouncementComponent } from './components/landing/upcoming-announcement/announcement/announcement.component';
-import { HomeComponent } from './components/landing/home/home.component';
-import { AboutUsComponent } from './components/landing/about-us/about-us.component';
-import { ProjectComponent } from './components/landing/project/project.component';
-import { TestimonialComponent } from './components/landing/testimonial/testimonial.component';
-import { ContactUsComponent } from './components/landing/contact-us/contact-us.component';
-import { UpcomingAnnouncementComponent } from './components/landing/upcoming-announcement/upcoming-announcement.component';
-import { UpcomingEventComponent } from './components/landing/upcoming-announcement/upcoming-event/upcoming-event.component';
-import { FooterComponent } from './components/landing/footer/footer.component';
+import { AnnouncementComponent } from './components/landing/single-page/upcoming-announcement/announcement/announcement.component';
+import { HomeComponent } from './components/landing/single-page/home/home.component';
+import { AboutUsComponent } from './components/landing/single-page/about-us/about-us.component';
+import { ProjectComponent } from './components/landing/single-page/project/project.component';
+import { TestimonialComponent } from './components/landing/single-page/testimonial/testimonial.component';
+import { ContactUsComponent } from './components/landing/single-page/contact-us/contact-us.component';
+import { UpcomingAnnouncementComponent } from './components/landing/single-page/upcoming-announcement/upcoming-announcement.component';
+import { UpcomingEventComponent } from './components/landing/single-page/upcoming-announcement/upcoming-event/upcoming-event.component';
+import { FooterComponent } from './components/landing/single-page/footer/footer.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { LoginComponent } from './components/landing/login/login.component';
 
