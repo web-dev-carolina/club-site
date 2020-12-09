@@ -6,6 +6,7 @@ import { TestimonialService } from './services/testimonials.service';
 import { MemberFormService } from './services/memberForm.service';
 import { ClientFormService } from './services/clientForm.service';
 import { GeneralFormService } from './services/generalForm.service';
+import { LoginService } from './services/login.service';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { GeneralFormService } from './services/generalForm.service';
   TestimonialService,
   MemberFormService,
   ClientFormService,
-  GeneralFormService]
+  GeneralFormService,
+  LoginService]
 })
 export class AppComponent {
   title = 'my-app';
