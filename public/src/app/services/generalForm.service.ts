@@ -13,4 +13,8 @@ export class GeneralFormService {
     { name: n, affiliation: a, email: e, message: m })
     .toPromise();
   }
+  // tslint:disable-next-line:typedef
+  getForms(){
+    return this.http.get('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/generalForm');
+  }
 }

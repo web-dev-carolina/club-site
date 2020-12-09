@@ -13,4 +13,8 @@ export class ClientFormService {
     { name: n, business: b, email: e, message: m, service: s })
     .toPromise();
   }
+  // tslint:disable-next-line:typedef
+  getForms(){
+    return this.http.get('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/clientForm');
+  }
 }
