@@ -29,6 +29,6 @@ import { FooterComponent } from './footer/footer.component';
         SinglePComponent,
     ]
 })
-export class SinglePModule {
 
+export class SinglePModule {
 }

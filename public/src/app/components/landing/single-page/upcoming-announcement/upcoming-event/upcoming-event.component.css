@@ -1,9 +1,9 @@
-#eventDate {
+.eventDate {
     background-color: #5262AD;
     border-radius: 20px;
 }
 
-#day {
+.day {
     align-items: center;
     text-align: center;
     margin-bottom: 2%;
@@ -15,7 +15,7 @@
     color: #FFFFFF;
 }
 
-#month {
+.month {
     align-items: center;
     text-align: center;
     padding-bottom: 2%;
@@ -29,11 +29,10 @@
 
 .event {
     background-color: #EFEFF6;
-    /* border: 2px solid #5262AD; */
     border-radius: 30px;
 }
 
-#eventBackground {
+.eventBackground {
     background-color: white;
 }
 
@@ -56,16 +55,16 @@
     .title {
         font-size: 30px;
     }
-    #day {
+    .day {
         font-size: 33px;
         line-height: 33px;
         padding-top: 5px;
     }
-    #month {
+    .month {
         font-size: 25px;
         line-height: 25px;
     }
-    #eventDate {
+    .eventDate {
         line-height: 10px;
     }
     .eventInfo {
@@ -74,12 +73,12 @@
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
-    #day {
+    .day {
         font-size: 33px;
         line-height: 33px;
         padding-top: 5px;
     }
-    #month {
+    .month {
         font-size: 25px;
         line-height: 25px;
     }

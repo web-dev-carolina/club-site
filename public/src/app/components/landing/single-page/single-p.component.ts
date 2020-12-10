@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
     selector: 'app-single-p',
     templateUrl: 'single-p.component.html',
 })
-export class SinglePComponent {
 
+export class SinglePComponent {
 }

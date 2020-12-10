@@ -36,7 +36,7 @@
   font-size: large;
 }
 
-#crd {
+.crd {
   height: 20rem;
 }
 
@@ -70,13 +70,13 @@
 }
 
 @media screen and (max-width: 992px) and (min-width: 576px) {
-  #crd {
+  .crd {
     width: 50% !important;
   }
 }
 
 @media screen and (max-width: 576px) {
-  #crd {
+  .crd {
     width: 75% !important;
   }
   .title {

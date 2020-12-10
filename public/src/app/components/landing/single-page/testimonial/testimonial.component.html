@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
-<a name="testimonials"></a>
+<a name="testimonials" id="testimonials"></a>
 <div id="offContainer" class="container-fluid">
   <h1 class="title text-center">Testimonials</h1>
   <p class="subtitle text-center">See what clients and club members have to say about us!</p>
@@ -21,7 +21,7 @@
           <ng-container *ngIf="isFirst; then thenBlock else elseBlock"></ng-container>
           <ng-template #thenBlock>
             <div class="carousel-item active">
-              <div id="crd" class="testimonial card w-25">
+              <div id="" class="crd testimonial card w-25">
                 <div class="card-body">
                   <i class="fas fa-quote-left"></i>
                   <p class="card-text">{{testimonial.body}}</p>
@@ -32,7 +32,7 @@
           </ng-template>
           <ng-template #elseBlock>
             <div class="carousel-item">
-              <div id="crd" class="testimonial card w-25">
+              <div id="" class="crd testimonial card w-25">
                 <div class="card-body">
                   <i class="fas fa-quote-left"></i>
                   <p class="card-text">{{testimonial.body}}</p>
