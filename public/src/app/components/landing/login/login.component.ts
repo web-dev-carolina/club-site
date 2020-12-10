@@ -36,6 +36,7 @@ export class LoginComponent {
                     }
                     return;
                 }
+                sessionStorage.setItem('user', inputUser);
                 if (resp[0].type === 'admin'){
                     this.router.navigateByUrl('/loggedIn/admin/home');
                 }

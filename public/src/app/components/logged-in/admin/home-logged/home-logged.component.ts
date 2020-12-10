@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
     styleUrls: ['home-logged.component.css']
 })
 export class HomeLoggedComponent {
-
+    user: string;
+    constructor(){
+        this.user = sessionStorage.getItem('user');
+    }
 }
