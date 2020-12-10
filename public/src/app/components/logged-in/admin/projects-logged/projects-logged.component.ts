@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ProjectService } from '../../../../services/projects.service';
+import { Project } from '../../../../../Project';
 
 @Component({
     selector: 'app-projects-logged',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
     styleUrls: ['projects-logged.component.css']
 })
 export class ProjectsLoggedComponent {
-
+    projects: Project[];
+    constructor(private projectService: ProjectService){
+        this.projectService.getProjects().subscribe((projects: any[]) => {
+            this.projects = projects;
+        });
+    }
 }
