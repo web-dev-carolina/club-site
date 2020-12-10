@@ -13,6 +13,7 @@ export class TopBarLoggedInComponent {
       const element = (e.target as HTMLElement);
       if (element.id === 'largeContact'){
         this.logoutService.logout();
+        sessionStorage.removeItem('user');
         this.router.navigateByUrl('/');
       }
     });
