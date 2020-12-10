@@ -17,7 +17,7 @@
 <ng-container *ngIf="this.display === 'memberForm' || this.display === 'all'">
     <div class="row">
         <ng-container *ngFor="let memberForm of memberForms">
-            <div class="col-3 bg-light mr-1 ml-1">
+            <div class="col-3 bg-light mr-1 ml-1 mt-1 mb-1">
                 <h3>{{memberForm.firstName}} {{memberForm.lastName}}</h3>
                 <p>{{memberForm.email}}</p>
                 <p>{{memberForm.message}}</p>
@@ -29,7 +29,7 @@
 <ng-container *ngIf="this.display === 'clientForm' || this.display === 'all'">
     <div class="row">
         <ng-container *ngFor="let clientForm of clientForms">
-            <div class="col-3 bg-light mr-1 ml-1">
+            <div class="col-3 bg-light mr-1 ml-1 mt-1 mb-1">
                 <h3>{{clientForm.name}}</h3>
                 <p>{{clientForm.business}}</p>
                 <p>{{clientForm.email}}</p>
@@ -43,7 +43,7 @@
 <ng-container *ngIf="this.display === 'generalForm' || this.display === 'all'">
     <div class="row">
         <ng-container *ngFor="let generalForm of generalForms">
-            <div class="col-3 bg-light mr-1 ml-1">
+            <div class="col-3 bg-light mr-1 ml-1 mt-1 mb-1">
                 <h3>{{generalForm.name}}</h3>
                 <p>{{generalForm.affiliation}}</p>
                 <p>{{generalForm.email}}</p>
