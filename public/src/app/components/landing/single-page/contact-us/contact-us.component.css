@@ -120,4 +120,8 @@ input, textarea {
   .title {
     font-size: 30px;
   }
+  #contact-subtext {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
