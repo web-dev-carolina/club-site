@@ -7,6 +7,7 @@ import { MemberFormService } from './services/memberForm.service';
 import { ClientFormService } from './services/clientForm.service';
 import { GeneralFormService } from './services/generalForm.service';
 import { LoginService } from './services/login.service';
+import { LogoutService } from './services/logout.service';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ import { LoginService } from './services/login.service';
   MemberFormService,
   ClientFormService,
   GeneralFormService,
-  LoginService]
+  LoginService,
+  LogoutService]
 })
 export class AppComponent {
   title = 'my-app';
