@@ -21,7 +21,7 @@ export class InquiriesComponent {
                 private clientFormService: ClientFormService,
                 private generalFormService: GeneralFormService){
         this.memberForms = [];
-        this.display = 'memberForm';
+        this.display = 'all';
         this.memberFormService.getForms().subscribe((memberForms: any[]) => {
             this.memberForms = memberForms;
         });
