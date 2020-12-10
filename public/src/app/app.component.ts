@@ -8,6 +8,7 @@ import { ClientFormService } from './services/clientForm.service';
 import { GeneralFormService } from './services/generalForm.service';
 import { LoginService } from './services/login.service';
 import { LogoutService } from './services/logout.service';
+import { UsersService } from './services/users.service';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,8 @@ import { LogoutService } from './services/logout.service';
   ClientFormService,
   GeneralFormService,
   LoginService,
-  LogoutService]
+  LogoutService,
+  UsersService]
 })
 export class AppComponent {
   title = 'my-app';

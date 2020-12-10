@@ -24,7 +24,7 @@ app.use(expressSession({
     saveUninitialized: false,
     proxy : true, // add this when behind a reverse proxy, if you need secure cookies
     cookie : {
-        secure : true, // disable for localhost testing because it isn't secure
+        //secure : true, // disable for localhost testing because it isn't secure
         maxAge: 5184000000 // 2 months but set to whatever floats your boat
     }
 }));
@@ -38,6 +38,7 @@ var clientForm = require('./routes/clientForm')
 var generalForm = require('./routes/generalForm')
 var login = require('./routes/login')
 var logout = require('./routes/logout')
+var users = require('./routes/users')
 
 //View Engine
 app.set('view engine', 'ejs')
@@ -60,6 +61,7 @@ app.use('/api', clientForm)
 app.use('/api', generalForm)
 app.use('/api', login)
 app.use('/api', logout)
+app.use('/api', users)
 
 app.listen(port, function(){
     console.log("Server started on port" + port)
