@@ -49,6 +49,68 @@
                             </div>
                         </div>
                     </ng-container>
+                    <ng-container *ngIf="this.display === 'announcement'">
+                        <div class="container bg-white">
+                            <div class="form">
+                                <div class="row">
+                                    <div class="col-lg">
+                                      <label for="titleInput">Title</label>
+                                      <input type="text" class="form-control" id="titleInput" placeholder="Site Done">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg">
+                                      <label for="linkInput">Link</label>
+                                      <input type="text" class="form-control" id="linkInput" placeholder="http://website.com">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg">
+                                      <label for="messageInput">Message</label>
+                                      <textarea type="text" class="form-control" id="messageInput" placeholder="The website is now done."></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="container">
+                                        <button class="button">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <ng-container *ngIf="this.display === 'testimonial'">
+                        <div class="container bg-white">
+                            <div class="form">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                      <label for="monthInput">Month</label>
+                                      <input type="text" class="form-control" id="monthInput" placeholder="Dec">
+                                    </div>
+                                    <div class="col-md-3">
+                                      <label for="dayInput">Date</label>
+                                      <input type="text" class="form-control" id="dayInput" placeholder="11">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg">
+                                      <label for="titleInput">Title</label>
+                                      <input type="text" class="form-control" id="titleInput" placeholder="Meeting">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg">
+                                      <label for="messageInput">Message</label>
+                                      <textarea type="text" class="form-control" id="messageInput" placeholder="Meeting at 12:00 P.M."></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="container">
+                                        <button class="button">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
                 </div>
                 <div class="col">
                     <ng-container *ngIf="this.display === 'upcomingEvent'">
