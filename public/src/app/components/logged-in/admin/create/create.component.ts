@@ -41,6 +41,14 @@ export class CreateComponent {
           } else if (id === 'testimonial'){
             this.display = 'testimonial';
           }
+        } else if (id === 'createButton'){
+          if (this.display === 'upcomingEvent'){
+            const title = (document.getElementById('titleInput') as HTMLInputElement).value;
+            const body = (document.getElementById('bodyInput') as HTMLInputElement).value;
+            const day = (document.getElementById('dayInput') as HTMLInputElement).value;
+            const month = (document.getElementById('monthInput') as HTMLInputElement).value;
+            this.upcomingEventService.newUpcomingEvent(title, body, day, month);
+          }
         }
       });
     }

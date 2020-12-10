@@ -11,4 +11,11 @@ export class UpcomingEventsService {
   getUpcomingEvents(){
      return this.http.get('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/upcomingEvents');
   }
+
+  // tslint:disable-next-line:typedef
+  newUpcomingEvent(t, b, d, m){
+    return this.http.post('http://localhost:3000/api/upcomingEvents',
+    { title: t, body: b, day: d, month: m})
+    .toPromise();
+  }
 }

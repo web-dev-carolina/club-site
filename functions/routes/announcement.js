@@ -20,4 +20,22 @@ router.get('/announcements', async function(req, res, next){
 
 })
 
+router.post('/announcements', async function(req, res, next){
+  try {
+      const client = await getClient();
+      const db = client.db("club-site");
+      const collection = db.collection("announcements");
+    
+      collection.insert(req.body, function (err, announcement){
+        if(err){
+          res.send(err);
+        }
+        res.json(announcement)
+      })   
+  } catch (err) {
+        res.status(500).send('Something broke!');
+  }
+
+})
+
 module.exports = router;
