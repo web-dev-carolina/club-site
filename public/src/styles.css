@@ -12,20 +12,19 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 45px;
     margin: 1em;
-  }
-  
-  .subtitle {
+}
+
+.subtitle {
     font-family: 'Lato', sans-serif;
     font-size: 25px;
-  }
+}
 
-
-  #eventDate {
+.eventDate {
     background-color: #5262AD;
     border-radius: 20px;
 }
 
-#day {
+.day {
     align-items: center;
     text-align: center;
     margin-bottom: 2%;
@@ -37,7 +36,7 @@
     color: #FFFFFF;
 }
 
-#month {
+.month {
     align-items: center;
     text-align: center;
     padding-bottom: 2%;
@@ -55,6 +54,6 @@
     border-radius: 30px;
 }
 
-#eventBackground {
+.eventBackground {
     background-color: white;
 }

@@ -47,7 +47,7 @@ input, textarea {
   padding-bottom: 100%;
 }
 
-#contactLink {
+.contactLink {
   font-family: "Lato", sans-serif;
   text-align: left;
   font-size: 17px;
@@ -87,7 +87,7 @@ input, textarea {
 
 .contact {
   font-family: 'Lato', sans-serif;
-  background-color: #BB5AA2;
+  background-color: #81386e;
   color: white;
   border: none;
   padding-left: 25px;
