@@ -12,7 +12,7 @@ export class TopBarLoggedInComponent {
     window.addEventListener('click', (e) => {
       const element = (e.target as HTMLElement);
       if (element.id === 'largeContact'){
-        console.log('here');
+        this.logoutService.logout();
         this.router.navigateByUrl('/');
       }
     });
