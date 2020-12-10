@@ -9,6 +9,6 @@ export class UsersService {
 
   // tslint:disable-next-line:typedef
   getUsers(){
-     return this.http.get('http://localhost:3000/api/users');
+     return this.http.get('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/users');
   }
 }
