@@ -1,0 +1,44 @@
+* {
+    font-family: 'Lato', 'sans-serif';
+}
+
+.create-bg {
+    background-color: #F3F3FA;
+}
+
+.create-body {
+    position: relative;
+    top: 150px;
+}
+
+.title {
+    margin: 0;
+    margin-bottom: 0.5em;
+    font-family: 'Montserrat', 'sans-serif';
+    font-size: 35px;
+}
+
+.toggle-title {
+    margin: 0;
+    margin-bottom: 0.5em;
+    font-family: 'Montserrat', 'sans-serif';
+    font-size: 30px;
+}
+
+.row {
+    margin: 2em 0;
+}
+
+.toggle {
+    margin-right: 2em;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 0.75em 1.25em;
+    border-radius: 5px;
+}
+
+.toggle:focus {
+    background-color: white;
+    box-shadow: 0px 2px 4px #D5D5DD;
+}
