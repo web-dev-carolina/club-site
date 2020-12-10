@@ -123,13 +123,22 @@
                     <ng-container *ngIf="this.display === 'announcement'">
                         <h1 class="toggle-title">Announcements</h1>
                         <ng-container *ngFor="let announcement of announcements">
-                            <p>{{announcement.title}}</p>
+                            <div class="container">
+                                <p>{{announcement.title}}</p>
+                                <p>{{announcement.date}}</p>
+                                <p>{{announcement.body}}</p>
+                                <hr>
+                            </div>
                         </ng-container>
                     </ng-container>
                     <ng-container *ngIf="this.display === 'testimonial'">
                         <h1 class="toggle-title">Testimonials</h1>
                         <ng-container *ngFor="let testimonial of testimonials">
-                            <p>{{testimonial.title}}</p>
+                            <div class="container">
+                                <p>{{testimonial.title}}</p>
+                                <p>{{testimonial.body}}</p>
+                                <hr>
+                            </div>
                         </ng-container>
                     </ng-container>
                 </div>
