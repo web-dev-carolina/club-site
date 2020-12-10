@@ -11,4 +11,11 @@ export class TestimonialService {
   getTestimonials(){
      return this.http.get('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/testimonials');
   }
+
+  // tslint:disable-next-line:typedef
+  newTestimonial(t, b){
+    return this.http.post('http://localhost:3000/api/testimonials',
+    { title: t, body: b})
+    .toPromise();
+  }
 }

@@ -54,7 +54,9 @@ export class CreateComponent {
             const body = (document.getElementById('bodyInput') as HTMLInputElement).value;
             this.annoucementService.newAnnouncement(title, date, body);
           } else if (this.display === 'testimonial'){
-            console.log('hi');
+            const title = (document.getElementById('titleInput') as HTMLInputElement).value;
+            const body = (document.getElementById('bodyInput') as HTMLInputElement).value;
+            this.testimonialService.newTestimonial(title, body);
           }
         }
       });
