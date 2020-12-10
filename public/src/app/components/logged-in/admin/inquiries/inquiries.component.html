@@ -15,17 +15,38 @@
     </button>
 </div>
 <ng-container *ngIf="this.display === 'memberForm'">
-    <ng-container *ngFor="let memberForm of memberForms">
-        <p>{{memberForm.firstName}}</p>
-    </ng-container>
+    <div class="row">
+        <ng-container *ngFor="let memberForm of memberForms">
+            <div class="col-3 bg-light mr-1 ml-1">
+                <h3>{{memberForm.firstName}} {{memberForm.lastName}}</h3>
+                <p>{{memberForm.email}}</p>
+                <p>{{memberForm.message}}</p>
+            </div>
+        </ng-container>
+    </div>
 </ng-container>
 <ng-container *ngIf="this.display === 'clientForm'">
-    <ng-container *ngFor="let clientForm of clientForms">
-        <p>{{clientForm.name}}</p>
-    </ng-container>
+    <div class="row">
+        <ng-container *ngFor="let clientForm of clientForms">
+            <div class="col-3 bg-light mr-1 ml-1">
+                <h3>{{clientForm.name}}</h3>
+                <p>{{clientForm.business}}</p>
+                <p>{{clientForm.email}}</p>
+                <p>{{clientForm.message}}</p>
+                <p>{{clientForm.service}}</p>
+            </div>
+        </ng-container>
+    </div>  
 </ng-container>
 <ng-container *ngIf="this.display === 'generalForm'">
-    <ng-container *ngFor="let generalForm of generalForms">
-        <p>{{generalForm.name}}</p>
-    </ng-container>
+    <div class="row">
+        <ng-container *ngFor="let generalForm of generalForms">
+            <div class="col-3 bg-light mr-1 ml-1">
+                <h3>{{generalForm.name}}</h3>
+                <p>{{generalForm.affiliation}}</p>
+                <p>{{generalForm.email}}</p>
+                <p>{{generalForm.message}}</p>
+            </div>
+        </ng-container>
+    </div>
 </ng-container>
