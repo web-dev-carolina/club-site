@@ -14,7 +14,7 @@ export class UpcomingEventsService {
 
   // tslint:disable-next-line:typedef
   newUpcomingEvent(t, b, d, m){
-    return this.http.post('http://localhost:3000/api/upcomingEvents',
+    return this.http.post('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/upcomingEvents',
     { title: t, body: b, day: d, month: m})
     .toPromise();
   }

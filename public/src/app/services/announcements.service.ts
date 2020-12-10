@@ -14,7 +14,7 @@ export class AnnouncementService {
 
   // tslint:disable-next-line:typedef
   newAnnouncement(t, d, b){
-    return this.http.post('http://localhost:3000/api/announcements',
+    return this.http.post('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/announcements',
     { title: t, date: d, body: b})
     .toPromise();
   }
