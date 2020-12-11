@@ -1,8 +1,22 @@
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class="bg">
+    <div class="body">
+        <div class="container">
+            <h1 class="title">Members</h1>
+            <div class="row">
+                <button autofocus id="upcomingEvent" type="button" class="createToggle toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    Add
+                </button>
+                <button id="announcement" type="button" class="createToggle toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    Remove
+                </button>
+                <button id="testimonial" type="button" class="createToggle toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    Edit
+                </button>
+            </div>
+            <div class="row"></div>
+        </div>
+    </div>
+</div>
 <ng-container *ngFor="let user of users">
     <p>{{user.username}}</p>
 </ng-container>
