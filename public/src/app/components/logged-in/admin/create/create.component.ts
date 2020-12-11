@@ -31,7 +31,6 @@ export class CreateComponent {
       });
       window.addEventListener('click', (e) => {
         const element = (e.target as HTMLElement);
-        console.log(element);
         const clas = element.getAttribute('class');
         const id = element.id;
         if (clas.includes('createToggle')){
@@ -64,7 +63,6 @@ export class CreateComponent {
           }
         } else if (clas.includes('delete')) {
           if (clas.includes('delete-event')) {
-            console.log('here');
             this.upcomingEventService.deleteEvent(element.id);
           }
         }
