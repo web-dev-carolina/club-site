@@ -37,13 +37,13 @@ router.post('/upcomingEvents', async function (req, res, next) {
 
 })
 
-router.delete('/upcomingEvents', async function (req, res, next) {
+router.delete('/upcomingEvents/:id', async function (req, res, next) {
   try {
     const client = await getClient();
     const db = client.db("club-site");
     const collection = db.collection("upcomingEvents");
-
-    collection.delete(req.body);
+    
+    collection.deleteOne({title: req.params.id});
   } catch (err) {
     res.status(500).send('Something broke!');
   }

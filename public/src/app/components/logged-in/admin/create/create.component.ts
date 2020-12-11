@@ -64,7 +64,8 @@ export class CreateComponent {
           }
         } else if (clas.includes('delete')) {
           if (clas.includes('delete-event')) {
-            this.upcomingEventService.deleteEvent();
+            console.log('here');
+            this.upcomingEventService.deleteEvent(element.id);
           }
         }
       });
