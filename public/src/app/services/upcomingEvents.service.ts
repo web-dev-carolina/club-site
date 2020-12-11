@@ -21,7 +21,7 @@ export class UpcomingEventsService {
 
   // tslint:disable-next-line:typedef
   deleteEvent(t) {
-    return this.http.delete('http://localhost:3000/api/upcomingEvents/' + t)
+    return this.http.delete('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/upcomingEvents/' + t)
     .toPromise();
   }
 }
