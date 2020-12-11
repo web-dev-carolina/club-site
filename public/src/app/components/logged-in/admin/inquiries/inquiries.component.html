@@ -1,55 +1,105 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="row">
-    <button id="memberForm" type="button" class="formToggle btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
-        Member Form
-    </button>
-    <button id="clientForm" type="button" class="formToggle btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
-        Client Form
-    </button>
-    <button id="generalForm" type="button" class="formToggle btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
-        General Form
-    </button>
+<div class="bg">
+    <div class="body">
+        <div class="container">
+            <h1 class="title">Inquiries</h1>
+            <div class="row">
+                <button id="all" type="button" class="formToggle filter" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    All
+                </button>
+                <button id="memberForm" type="button" class="formToggle filter" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    Student
+                </button>
+                <button id="clientForm" type="button" class="formToggle filter" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    Client
+                </button>
+                <button id="generalForm" type="button" class="formToggle filter" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    General
+                </button>
+            </div>
+
+            <div class="row scroll">
+                <ng-container *ngIf="this.display === 'all'">
+                    <ng-container *ngFor="let memberForm of memberForms">
+                        <div class="col-4">
+                            <div class="inquiry">
+                                <h5>{{memberForm.firstName}} {{memberForm.lastName}}</h5>
+                                <h6 class="text-muted">Student</h6>
+                                <p>{{memberForm.message}}</p>
+                                <p class="text-muted">{{memberForm.email}}</p>
+                                <p class="icon"><i class="fas fa-user-graduate"></i><span>Student</span></p>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <ng-container *ngFor="let clientForm of clientForms">
+                        <div class="col-4">
+                            <div class="inquiry">
+                                <h5>{{clientForm.name}}</h5>
+                                <h6 class="text-muted">{{clientForm.business}}</h6>
+                                <p>{{clientForm.message}}</p>
+                                <p class="text-muted">{{clientForm.email}}</p>
+                                <button class="text-capitalize btn service">{{clientForm.service}}</button>
+                                <p class="icon mt-3"><i class="fas fa-briefcase"></i><span>Client</span></p>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <ng-container *ngFor="let generalForm of generalForms">
+                        <div class="col-4">
+                            <div class="inquiry">
+                                <h5>{{generalForm.name}}</h5>
+                                <h6 class="text-muted">{{generalForm.affiliation}}</h6>
+                                <p>{{generalForm.message}}</p>
+                                <p class="text-muted">{{generalForm.email}}</p>
+                                <p class="icon"><i class="fas fa-question-circle"></i><span>General</span></p>
+                            </div>
+                        </div>
+                    </ng-container>
+                </ng-container>
+                
+                <ng-container *ngIf="this.display === 'memberForm'">
+                        <ng-container *ngFor="let memberForm of memberForms">
+                            <div class="col-4">
+                                <div class="inquiry">
+                                    <h5>{{memberForm.firstName}} {{memberForm.lastName}}</h5>
+                                    <h6 class="text-muted">Student</h6>
+                                    <p>{{memberForm.message}}</p>
+                                    <p class="text-muted">{{memberForm.email}}</p>
+                                    <p class="icon"><i class="fas fa-user-graduate"></i><span>Student</span></p>
+                                </div>
+                            </div>
+                        </ng-container>
+                </ng-container>
+                
+                <ng-container *ngIf="this.display === 'clientForm'">
+                        <ng-container *ngFor="let clientForm of clientForms">
+                            <div class="col-4">
+                                <div class="inquiry">
+                                    <h5>{{clientForm.name}}</h5>
+                                    <h6 class="text-muted">{{clientForm.business}}</h6>
+                                    <p>{{clientForm.message}}</p>
+                                    <p class="text-muted">{{clientForm.email}}</p>
+                                    <button class="text-capitalize btn service">{{clientForm.service}}</button>
+                                    <p class="icon mt-3"><i class="fas fa-briefcase"></i><span>Client</span></p>
+                                </div>
+                            </div>
+                        </ng-container>
+                </ng-container>
+    
+                <ng-container *ngIf="this.display === 'generalForm'">
+                        <ng-container *ngFor="let generalForm of generalForms">
+                            <div class="col-4">
+                                <div class="inquiry">
+                                    <h5>{{generalForm.name}}</h5>
+                                    <h6 class="text-muted">{{generalForm.affiliation}}</h6>
+                                    <p>{{generalForm.message}}</p>
+                                    <p class="text-muted">{{generalForm.email}}</p>
+                                    <p class="icon"><i class="fas fa-question-circle"></i><span>General</span></p>
+                                </div>
+                            </div>
+                        </ng-container>
+                </ng-container>
+            </div>
+            
+            
+        </div>
+    </div>
 </div>
-<ng-container *ngIf="this.display === 'memberForm' || this.display === 'all'">
-    <div class="row">
-        <ng-container *ngFor="let memberForm of memberForms">
-            <div class="col-3 bg-light mr-1 ml-1 mt-1 mb-1">
-                <h3>{{memberForm.firstName}} {{memberForm.lastName}}</h3>
-                <p>{{memberForm.email}}</p>
-                <p>{{memberForm.message}}</p>
-                <h3>Member</h3>
-            </div>
-        </ng-container>
-    </div>
-</ng-container>
-<ng-container *ngIf="this.display === 'clientForm' || this.display === 'all'">
-    <div class="row">
-        <ng-container *ngFor="let clientForm of clientForms">
-            <div class="col-3 bg-light mr-1 ml-1 mt-1 mb-1">
-                <h3>{{clientForm.name}}</h3>
-                <p>{{clientForm.business}}</p>
-                <p>{{clientForm.email}}</p>
-                <p>{{clientForm.message}}</p>
-                <p>{{clientForm.service}}</p>
-                <h3>Client</h3>
-            </div>
-        </ng-container>
-    </div>  
-</ng-container>
-<ng-container *ngIf="this.display === 'generalForm' || this.display === 'all'">
-    <div class="row">
-        <ng-container *ngFor="let generalForm of generalForms">
-            <div class="col-3 bg-light mr-1 ml-1 mt-1 mb-1">
-                <h3>{{generalForm.name}}</h3>
-                <p>{{generalForm.affiliation}}</p>
-                <p>{{generalForm.email}}</p>
-                <p>{{generalForm.message}}</p>
-                <h3>General</h3>
-            </div>
-        </ng-container>
-    </div>
-</ng-container>

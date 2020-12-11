@@ -1,0 +1,91 @@
+* {
+    font-family: 'Lato', 'sans-serif';
+}
+
+.bg {
+    background-color: #F3F3FA;
+    height: 1000px;
+}
+
+.body {
+    position: relative;
+    top: 150px;
+}
+
+.title {
+    margin: 0;
+    margin-bottom: 0.5em;
+    font-family: 'Montserrat', 'sans-serif';
+    font-size: 35px;
+}
+
+.toggle-title {
+    margin: 0;
+    margin-bottom: 0.5em;
+    font-family: 'Montserrat', 'sans-serif';
+    font-size: 30px;
+}
+
+.row {
+    margin: 2em 0;
+}
+
+.toggle {
+    margin-right: 1.5em;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 0.75em 1.25em;
+    border-radius: 5px;
+}
+
+.toggle:focus {
+    background-color: white;
+    box-shadow: 0px 2px 4px #D5D5DD;
+}
+
+.filter {
+    margin-right: 1.5em;
+    border: 1px solid #5262AD;
+    background-color: transparent;
+    outline: none;
+    padding: 0.75em 1.25em;
+    border-radius: 5px;
+}
+
+.filter:focus {
+    background-color: #945DA6;
+    color: white;
+    border: none;
+}
+
+.inquiry {
+    box-shadow: 0px 4px 13px 7px rgba(219, 219, 233, 0.5);
+    border-radius: 11px;
+    margin: 1em 0;
+    background-color: white;
+    padding: 1.5em 2em;
+}
+
+.icon {
+    color: #5262AD;
+}
+
+.service {
+    color: white;
+    background-color: #945DA6;
+}
+
+.service:hover {
+    cursor: default;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.scroll {
+    overflow: scroll;
+    height: 500px;
+}
