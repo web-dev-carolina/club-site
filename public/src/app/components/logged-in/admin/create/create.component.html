@@ -3,7 +3,7 @@
         <div class="container">
             <h1 class="title">Create</h1>
             <div class="row">
-                <button autofocus id="upcomingEvent" type="button" class="createToggle toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
+                <button autofocus id="upcomingEvent" type="button" class="createToggle toggle" data-toggle="button" aria-pressed="true" autocomplete="off">
                     Upcoming event
                 </button>
                 <button id="announcement" type="button" class="createToggle toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
@@ -89,7 +89,7 @@
                                 <div class="row">
                                     <div class="col-lg">
                                         <label for="bodyInput">Body</label>
-                                        <textarea type="text" class="form-control" id="bodyInput" placeholder="Web dev carolina is a good club."></textarea>
+                                        <textarea type="text" class="form-control" id="bodyInput" placeholder="Web Dev Carolina is a good club."></textarea>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -118,7 +118,7 @@
                                         <h5>{{upcomingEvent.title}}</h5>
                                         <h6>{{upcomingEvent.body}}</h6>
                                         <button class="btn btn-outline-success">Edit</button>
-                                        <button class="btn btn-outline-danger">Delete</button>
+                                        <button class="btn btn-outline-danger delete-event delete">Delete</button>
                                     </div>
                                 </div>
                         </ng-container>
@@ -133,7 +133,7 @@
                                     <h6 class="text-muted">{{announcement.date}}</h6>
                                     <p class="my-3">{{announcement.body}}</p>
                                     <button class="btn btn-outline-success">Edit</button>
-                                    <button class="btn btn-outline-danger">Delete</button>
+                                    <button class="btn btn-outline-danger delete-announcement delete">Delete</button>
                                 </div>
                             </ng-container>
                         </div>
@@ -146,7 +146,7 @@
                                     <h4>{{testimonial.title}}</h4>
                                     <h6 class="my-3">{{testimonial.body}}</h6>
                                     <button class="btn btn-outline-success">Edit</button>
-                                    <button class="btn btn-outline-danger">Delete</button>
+                                    <button class="btn btn-outline-danger delete-testimonial delete">Delete</button>
                                 </div>
                             </ng-container>
                         </div>

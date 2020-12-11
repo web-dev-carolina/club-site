@@ -31,6 +31,7 @@ export class CreateComponent {
       });
       window.addEventListener('click', (e) => {
         const element = (e.target as HTMLElement);
+        console.log(element);
         const clas = element.getAttribute('class');
         const id = element.id;
         if (clas.includes('createToggle')){
@@ -60,6 +61,10 @@ export class CreateComponent {
             const body = (document.getElementById('bodyInput') as HTMLInputElement).value;
             this.testimonialService.newTestimonial(title, body);
             this.addSuccessDiv();
+          }
+        } else if (clas.includes('delete')) {
+          if (clas.includes('delete-event')) {
+            this.upcomingEventService.deleteEvent();
           }
         }
       });

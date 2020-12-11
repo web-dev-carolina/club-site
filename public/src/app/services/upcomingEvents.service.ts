@@ -18,4 +18,10 @@ export class UpcomingEventsService {
     { title: t, body: b, day: d, month: m})
     .toPromise();
   }
+
+  // tslint:disable-next-line:typedef
+  deleteEvent() {
+    return this.http.post('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/upcomingEvents',
+    {});
+  }
 }
