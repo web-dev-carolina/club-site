@@ -116,7 +116,7 @@
                                     </div>
                                     <div class="col-md-auto pt-3 eventInfo">
                                         <h5>{{upcomingEvent.title}}</h5>
-                                        <h5>{{upcomingEvent.body}}</h5>
+                                        <h6>{{upcomingEvent.body}}</h6>
                                         <button class="btn btn-outline-success">Edit</button>
                                         <button class="btn btn-outline-danger">Delete</button>
                                     </div>
@@ -129,9 +129,9 @@
                         <div class="scroll">
                             <ng-container *ngFor="let announcement of announcements">
                                 <div class="container bg-white event p-4 mt-4 mb-4">
-                                    <p>{{announcement.title}}</p>
-                                    <p>{{announcement.date}}</p>
-                                    <p>{{announcement.body}}</p>
+                                    <h4>{{announcement.title}}</h4>
+                                    <h6 class="text-muted">{{announcement.date}}</h6>
+                                    <p class="my-3">{{announcement.body}}</p>
                                     <button class="btn btn-outline-success">Edit</button>
                                     <button class="btn btn-outline-danger">Delete</button>
                                 </div>
@@ -143,8 +143,8 @@
                         <div class="scroll">
                             <ng-container *ngFor="let testimonial of testimonials">
                                 <div class="container bg-white event p-4 mt-4 mb-4">
-                                    <p>{{testimonial.title}}</p>
-                                    <p>{{testimonial.body}}</p>
+                                    <h4>{{testimonial.title}}</h4>
+                                    <h6 class="my-3">{{testimonial.body}}</h6>
                                     <button class="btn btn-outline-success">Edit</button>
                                     <button class="btn btn-outline-danger">Delete</button>
                                 </div>
