@@ -42,6 +42,8 @@ export class InquiriesComponent {
                 this.display = 'clientForm';
               } else if (id === 'generalForm'){
                 this.display = 'generalForm';
+              } else if (id === 'all'){
+                this.display = 'all';
               }
             }
           });
