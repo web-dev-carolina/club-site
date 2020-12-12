@@ -49,7 +49,7 @@ export class CreateComponent {
           const month = (document.getElementById('monthInput') as HTMLInputElement).value;
           const newEvent = new UpcomingEvent(title, body, day, month);
           const respEvent = await this.upcomingEventService.newUpcomingEvent(newEvent);
-          newEvent.setId(respEvent.ops[0]._id);
+          newEvent.setId(JSON.parse(JSON.stringify(respEvent)).insertedIds[0]);
           this.upcomingEvents.push(newEvent);
           this.addSuccessDiv();
         } else if (this.display === 'announcement') {
@@ -58,7 +58,7 @@ export class CreateComponent {
           const body = (document.getElementById('bodyInput') as HTMLInputElement).value;
           const newAnnouncement = new Announcement(title, date, body);
           const respAnnouncement = await this.annoucementService.newAnnouncement(newAnnouncement);
-          newAnnouncement.setId(respAnnouncement.ops[0]._id);
+          newAnnouncement.setId(JSON.parse(JSON.stringify(respAnnouncement)).insertedIds[0]);
           this.announcements.push(newAnnouncement);
           this.addSuccessDiv();
         } else if (this.display === 'testimonial') {
@@ -66,7 +66,7 @@ export class CreateComponent {
           const body = (document.getElementById('bodyInput') as HTMLInputElement).value;
           const newTestimonial = new Testimonial(title, body);
           const respTestimonial = await this.testimonialService.newTestimonial(newTestimonial);
-          newTestimonial.setId(respTestimonial.ops[0]._id);
+          newTestimonial.setId(JSON.parse(JSON.stringify(respTestimonial)).insertedIds[0]);
           this.testimonials.push(newTestimonial);
           this.addSuccessDiv();
         }
