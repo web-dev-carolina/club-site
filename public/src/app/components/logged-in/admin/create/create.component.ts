@@ -63,12 +63,12 @@ export class CreateComponent {
         }
       } else if (clas.includes('delete')) {
         if (clas.includes('delete-event')) {
-          this.upcomingEventService.deleteEvent(element.dataId);
+          this.upcomingEventService.deleteEvent(element.title);
         }
       } else if (clas.includes('edit')) {
         if (clas.includes('edit-event')) {
           // get the current state of the event
-          const curr = this.upcomingEvents.filter((i) => i.title === element.dataId)[0];
+          const curr = this.upcomingEvents.filter((i) => i.title === element.title)[0];
           // replace create form to modify event
           this.renderEditForm(curr);
           // save the modified state
