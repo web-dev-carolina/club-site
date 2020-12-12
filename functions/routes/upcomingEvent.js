@@ -17,7 +17,8 @@ router.get('/upcomingEvents', async function (req, res, next) {
   } catch (err) {
     res.status(500).send('Something broke!');
   }
-})
+});
+
 
 router.post('/upcomingEvents', async function (req, res, next) {
   try {
@@ -34,8 +35,7 @@ router.post('/upcomingEvents', async function (req, res, next) {
   } catch (err) {
     res.status(500).send('Something broke!');
   }
-
-})
+});
 
 router.delete('/upcomingEvents/:id', async function (req, res, next) {
   try {
@@ -47,6 +47,6 @@ router.delete('/upcomingEvents/:id', async function (req, res, next) {
   } catch (err) {
     res.status(500).send('Something broke!');
   }
-})
+});
 
 module.exports = router;

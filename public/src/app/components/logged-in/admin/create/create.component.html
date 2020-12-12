@@ -1,5 +1,5 @@
 <div class="bg">
-    <div class="body">
+    <div id="createDiv" class="body">
         <div class="container">
             <h1 class="title">Create</h1>
             <div class="row">
@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col-5">
                     <ng-container *ngIf="this.display === 'upcomingEvent'">
-                        <div class="container bg-white user-form">
+                        <div class="container bg-white user-form col">
                             <div id="createForm" class="form">
                                 <div class="row">
                                     <div class="col-md-3">
@@ -109,16 +109,16 @@
                             <ng-container *ngFor="let upcomingEvent of upcomingEvents">
                                 <div class="row bg-white event">
                                     <div class="col-lg-3">
-                                        <div class="container mt-3 eventDate">
+                                        <div class="col container mt-3 eventDate">
                                             <p class="day">{{upcomingEvent.day}}</p>
                                             <p class="month">{{upcomingEvent.month}}</p>
                                         </div>
                                     </div>
                                     <div class="col-md-auto pt-3 eventInfo">
-                                        <h5>{{upcomingEvent.title}}</h5>
+                                        <h5 class="event-title">{{upcomingEvent.title}}</h5>
                                         <h6>{{upcomingEvent.body}}</h6>
-                                        <button class="btn btn-outline-success">Edit</button>
-                                        <button id={{upcomingEvent.title}} class="btn btn-outline-danger delete-event delete">Delete</button>
+                                        <button dataId={{upcomingEvent.title}} class="btn btn-outline-success edit edit-event">Edit</button>
+                                        <button dataId={{upcomingEvent.title}} class="btn btn-outline-danger delete-event delete">Delete</button>
                                     </div>
                                 </div>
                         </ng-container>
@@ -132,7 +132,7 @@
                                     <h4>{{announcement.title}}</h4>
                                     <h6 class="text-muted">{{announcement.date}}</h6>
                                     <p class="my-3">{{announcement.body}}</p>
-                                    <button class="btn btn-outline-success">Edit</button>
+                                    <button class="btn btn-outline-success edit edit-announcement">Edit</button>
                                     <button class="btn btn-outline-danger delete-announcement delete">Delete</button>
                                 </div>
                             </ng-container>
@@ -145,7 +145,7 @@
                                 <div class="container bg-white event p-4 mt-4 mb-4">
                                     <h4>{{testimonial.title}}</h4>
                                     <h6 class="my-3">{{testimonial.body}}</h6>
-                                    <button class="btn btn-outline-success">Edit</button>
+                                    <button class="btn btn-outline-success edit edit-testimonial">Edit</button>
                                     <button class="btn btn-outline-danger delete-testimonial delete">Delete</button>
                                 </div>
                             </ng-container>
