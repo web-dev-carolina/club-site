@@ -63,7 +63,8 @@ export class CreateComponent {
         }
       } else if (clas.includes('delete')) {
         if (clas.includes('delete-event')) {
-          this.upcomingEventService.deleteEvent(element.title);
+          const curr = this.upcomingEvents.filter((i) => i.title === element.title)[0];
+          this.upcomingEventService.deleteEvent(curr._id);
         }
       } else if (clas.includes('edit')) {
         if (clas.includes('edit-event')) {
