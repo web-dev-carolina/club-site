@@ -76,9 +76,9 @@ export class CreateComponent {
       } else if (clas.includes('edit')) {
         if (clas.includes('edit-event')) {
           // get the current state of the event
-          const curr = this.upcomingEvents.filter((i) => i.title === element.title)[0];
+          const curr = this.upcomingEvents.filter((i) => i._id === element.title)[0];
+          console.log(curr);
           // replace create form to modify event
-          this.renderEditForm(curr);
           // save the modified state
           this.upcomingEventService.updateEvent(curr);
         }
