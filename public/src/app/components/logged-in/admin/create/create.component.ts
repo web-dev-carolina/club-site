@@ -80,8 +80,7 @@ export class CreateComponent {
         if (clas.includes('edit-event')) {
           // get the current state of the event
           const curr = this.upcomingEvents.filter((i) => i._id === element.title)[0];
-          console.log(curr);
-          // replace create form to modify event
+          // render edit form in overlay
           // save the modified state
           this.upcomingEventService.updateEvent(curr);
         }
