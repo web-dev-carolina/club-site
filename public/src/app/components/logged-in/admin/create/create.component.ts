@@ -56,14 +56,14 @@ export class CreateComponent {
           const date = (document.getElementById('dateInput') as HTMLInputElement).value;
           const body = (document.getElementById('bodyInput') as HTMLInputElement).value;
           const newAnnouncement = new Announcement(title, date, body);
-          this.annoucementService.newAnnouncement(newAnnouncement);
+          await this.annoucementService.newAnnouncement(newAnnouncement);
           this.announcements.push(newAnnouncement);
           this.addSuccessDiv();
         } else if (this.display === 'testimonial') {
           const title = (document.getElementById('titleInput') as HTMLInputElement).value;
           const body = (document.getElementById('bodyInput') as HTMLInputElement).value;
           const newTestimonial = new Testimonial(title, body);
-          this.testimonialService.newTestimonial(newTestimonial);
+          await this.testimonialService.newTestimonial(newTestimonial);
           this.testimonials.push(newTestimonial);
           this.addSuccessDiv();
         }
