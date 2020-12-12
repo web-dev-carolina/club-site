@@ -2,6 +2,9 @@ import { Component, AfterContentInit } from '@angular/core';
 import { MemberFormService } from '../../../../services/memberForm.service';
 import { ClientFormService } from '../../../../services/clientForm.service';
 import { GeneralFormService } from '../../../../services/generalForm.service';
+import { MemberForm } from 'src/MemberForm';
+import { ClientForm } from 'src/ClientForm';
+import { GeneralForm } from 'src/GeneralForm';
 
 @Component({
   selector: 'app-contact-us',
@@ -88,7 +91,8 @@ export class ContactUsComponent implements AfterContentInit {
           this.setInputClass(message, 'form-control is-valid');
         }
         if (firstNameVal.length !== 0 && lastNameVal.length !== 0 && emailVal.length !== 0 && messageVal.length !== 0) {
-          const resp = this.memberFormService.postForm(firstNameVal, lastNameVal, emailVal, messageVal);
+          const memberForm = new MemberForm(firstNameVal, lastNameVal, emailVal, messageVal);
+          const resp = this.memberFormService.postForm(memberForm);
           resp.then(data => {if (data !== false){
             if (!document.getElementById('divSuccess')){
               const div = document.createElement('div');
@@ -170,7 +174,8 @@ export class ContactUsComponent implements AfterContentInit {
         }
         if (nameVal.length !== 0 && businessVal.length !== 0 && emailVal.length !== 0 &&
             messageVal.length !== 0 && serviceButtonsVal !== false){
-          const resp = this.clientFormService.postForm(nameVal, businessVal, emailVal, messageVal, serviceButtonsId);
+          const clientForm = new ClientForm(nameVal, businessVal, emailVal, messageVal, serviceButtonsId);
+          const resp = this.clientFormService.postForm(clientForm);
           resp.then(data => {if (data !== false){
             if (!document.getElementById('divSuccess')){
               const div = document.createElement('div');
@@ -201,7 +206,6 @@ export class ContactUsComponent implements AfterContentInit {
         const emailVal = email.value;
         const message = (document.getElementById('inputMessage') as HTMLInputElement);
         const messageVal = message.value;
-        const resp = this.generalFormService.postForm(nameVal, affiliationVal, emailVal, messageVal);
         if (nameVal.length === 0) {
           this.setInputClass(name, 'form-control is-invalid');
         } else {
@@ -223,6 +227,8 @@ export class ContactUsComponent implements AfterContentInit {
           this.setInputClass(message, 'form-control is-valid');
         }
         if (nameVal.length !== 0 && affiliationVal.length !== 0 && emailVal.length !== 0 && messageVal.length !== 0) {
+          const generalForm = new GeneralForm(nameVal, affiliationVal, emailVal, messageVal);
+          const resp = this.generalFormService.postForm(generalForm);
           resp.then(data => {if (data !== false){
             if (!document.getElementById('divSuccess')){
               const div = document.createElement('div');

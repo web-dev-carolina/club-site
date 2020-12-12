@@ -8,9 +8,8 @@ export class MemberFormService {
   }
 
   // tslint:disable-next-line:typedef
-  postForm(f, l, e, m){
-    return this.http.post('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/memberForm',
-    { firstName: f, lastName: l, email: e, message: m }).toPromise();
+  postForm(memberForm){
+    return this.http.post('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/memberForm', memberForm).toPromise();
   }
 
   // tslint:disable-next-line:typedef
