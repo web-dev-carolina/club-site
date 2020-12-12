@@ -29,7 +29,7 @@ export class CreateComponent {
     this.testimonialService.getTestimonials().subscribe((testimonials: any[]) => {
       this.testimonials = testimonials;
     });
-    window.addEventListener('click', (e) => {
+    window.addEventListener('click', async (e) => {
       const element = (e.target as HTMLElement);
       const clas = element.getAttribute('class');
       const id = element.id;
@@ -47,24 +47,31 @@ export class CreateComponent {
           const body = (document.getElementById('bodyInput') as HTMLInputElement).value;
           const day = (document.getElementById('dayInput') as HTMLInputElement).value;
           const month = (document.getElementById('monthInput') as HTMLInputElement).value;
-          this.upcomingEventService.newUpcomingEvent(title, body, day, month);
+          const newEvent = new UpcomingEvent(title, body, day, month);
+          await this.upcomingEventService.newUpcomingEvent(newEvent);
+          this.upcomingEvents.push(newEvent);
           this.addSuccessDiv();
         } else if (this.display === 'announcement') {
           const title = (document.getElementById('titleInput') as HTMLInputElement).value;
           const date = (document.getElementById('dateInput') as HTMLInputElement).value;
           const body = (document.getElementById('bodyInput') as HTMLInputElement).value;
-          this.annoucementService.newAnnouncement(title, date, body);
+          const newAnnouncement = new Announcement(title, date, body);
+          this.annoucementService.newAnnouncement(newAnnouncement);
+          this.announcements.push(newAnnouncement);
           this.addSuccessDiv();
         } else if (this.display === 'testimonial') {
           const title = (document.getElementById('titleInput') as HTMLInputElement).value;
           const body = (document.getElementById('bodyInput') as HTMLInputElement).value;
-          this.testimonialService.newTestimonial(title, body);
+          const newTestimonial = new Testimonial(title, body);
+          this.testimonialService.newTestimonial(newTestimonial);
+          this.testimonials.push(newTestimonial);
           this.addSuccessDiv();
         }
       } else if (clas.includes('delete')) {
         if (clas.includes('delete-event')) {
-          const curr = this.upcomingEvents.filter((i) => i.title === element.title)[0];
+          const curr = this.upcomingEvents.filter((i) => i._id === element.title)[0];
           this.upcomingEventService.deleteEvent(curr._id);
+          this.upcomingEvents = this.upcomingEvents.filter(event => { if (event._id !== curr._id) { return event; } });
         }
       } else if (clas.includes('edit')) {
         if (clas.includes('edit-event')) {
