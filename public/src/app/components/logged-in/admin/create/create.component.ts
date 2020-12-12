@@ -72,6 +72,7 @@ export class CreateComponent {
           // replace create form to modify event
           this.renderEditForm(curr);
           // save the modified state
+          this.upcomingEventService.updateEvent(curr);
         }
       }
     });

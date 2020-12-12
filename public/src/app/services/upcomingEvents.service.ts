@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { CurrencyPipe } from '@angular/common';
 
 @Injectable()
 export class UpcomingEventsService {
@@ -25,8 +26,8 @@ export class UpcomingEventsService {
   }
 
   // tslint:disable-next-line:typedef
-  updateEvent(title, body, day, month) {
-    return this.http.put('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/upcomingEvents/' + title,
-    { title, body, day, month}).toPromise();
+  updateEvent(curr) {
+    return this.http.put('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/upcomingEvents/' + curr.title,
+    curr).toPromise();
   }
 }
