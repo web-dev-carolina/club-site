@@ -164,6 +164,8 @@ Frontend is deploy at the following url...
 ```bash
 https://webdevcarolina.com/
 ```
+
+The deployed version is contained on the 'Firebase' branch to ensure we always have a stable version of the code.
 # Contributors
 
 - Christian Nell (Project Lead)
