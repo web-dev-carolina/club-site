@@ -13,9 +13,8 @@ export class AnnouncementService {
   }
 
   // tslint:disable-next-line:typedef
-  newAnnouncement(t, d, b){
-    return this.http.post('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/announcements',
-    { title: t, date: d, body: b})
+  newAnnouncement(announcement){
+    return this.http.post('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/announcements', announcement)
     .toPromise();
   }
 }

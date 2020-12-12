@@ -13,9 +13,8 @@ export class TestimonialService {
   }
 
   // tslint:disable-next-line:typedef
-  newTestimonial(t, b){
-    return this.http.post('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/testimonials',
-    { title: t, body: b})
+  newTestimonial(testimonial){
+    return this.http.post('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/testimonials', testimonial)
     .toPromise();
   }
 }
