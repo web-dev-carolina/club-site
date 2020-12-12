@@ -11,4 +11,8 @@ export class UpcomingEvent {
         this.day = day;
         this.month = month;
     }
+
+    setId(id): void {
+        this._id = id;
+    }
 }

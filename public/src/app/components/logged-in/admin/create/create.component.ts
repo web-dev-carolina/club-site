@@ -48,7 +48,8 @@ export class CreateComponent {
           const day = (document.getElementById('dayInput') as HTMLInputElement).value;
           const month = (document.getElementById('monthInput') as HTMLInputElement).value;
           const newEvent = new UpcomingEvent(title, body, day, month);
-          await this.upcomingEventService.newUpcomingEvent(newEvent);
+          const respEvent = await this.upcomingEventService.newUpcomingEvent(newEvent);
+          newEvent.setId(respEvent.ops[0]._id);
           this.upcomingEvents.push(newEvent);
           this.addSuccessDiv();
         } else if (this.display === 'announcement') {
@@ -56,14 +57,16 @@ export class CreateComponent {
           const date = (document.getElementById('dateInput') as HTMLInputElement).value;
           const body = (document.getElementById('bodyInput') as HTMLInputElement).value;
           const newAnnouncement = new Announcement(title, date, body);
-          await this.annoucementService.newAnnouncement(newAnnouncement);
+          const respAnnouncement = await this.annoucementService.newAnnouncement(newAnnouncement);
+          newAnnouncement.setId(respAnnouncement.ops[0]._id);
           this.announcements.push(newAnnouncement);
           this.addSuccessDiv();
         } else if (this.display === 'testimonial') {
           const title = (document.getElementById('titleInput') as HTMLInputElement).value;
           const body = (document.getElementById('bodyInput') as HTMLInputElement).value;
           const newTestimonial = new Testimonial(title, body);
-          await this.testimonialService.newTestimonial(newTestimonial);
+          const respTestimonial = await this.testimonialService.newTestimonial(newTestimonial);
+          newTestimonial.setId(respTestimonial.ops[0]._id);
           this.testimonials.push(newTestimonial);
           this.addSuccessDiv();
         }
