@@ -5,14 +5,14 @@
             <div *ngFor="let announcement of announcements; last as isLast;">
                 <div *ngIf="isLast; then thenBlock else elseBlock"></div>
                 <ng-template #thenBlock>
-                    <h3>{{announcement.title}}</h3>
-                    <h6>{{announcement.date}}</h6>
-                    <p>{{announcement.body}}</p>
+                    <h4>{{announcement.title}}</h4>
+                    <h6 class="text-muted">{{announcement.date}}</h6>
+                    <p class="my-3">{{announcement.body}}</p>
                 </ng-template>
                 <ng-template #elseBlock>
-                    <h3>{{announcement.title}}</h3>
-                    <h6>{{announcement.date}}</h6>
-                    <p>{{announcement.body}}</p>
+                    <h4>{{announcement.title}}</h4>
+                    <h6 class="text-muted">{{announcement.date}}</h6>
+                    <p class="my-3">{{announcement.body}}</p>
                     <hr>
                 </ng-template>
             </div>

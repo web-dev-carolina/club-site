@@ -8,6 +8,7 @@ nav a {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    cursor: pointer;
 }
 
 .nav-style {
@@ -51,6 +52,7 @@ a.left {
     position: relative;
     color: black;
     text-decoration: none;
+    cursor: pointer;
 }
 
 a.left:before {
