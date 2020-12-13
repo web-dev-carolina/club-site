@@ -9,15 +9,15 @@ import { Router } from '@angular/router';
     styleUrls: ['login.component.css']
 })
 export class LoginComponent {
-    constructor(private loginService: LoginService, private router: Router){
+    constructor(private loginService: LoginService, private router: Router) {
         window.addEventListener('click', async (e) => {
-            if ((e.target as HTMLElement).id === 'submitLogin'){
+            if ((e.target as HTMLElement).id === 'submitLogin') {
+                e.preventDefault();
                 const inputUser = (document.getElementById('usernameInput') as HTMLInputElement).value;
                 const inputPass = (document.getElementById('passwordInput') as HTMLInputElement).value;
                 const resp = await this.loginService.login(inputUser, inputPass);
-                console.log(resp);
-                if (!resp){
-                    if (!document.getElementById('divBad')){
+                if (!resp) {
+                    if (!document.getElementById('divBad')) {
                         const div = document.createElement('div');
                         const del = document.createElement('button');
                         const span = document.createElement('span');
@@ -35,11 +35,14 @@ export class LoginComponent {
                         div.appendChild(del);
                         document.getElementById('loginForm').append(div);
                     }
-                    return;
-                }
-                sessionStorage.setItem('user', inputUser);
-                if (resp[0].type === 'admin'){
-                    this.router.navigateByUrl('/loggedIn/admin/home');
+                } else {
+                    // const user_data = resp.user_data;
+                    // const token = resp.token;
+                    sessionStorage.setItem('user', resp[0].username);
+                    // localStorage.setItem('wdc-auth-token', token);
+                    if (resp[0].type === 'admin') {
+                        this.router.navigateByUrl('/loggedIn/admin/home');
+                    }
                 }
                 return;
             }
