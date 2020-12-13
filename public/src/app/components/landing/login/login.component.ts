@@ -15,6 +15,7 @@ export class LoginComponent {
                 const inputUser = (document.getElementById('usernameInput') as HTMLInputElement).value;
                 const inputPass = (document.getElementById('passwordInput') as HTMLInputElement).value;
                 const resp = await this.loginService.login(inputUser, inputPass);
+                console.log(resp);
                 if (!resp){
                     if (!document.getElementById('divBad')){
                         const div = document.createElement('div');
