@@ -80,22 +80,23 @@
                     </ng-container>
                     <ng-container *ngIf="this.display === 'edit'">
                         <div class="container bg-white user-form">
-                            <div id="createForm" class="form">
-                                <div class="row">
-                                    <div class="col-lg">
-                                      <label for="titleInput">Author</label>
-                                      <input type="text" class="form-control" id="titleInput" placeholder="Jonny Smith">
-                                    </div>
+                            <div class="form">
+                                <div class="row text-center">
+                                    <h4 class="title">Search members</h4>
                                 </div>
                                 <div class="row">
-                                    <div class="col-lg">
-                                        <label for="bodyInput">Body</label>
-                                        <textarea type="text" class="form-control" id="bodyInput" placeholder="Web Dev Carolina is a good club."></textarea>
-                                    </div>
+                                    <div class="col-md">
+                                        <label for="fnameInput">First name (optional)</label>
+                                        <input type="text" class="form-control" id="fnameInput">
+                                      </div>
+                                      <div class="col-md">
+                                        <label for="lnameInput">Last Name (required)</label>
+                                        <input type="text" class="form-control" id="lnameInput">
+                                      </div>
                                 </div>
                                 <div class="row">
                                     <div class="container d-flex justify-content-center">
-                                        <button id="createButton" class="button submit">Submit</button>
+                                        <button id="createButton" class="button submit">Search</button>
                                     </div>
                                 </div>
                             </div>
