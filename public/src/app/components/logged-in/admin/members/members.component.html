@@ -3,17 +3,105 @@
         <div class="container">
             <h1 class="title">Members</h1>
             <div class="row">
-                <button autofocus id="upcomingEvent" type="button" class="createToggle toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
+                <button autofocus id="add" type="button" class="memberToggle toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
                     Add
                 </button>
-                <button id="announcement" type="button" class="createToggle toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
+                <button id="remove" type="button" class="memberToggle toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
                     Remove
                 </button>
-                <button id="testimonial" type="button" class="createToggle toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
+                <button id="edit" type="button" class="memberToggle toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
                     Edit
                 </button>
             </div>
-            <div class="row"></div>
+            <div class="row">
+                <div class="col-5">
+                    <ng-container *ngIf="this.display === 'add'">
+                        <div class="container bg-white user-form col">
+                            <div id="createForm" class="form">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                      <label for="monthInput">Month</label>
+                                      <input type="text" class="form-control" id="monthInput" placeholder="Dec">
+                                    </div>
+                                    <div class="col-md-3">
+                                      <label for="dayInput">Day</label>
+                                      <input type="text" class="form-control" id="dayInput" placeholder="11">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg">
+                                      <label for="titleInput">Title</label>
+                                      <input type="text" class="form-control" id="titleInput" placeholder="Meeting">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg">
+                                      <label for="bodyInput">Body</label>
+                                      <textarea type="text" class="form-control" id="bodyInput" placeholder="Meeting at 12:00 P.M."></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="container d-flex justify-content-center">
+                                        <button id="createButton" class="button submit">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <ng-container *ngIf="this.display === 'remove'">
+                        <div class="container bg-white user-form">
+                            <div id="createForm" class="form">
+                                <div class="row">
+                                    <div class="col-lg">
+                                      <label for="titleInput">Title</label>
+                                      <input type="text" class="form-control" id="titleInput" placeholder="Site Done">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg">
+                                      <label for="dateInput">Date</label>
+                                      <input type="text" class="form-control" id="dateInput" placeholder="Dec. 3, 2020">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg">
+                                      <label for="bodyInput">Body</label>
+                                      <textarea type="text" class="form-control" id="bodyInput" placeholder="The website is now done."></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="container d-flex justify-content-center">
+                                        <button id="createButton" class="button submit">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <ng-container *ngIf="this.display === 'edit'">
+                        <div class="container bg-white user-form">
+                            <div id="createForm" class="form">
+                                <div class="row">
+                                    <div class="col-lg">
+                                      <label for="titleInput">Author</label>
+                                      <input type="text" class="form-control" id="titleInput" placeholder="Jonny Smith">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg">
+                                        <label for="bodyInput">Body</label>
+                                        <textarea type="text" class="form-control" id="bodyInput" placeholder="Web Dev Carolina is a good club."></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="container d-flex justify-content-center">
+                                        <button id="createButton" class="button submit">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
         </div>
     </div>
 </div>
