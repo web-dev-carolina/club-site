@@ -27,10 +27,8 @@ router.post('/login', bodyParser.json(), async (req,res) => {
         console.log("User: " + user + ". Credentials valid");
         req.session.user = user;
         const token = jwt.sign({ id: user._id }, "jwt_webdevsite");
-        res.json({
-            token, 
-            user_data
-        });
+        // res.json({ token, user_data });
+        res.json(user_data);
         return;
     }
     res.status(403).send("Unauthorized credentials");
