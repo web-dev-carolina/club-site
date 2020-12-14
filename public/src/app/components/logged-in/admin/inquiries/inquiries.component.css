@@ -71,6 +71,10 @@
     color: #5262AD;
 }
 
+.fas {
+    margin-right: 0.5em;
+}
+
 .service {
     color: white;
     background-color: #945DA6;
@@ -85,7 +89,6 @@
     box-shadow: none;
 }
 
-.scroll {
-    overflow: scroll;
-    height: 500px;
+.form {
+    margin-left: -15px;
 }

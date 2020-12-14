@@ -80,3 +80,19 @@
 .event button {
     margin-right: 0.5em;
 }
+
+@media only screen and (max-width: 992px) {
+    .toggle-title {
+        margin-top: 1em;
+        text-align: center;
+    }
+    .bg {
+        height: 1500px;
+    }
+    .scroll {
+        overflow: visible;
+    }
+    .form {
+        margin-left: 0;
+    }
+}
