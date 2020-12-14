@@ -14,36 +14,36 @@
                 </button>
             </div>
             <div class="row">
-                <div class="col-5">
-                    <ng-container *ngIf="this.display === 'add'">
-                        <div class="container bg-white user-form col">
-                            <div class="form">
+                <div class="col-6">
+                    <div class="form mr-4">
+                        <ng-container *ngIf="this.display === 'add'">
+                            <div class="container bg-white user-form col">
                                 <div class="row">
                                     <div class="col-md">
-                                      <label for="fnameInput">First name</label>
-                                      <input type="text" class="form-control" id="fnameInput">
+                                        <label for="fnameInput">First name</label>
+                                        <input type="text" class="form-control" id="fnameInput">
                                     </div>
                                     <div class="col-md">
-                                      <label for="lnameInput">Last Name</label>
-                                      <input type="text" class="form-control" id="lnameInput">
+                                        <label for="lnameInput">Last Name</label>
+                                        <input type="text" class="form-control" id="lnameInput">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg">
-                                      <label for="emailInput">Email</label>
-                                      <input type="text" class="form-control" id="emailInput">
+                                        <label for="emailInput">Email</label>
+                                        <input type="text" class="form-control" id="emailInput">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg">
-                                      <label for="placementInput">Team placement</label>
-                                      <select class="form-control" id="placementInput">
-                                          <option>Club Site</option>
-                                          <option>Client 1</option>
-                                          <option>Student Org 1</option>
-                                          <option>Client 2</option>
-                                          <option>Wherever members are needed</option>
-                                      </select>
+                                        <label for="placementInput">Team placement</label>
+                                        <select class="form-control" id="placementInput">
+                                            <option>Club Site</option>
+                                            <option>Client 1</option>
+                                            <option>Student Org 1</option>
+                                            <option>Client 2</option>
+                                            <option>Wherever members are needed</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -52,62 +52,66 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </ng-container>
-                    <ng-container *ngIf="this.display === 'remove'">
-                        <div class="container bg-white user-form">
-                            <div class="form">
-                                <div class="row text-center">
-                                    <h4 class="title">Search members</h4>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md">
-                                        <label for="fnameInput">First name (optional)</label>
-                                        <input type="text" class="form-control" id="fnameInput">
-                                      </div>
-                                      <div class="col-md">
-                                        <label for="lnameInput">Last Name (required)</label>
-                                        <input type="text" class="form-control" id="lnameInput">
-                                      </div>
-                                </div>
-                                <div class="row">
-                                    <div class="container d-flex justify-content-center">
-                                        <button id="createButton" class="button submit">Search</button>
+                        </ng-container>
+                        <ng-container *ngIf="this.display === 'remove'">
+                            <div class="container bg-white user-form">
+                                <div class="form">
+                                    <div class="row d-flex justify-content-center">
+                                        <h4 class="title">Search members</h4>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <label for="fnameInput">First name</label>
+                                            <input type="text" class="form-control" id="fnameInput">
+                                          </div>
+                                          <div class="col-md">
+                                            <label for="lnameInput">Last Name</label>
+                                            <input type="text" class="form-control" id="lnameInput">
+                                          </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="container d-flex justify-content-center">
+                                            <button id="createButton" class="button submit">Search</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </ng-container>
-                    <ng-container *ngIf="this.display === 'edit'">
-                        <div class="container bg-white user-form">
-                            <div class="form">
-                                <div class="row text-center">
-                                    <h4 class="title">Search members</h4>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md">
-                                        <label for="fnameInput">First name (optional)</label>
-                                        <input type="text" class="form-control" id="fnameInput">
-                                      </div>
-                                      <div class="col-md">
-                                        <label for="lnameInput">Last Name (required)</label>
-                                        <input type="text" class="form-control" id="lnameInput">
-                                      </div>
-                                </div>
-                                <div class="row">
-                                    <div class="container d-flex justify-content-center">
-                                        <button id="createButton" class="button submit">Search</button>
+                        </ng-container>
+                        <ng-container *ngIf="this.display === 'edit'">
+                            <div class="container bg-white user-form">
+                                <div class="form">
+                                    <div class="row d-flex justify-content-center">
+                                        <h4 class="title">Search members</h4>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <label for="fnameInput">First name</label>
+                                            <input type="text" class="form-control" id="fnameInput">
+                                          </div>
+                                          <div class="col-md">
+                                            <label for="lnameInput">Last Name</label>
+                                            <input type="text" class="form-control" id="lnameInput">
+                                          </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="container d-flex justify-content-center">
+                                            <button id="createButton" class="button submit">Search</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </ng-container>
+                        </ng-container>
+                    </div>
                 </div>
-                <div class="col-1"></div>
                 <div class="col-6">
-                    <ng-container *ngFor="let user of users">
-                        <p>{{user.username}}</p>
-                    </ng-container>
+                    <div class="scoll">
+                        <ng-container *ngFor="let user of users">
+                            <div class="bg-white event p-4 mb-4">
+                                <h4>Username: {{user.username}}</h4>
+                                <span class="text-muted">Privilege: {{user.type}}</span>
+                            </div>
+                        </ng-container>
+                    </div>
                 </div>
             </div>
         </div>

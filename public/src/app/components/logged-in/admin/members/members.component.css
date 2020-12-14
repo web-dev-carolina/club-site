@@ -68,6 +68,10 @@
     color: white;
 }
 
+.form {
+    margin-left: -15px;
+}
+
 .scroll {
     overflow: scroll;
     height: 400px;
