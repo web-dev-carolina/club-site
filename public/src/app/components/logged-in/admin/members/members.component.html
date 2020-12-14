@@ -14,7 +14,7 @@
                 </button>
             </div>
             <div class="row">
-                <div class="col-6">
+                <div class="col-lg-6">
                     <div class="form mr-4">
                         <ng-container *ngIf="this.display === 'add'">
                             <div class="container bg-white user-form col">
@@ -57,7 +57,7 @@
                             <div class="container bg-white user-form">
                                 <div class="form">
                                     <div class="row d-flex justify-content-center">
-                                        <h4 class="title">Search members</h4>
+                                        <h4 class="toggle-title">Search members</h4>
                                     </div>
                                     <div class="row">
                                         <div class="col-md">
@@ -81,7 +81,7 @@
                             <div class="container bg-white user-form">
                                 <div class="form">
                                     <div class="row d-flex justify-content-center">
-                                        <h4 class="title">Search members</h4>
+                                        <h4 class="toggle-title">Search members</h4>
                                     </div>
                                     <div class="row">
                                         <div class="col-md">
@@ -103,7 +103,7 @@
                         </ng-container>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6 mobile">
                     <div class="scoll">
                         <ng-container *ngFor="let user of users">
                             <div class="bg-white event p-4 mb-4">

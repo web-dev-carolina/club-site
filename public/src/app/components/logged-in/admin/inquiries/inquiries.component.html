@@ -3,24 +3,25 @@
         <div class="container">
             <h1 class="title">Inquiries</h1>
             <div class="row">
-                <button id="all" type="button" class="formToggle filter" data-toggle="button" aria-pressed="false" autocomplete="off">
+                <button id="all" type="button" class="formToggle filter my-1" data-toggle="button" aria-pressed="false" autocomplete="off">
                     All
                 </button>
-                <button id="memberForm" type="button" class="formToggle filter" data-toggle="button" aria-pressed="false" autocomplete="off">
+                <button id="memberForm" type="button" class="formToggle filter my-1" data-toggle="button" aria-pressed="false" autocomplete="off">
                     Student
                 </button>
-                <button id="clientForm" type="button" class="formToggle filter" data-toggle="button" aria-pressed="false" autocomplete="off">
+            
+                <button id="clientForm" type="button" class="formToggle filter my-1" data-toggle="button" aria-pressed="false" autocomplete="off">
                     Client
                 </button>
-                <button id="generalForm" type="button" class="formToggle filter" data-toggle="button" aria-pressed="false" autocomplete="off">
+                <button id="generalForm" type="button" class="formToggle filter my-1" data-toggle="button" aria-pressed="false" autocomplete="off">
                     General
                 </button>
             </div>
 
-            <div class="row">
+            <div class="row form">
                 <ng-container *ngIf="this.display === 'all'">
                     <ng-container *ngFor="let memberForm of memberForms">
-                        <div class="col-4">
+                        <div class="col-lg-4">
                             <div class="inquiry">
                                 <h5>{{memberForm.firstName}} {{memberForm.lastName}}</h5>
                                 <h6 class="text-muted">Student</h6>
@@ -31,7 +32,7 @@
                         </div>
                     </ng-container>
                     <ng-container *ngFor="let clientForm of clientForms">
-                        <div class="col-4">
+                        <div class="col-lg-4">
                             <div class="inquiry">
                                 <h5>{{clientForm.name}}</h5>
                                 <h6 class="text-muted">{{clientForm.business}}</h6>
@@ -43,7 +44,7 @@
                         </div>
                     </ng-container>
                     <ng-container *ngFor="let generalForm of generalForms">
-                        <div class="col-4">
+                        <div class="col-lg-4">
                             <div class="inquiry">
                                 <h5>{{generalForm.name}}</h5>
                                 <h6 class="text-muted">{{generalForm.affiliation}}</h6>
@@ -57,7 +58,7 @@
                 
                 <ng-container *ngIf="this.display === 'memberForm'">
                         <ng-container *ngFor="let memberForm of memberForms">
-                            <div class="col-4">
+                            <div class="col-lg-4">
                                 <div class="inquiry">
                                     <h5>{{memberForm.firstName}} {{memberForm.lastName}}</h5>
                                     <h6 class="text-muted">Student</h6>
@@ -71,7 +72,7 @@
                 
                 <ng-container *ngIf="this.display === 'clientForm'">
                         <ng-container *ngFor="let clientForm of clientForms">
-                            <div class="col-4">
+                            <div class="col-lg-4">
                                 <div class="inquiry">
                                     <h5>{{clientForm.name}}</h5>
                                     <h6 class="text-muted">{{clientForm.business}}</h6>
@@ -86,7 +87,7 @@
     
                 <ng-container *ngIf="this.display === 'generalForm'">
                         <ng-container *ngFor="let generalForm of generalForms">
-                            <div class="col-4">
+                            <div class="col-lg-4">
                                 <div class="inquiry">
                                     <h5>{{generalForm.name}}</h5>
                                     <h6 class="text-muted">{{generalForm.affiliation}}</h6>
