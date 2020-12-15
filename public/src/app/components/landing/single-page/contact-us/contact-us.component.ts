@@ -1,4 +1,4 @@
-import { Component, AfterContentInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MemberFormService } from '../../../../services/memberForm.service';
 import { ClientFormService } from '../../../../services/clientForm.service';
 import { GeneralFormService } from '../../../../services/generalForm.service';
@@ -11,7 +11,7 @@ import { GeneralForm } from 'src/GeneralForm';
   templateUrl: 'contact-us.component.html',
   styleUrls: ['contact-us.component.css'],
 })
-export class ContactUsComponent implements AfterContentInit {
+export class ContactUsComponent implements OnInit {
   state = '';
   constructor(private memberFormService: MemberFormService,
               private clientFormService: ClientFormService,
@@ -21,6 +21,7 @@ export class ContactUsComponent implements AfterContentInit {
       e.preventDefault();
       const id = (e.target as HTMLElement).id;
       const clas = (e.target as HTMLElement).getAttribute('class');
+      console.log(id);
       if (clas && clas.includes('serviceBtn')){
         if ((e.target as HTMLElement).getAttribute('aria-pressed') === 'true') {
           if (id === 'build'){
@@ -253,26 +254,24 @@ export class ContactUsComponent implements AfterContentInit {
       }
     });
   }
-  ngAfterContentInit(): void{
-    window.onload = () => {
-      document.getElementById('potentialMemberLink').onclick = () => {
-        this.state = 'potential member';
-        document.getElementById('memberImg').setAttribute('style', 'color: rgb(65,76,157)');
-        document.getElementById('clientImg').setAttribute('style', 'color: black');
-        document.getElementById('generalImg').setAttribute('style', 'color: black');
-      };
-      document.getElementById('potentialClientLink').onclick = () => {
-        this.state = 'potential client';
-        document.getElementById('clientImg').setAttribute('style', 'color: rgb(65,76,157)');
-        document.getElementById('memberImg').setAttribute('style', 'color: black');
-        document.getElementById('generalImg').setAttribute('style', 'color: black');
-      };
-      document.getElementById('generalLink').onclick = () => {
-        this.state = 'general';
-        document.getElementById('generalImg').setAttribute('style', 'color: rgb(65,76,157)');
-        document.getElementById('memberImg').setAttribute('style', 'color: black');
-        document.getElementById('clientImg').setAttribute('style', 'color: black');
-      };
+  ngOnInit(): void {
+    document.getElementById('potentialMemberLink').onclick = () => {
+      this.state = 'potential member';
+      document.getElementById('memberImg').setAttribute('style', 'color: rgb(65,76,157)');
+      document.getElementById('clientImg').setAttribute('style', 'color: black');
+      document.getElementById('generalImg').setAttribute('style', 'color: black');
+    };
+    document.getElementById('potentialClientLink').onclick = () => {
+      this.state = 'potential client';
+      document.getElementById('clientImg').setAttribute('style', 'color: rgb(65,76,157)');
+      document.getElementById('memberImg').setAttribute('style', 'color: black');
+      document.getElementById('generalImg').setAttribute('style', 'color: black');
+    };
+    document.getElementById('generalLink').onclick = () => {
+      this.state = 'general';
+      document.getElementById('generalImg').setAttribute('style', 'color: rgb(65,76,157)');
+      document.getElementById('memberImg').setAttribute('style', 'color: black');
+      document.getElementById('clientImg').setAttribute('style', 'color: black');
     };
   }
   setInputClass(input, isValid): void {
