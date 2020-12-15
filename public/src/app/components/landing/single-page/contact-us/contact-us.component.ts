@@ -21,7 +21,6 @@ export class ContactUsComponent implements OnInit {
       e.preventDefault();
       const id = (e.target as HTMLElement).id;
       const clas = (e.target as HTMLElement).getAttribute('class');
-      console.log(id);
       if (clas && clas.includes('serviceBtn')){
         if ((e.target as HTMLElement).getAttribute('aria-pressed') === 'true') {
           if (id === 'build'){
@@ -94,7 +93,8 @@ export class ContactUsComponent implements OnInit {
         if (firstNameVal.length !== 0 && lastNameVal.length !== 0 && emailVal.length !== 0 && messageVal.length !== 0) {
           const memberForm = new MemberForm(firstNameVal, lastNameVal, emailVal, messageVal);
           const resp = this.memberFormService.postForm(memberForm);
-          resp.then(data => {if (data !== false){
+          resp.then(data => {
+            console.log(JSON.parse(JSON.stringify(data)));
             if (!document.getElementById('divSuccess')){
               const div = document.createElement('div');
               const del = document.createElement('button');
@@ -113,7 +113,9 @@ export class ContactUsComponent implements OnInit {
               div.appendChild(del);
               document.getElementById('memberForm').appendChild(div);
             }
-          }});
+          }).catch(error => {
+            console.log('Error submitting form.');
+          });
         }
       } else if (id === 'clientSubmit') {
         const name = (document.getElementById('inputFirstName') as HTMLInputElement);
@@ -177,7 +179,7 @@ export class ContactUsComponent implements OnInit {
             messageVal.length !== 0 && serviceButtonsVal !== false){
           const clientForm = new ClientForm(nameVal, businessVal, emailVal, messageVal, serviceButtonsId);
           const resp = this.clientFormService.postForm(clientForm);
-          resp.then(data => {if (data !== false){
+          resp.then(data => {
             if (!document.getElementById('divSuccess')){
               const div = document.createElement('div');
               const del = document.createElement('button');
@@ -196,7 +198,9 @@ export class ContactUsComponent implements OnInit {
               div.appendChild(del);
               document.getElementById('clientForm').appendChild(div);
             }
-        }});
+        }).catch(error => {
+          console.log('Error submitting form.');
+        });
         }
       } else if (id === 'generalSubmit') {
         const name = (document.getElementById('inputFirstName') as HTMLInputElement);
@@ -230,7 +234,7 @@ export class ContactUsComponent implements OnInit {
         if (nameVal.length !== 0 && affiliationVal.length !== 0 && emailVal.length !== 0 && messageVal.length !== 0) {
           const generalForm = new GeneralForm(nameVal, affiliationVal, emailVal, messageVal);
           const resp = this.generalFormService.postForm(generalForm);
-          resp.then(data => {if (data !== false){
+          resp.then(data => {
             if (!document.getElementById('divSuccess')){
               const div = document.createElement('div');
               const del = document.createElement('button');
@@ -249,7 +253,9 @@ export class ContactUsComponent implements OnInit {
               div.appendChild(del);
               document.getElementById('generalForm').appendChild(div);
             }
-          }});
+          }).catch(error => {
+            console.log('Error submitting form.');
+          });
         }
       }
     });
