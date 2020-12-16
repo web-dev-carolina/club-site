@@ -1,0 +1,19 @@
+* {
+    font-family: 'Lato', 'sans-serif';
+}
+
+.form {
+    margin-left: -15px;
+}
+
+.row {
+    margin: 2em 0;
+}
+
+.project {
+    box-shadow: 0px 4px 13px 7px rgba(219, 219, 233, 0.5);
+    border-radius: 11px;
+    margin: 1em 0;
+    background-color: white;
+    padding: 1.5em 2em;
+}
