@@ -45,7 +45,7 @@ app.set('view engine', 'ejs')
 app.engine('html', require('ejs').renderFile)
 
 //Set Static Folder
-app.use(express.static('../public/dist/my-app'))
+app.use(express.static('../public/dist/Web-Dev-Carolina'))
 
 //Body Parser MW
 app.use(bodyParser.json())
