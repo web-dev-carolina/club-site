@@ -10,9 +10,10 @@
             <div class="project">
                 <h5>{{project.name}}</h5>
                 <h6>{{project.client}}</h6>
-                <p>{{project.desc}}</p>
-                <a (click)="goToLink([project.github])">Github</a>
                 <p class="text-muted">{{project.meet}}</p>
+                <p>{{project.desc}}</p>
+                <a (click)="goToLink([project.github])">Github</a><br>
+                <a (click)="goToLink([project.zoom])">Zoom</a>
             </div>
         </div>
     </ng-container>
