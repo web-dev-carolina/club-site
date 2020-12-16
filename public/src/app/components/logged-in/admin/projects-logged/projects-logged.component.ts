@@ -14,4 +14,7 @@ export class ProjectsLoggedComponent {
             this.projects = projects;
         });
     }
+    goToLink(url: string): void{
+        window.open(url, '_blank');
+    }
 }

@@ -9,7 +9,9 @@
         <div class="col-lg-4">
             <div class="project">
                 <h5>{{project.name}}</h5>
+                <h6>{{project.client}}</h6>
                 <p>{{project.desc}}</p>
+                <a (click)="goToLink([project.github])">Github</a>
                 <p class="text-muted">{{project.meet}}</p>
             </div>
         </div>
