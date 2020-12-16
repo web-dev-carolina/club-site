@@ -26,5 +26,5 @@ import { UsersService } from './services/users.service';
   UsersService]
 })
 export class AppComponent {
-  title = 'my-app';
+  title = 'Web-Dev-Carolina';
 }
