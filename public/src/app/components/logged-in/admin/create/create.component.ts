@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , OnInit } from '@angular/core';
 import { UpcomingEventsService } from '../../../../services/upcomingEvents.service';
 import { UpcomingEvent } from '../../../../../UpcomingEvent';
 import { AnnouncementService } from '../../../../services/announcements.service';
@@ -11,7 +11,7 @@ import { Testimonial } from '../../../../../Testimonial';
   templateUrl: 'create.component.html',
   styleUrls: ['create.component.css']
 })
-export class CreateComponent {
+export class CreateComponent implements OnInit {
   upcomingEvents: UpcomingEvent[];
   announcements: Announcement[];
   testimonials: Testimonial[];
@@ -29,6 +29,8 @@ export class CreateComponent {
     this.testimonialService.getTestimonials().subscribe((testimonials: any[]) => {
       this.testimonials = testimonials;
     });
+  }
+  ngOnInit(): void {
     window.addEventListener('click', async (e) => {
       const element = (e.target as HTMLElement);
       const clas = element.getAttribute('class');
