@@ -165,6 +165,18 @@ Frontend is deploy at the following url...
 https://webdevcarolina.com/
 ```
 
+## Testing (do in public folder)
+
+### Unit Tests
+```bash
+ng test
+```
+
+### e2e Tests
+```bash
+ng e2e
+```
+
 The deployed version is contained on the 'Firebase' branch to ensure we always have a stable version of the code.
 # Contributors
 
