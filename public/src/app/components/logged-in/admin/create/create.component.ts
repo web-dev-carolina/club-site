@@ -45,27 +45,27 @@ export class CreateComponent implements OnInit {
         }
       } else if (id === 'createButton') {
         if (this.display === 'upcomingEvent') {
-          const title = (document.getElementById('titleInput') as HTMLInputElement).value;
-          const body = (document.getElementById('bodyInput') as HTMLInputElement).value;
-          const day = (document.getElementById('dayInput') as HTMLInputElement).value;
-          const month = (document.getElementById('monthInput') as HTMLInputElement).value;
+          const title = (document.getElementById('titleInputUpcomingEvent') as HTMLInputElement).value;
+          const body = (document.getElementById('bodyInputUpcomingEvent') as HTMLInputElement).value;
+          const day = (document.getElementById('dayInputUpcomingEvent') as HTMLInputElement).value;
+          const month = (document.getElementById('monthInputUpcomingEvent') as HTMLInputElement).value;
           const newEvent = new UpcomingEvent(title, body, day, month);
           const respEvent = await this.upcomingEventService.newUpcomingEvent(newEvent);
           newEvent.setId(JSON.parse(JSON.stringify(respEvent)).insertedIds[0]);
           this.upcomingEvents.push(newEvent);
           this.addSuccessDiv();
         } else if (this.display === 'announcement') {
-          const title = (document.getElementById('titleInput') as HTMLInputElement).value;
-          const date = (document.getElementById('dateInput') as HTMLInputElement).value;
-          const body = (document.getElementById('bodyInput') as HTMLInputElement).value;
+          const title = (document.getElementById('titleInputAnnouncement') as HTMLInputElement).value;
+          const date = (document.getElementById('dateInputAnnouncement') as HTMLInputElement).value;
+          const body = (document.getElementById('bodyInputAnnouncement') as HTMLInputElement).value;
           const newAnnouncement = new Announcement(title, date, body);
           const respAnnouncement = await this.annoucementService.newAnnouncement(newAnnouncement);
           newAnnouncement.setId(JSON.parse(JSON.stringify(respAnnouncement)).insertedIds[0]);
           this.announcements.push(newAnnouncement);
           this.addSuccessDiv();
         } else if (this.display === 'testimonial') {
-          const title = (document.getElementById('titleInput') as HTMLInputElement).value;
-          const body = (document.getElementById('bodyInput') as HTMLInputElement).value;
+          const title = (document.getElementById('titleInputTestimonial') as HTMLInputElement).value;
+          const body = (document.getElementById('bodyInputTestimonial') as HTMLInputElement).value;
           const newTestimonial = new Testimonial(title, body);
           const respTestimonial = await this.testimonialService.newTestimonial(newTestimonial);
           newTestimonial.setId(JSON.parse(JSON.stringify(respTestimonial)).insertedIds[0]);
