@@ -81,6 +81,26 @@
     margin-right: 0.5em;
 }
 
+.close {
+    background-color: #2F4193;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    position: relative;
+    left: 47px;
+    bottom: 35px;
+    opacity: 1;
+}
+
+.close:hover {
+    opacity: 1;
+}
+
+.edit-form {
+    padding: 0;
+}
+
 @media only screen and (max-width: 992px) {
     .toggle-title {
         margin-top: 1em;

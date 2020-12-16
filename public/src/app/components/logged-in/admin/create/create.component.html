@@ -118,8 +118,57 @@
                                     <div class="col-md-auto pt-3 eventInfo">
                                         <h5 class="event-title">{{upcomingEvent.title}}</h5>
                                         <h6>{{upcomingEvent.body}}</h6>
-                                        <button data-title={{upcomingEvent._id}} class="btn btn-outline-success edit edit-event">Edit</button>
-                                        <button data-title={{upcomingEvent._id}} class="btn btn-outline-danger delete-event delete">Delete</button>
+
+                                        <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#editModal">
+                                            Edit
+                                        </button>
+
+                                        <!-- edit modal -->
+                    
+                                        <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-body">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <div aria-hidden="true">&times;</div>
+                                                        </button>
+                                                        <div class="edit-form">
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                <label for="monthInput">Month</label>
+                                                                <input type="text" class="form-control" id="monthInput" placeholder="Dec">
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                <label for="dayInput">Day</label>
+                                                                <input type="text" class="form-control" id="dayInput" placeholder="11">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-lg">
+                                                                <label for="titleInput">Title</label>
+                                                                <input type="text" class="form-control" id="titleInput" placeholder="Meeting">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-lg">
+                                                                <label for="bodyInput">Body</label>
+                                                                <textarea type="text" class="form-control" id="bodyInput" placeholder="Meeting at 12:00 P.M."></textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="container d-flex justify-content-center">
+                                                                    <button class="btn btn-outline-danger">Delete</button>
+                                                                    <button class="btn btn-outline-primary">Save changes</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- modal -->
+
                                     </div>
                                 </div>
                             </ng-container>
@@ -133,8 +182,52 @@
                                     <h4>{{announcement.title}}</h4>
                                     <h6 class="text-muted">{{announcement.date}}</h6>
                                     <p class="my-3">{{announcement.body}}</p>
-                                    <button class="btn btn-outline-success edit edit-announcement">Edit</button>
-                                    <button class="btn btn-outline-danger delete-announcement delete">Delete</button>
+                                    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#editModal">
+                                        Edit
+                                    </button>
+
+                                    <!-- edit modal -->
+                
+                                    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-body">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <div aria-hidden="true">&times;</div>
+                                                    </button>
+                                                    <div class="edit-form">
+                                                        <div class="row">
+                                                            <div class="col-lg">
+                                                              <label for="titleInput">Title</label>
+                                                              <input type="text" class="form-control" id="titleInput" placeholder="Site Done">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg">
+                                                              <label for="dateInput">Date</label>
+                                                              <input type="text" class="form-control" id="dateInput" placeholder="Dec. 3, 2020">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg">
+                                                              <label for="bodyInput">Body</label>
+                                                              <textarea type="text" class="form-control" id="bodyInput" placeholder="The website is now done."></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="container d-flex justify-content-center">
+                                                                <button class="btn btn-outline-danger">Delete</button>
+                                                                <button class="btn btn-outline-primary">Save changes</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- modal -->
+                                    
                                 </div>
                             </ng-container>
                         </div>
