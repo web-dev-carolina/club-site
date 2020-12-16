@@ -1,8 +1,8 @@
 {
   "hosting": [
     {
-      "target": "my-app",
-      "public": "dist/my-app",
+      "target": "Web-Dev-Carolina",
+      "public": "dist/Web-Dev-Carolina",
       "ignore": [
         "**/.*"
       ],
