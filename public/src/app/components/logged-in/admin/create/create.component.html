@@ -182,13 +182,13 @@
                                     <h4>{{announcement.title}}</h4>
                                     <h6 class="text-muted">{{announcement.date}}</h6>
                                     <p class="my-3">{{announcement.body}}</p>
-                                    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#editModal">
+                                    <button type="button" class="btn btn-outline-success" data-toggle="modal" [attr.data-target]="'#editModal' + announcement._id">
                                         Edit
                                     </button>
 
                                     <!-- edit modal -->
                 
-                                    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal fade" [id]="'editModal' + announcement._id" tabindex="-1" role="dialog" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-body">
