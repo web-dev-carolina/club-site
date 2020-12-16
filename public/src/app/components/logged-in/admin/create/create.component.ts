@@ -29,21 +29,11 @@ export class CreateComponent implements OnInit {
     this.testimonialService.getTestimonials().subscribe((testimonials: any[]) => {
       this.testimonials = testimonials;
     });
-  }
-  ngOnInit(): void {
     window.addEventListener('click', async (e) => {
       const element = (e.target as HTMLElement);
       const clas = element.getAttribute('class');
       const id = element.id;
-      if (clas.includes('createToggle')) {
-        if (id === 'upcomingEvent') {
-          this.display = 'upcomingEvent';
-        } else if (id === 'announcement') {
-          this.display = 'announcement';
-        } else if (id === 'testimonial') {
-          this.display = 'testimonial';
-        }
-      } else if (id === 'createButton') {
+      if (id === 'createButton') {
         if (this.display === 'upcomingEvent') {
           const title = (document.getElementById('titleInputUpcomingEvent') as HTMLInputElement).value;
           const body = (document.getElementById('bodyInputUpcomingEvent') as HTMLInputElement).value;
@@ -89,6 +79,22 @@ export class CreateComponent implements OnInit {
           // render edit form in overlay
           // save the modified state
           this.upcomingEventService.updateEvent(curr);
+        }
+      }
+    });
+  }
+  ngOnInit(): void {
+    window.addEventListener('click', async (e) => {
+      const element = (e.target as HTMLElement);
+      const clas = element.getAttribute('class');
+      const id = element.id;
+      if (clas.includes('createToggle')) {
+        if (id === 'upcomingEvent') {
+          this.display = 'upcomingEvent';
+        } else if (id === 'announcement') {
+          this.display = 'announcement';
+        } else if (id === 'testimonial') {
+          this.display = 'testimonial';
         }
       }
     });
