@@ -54,9 +54,9 @@ export class CreateComponent implements OnInit {
           this.announcements.push(newAnnouncement);
           this.addSuccessDiv();
         } else if (this.display === 'testimonial') {
-          const title = (document.getElementById('titleInputTestimonial') as HTMLInputElement).value;
+          const author = (document.getElementById('authorInputTestimonial') as HTMLInputElement).value;
           const body = (document.getElementById('bodyInputTestimonial') as HTMLInputElement).value;
-          const newTestimonial = new Testimonial(title, body);
+          const newTestimonial = new Testimonial(author, body);
           const respTestimonial = await this.testimonialService.newTestimonial(newTestimonial);
           newTestimonial.setId(JSON.parse(JSON.stringify(respTestimonial)).insertedIds[0]);
           this.testimonials.push(newTestimonial);
@@ -71,6 +71,10 @@ export class CreateComponent implements OnInit {
           const curr = this.announcements.filter((i) => i._id === element.title)[0];
           this.annoucementService.deleteAnnouncement(curr._id);
           this.announcements = this.announcements.filter(announcement => { if (announcement._id !== curr._id) { return announcement; } });
+        } else if (clas.includes('delete-testimonial')){
+          const curr = this.testimonials.filter((i) => i._id === element.title)[0];
+          this.testimonialService.deleteTestimonial(curr._id);
+          this.testimonials = this.testimonials.filter(testimonial => { if (testimonial._id !== curr._id) { return testimonial; } });
         }
       } else if (clas.includes('edit')) {
         if (clas.includes('edit-event')) {

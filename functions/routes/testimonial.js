@@ -37,4 +37,16 @@ router.post('/testimonials', async function(req, res, next){
 
 })
 
+router.delete('/testimonials/:id', async function (req, res, next) {
+  try {
+    const client = await getClient();
+    const db = client.db("club-site");
+    const collection = db.collection("testimonials");
+
+    collection.deleteOne({_id: new mongodb.ObjectID(req.params.id)});
+  } catch (err) {
+    res.status(500).send('Something broke!');
+  }
+});
+
 module.exports = router;

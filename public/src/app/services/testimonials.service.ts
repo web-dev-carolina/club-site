@@ -17,4 +17,10 @@ export class TestimonialService {
     return this.http.post('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/testimonials', testimonial)
     .toPromise();
   }
+
+  // tslint:disable-next-line:typedef
+  deleteTestimonial(id) {
+    return this.http.delete('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/testimonials/' + id)
+    .toPromise();
+  }
 }

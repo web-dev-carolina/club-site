@@ -83,8 +83,8 @@
                                 <div id="createForm" class="form">
                                     <div class="row">
                                         <div class="col-lg">
-                                          <label for="titleInputTestimonial">Author</label>
-                                          <input type="text" class="form-control" id="titleInputTestimonial" placeholder="Jonny Smith">
+                                          <label for="authorInputTestimonial">Author</label>
+                                          <input type="text" class="form-control" id="authorInputTestimonial" placeholder="Jonny Smith">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -237,10 +237,47 @@
                         <div class="scroll">
                             <ng-container *ngFor="let testimonial of testimonials">
                                 <div class="container bg-white event p-4 mt-4 mb-4">
-                                    <h4>{{testimonial.title}}</h4>
+                                    <h4>{{testimonial.author}}</h4>
                                     <h6 class="my-3">{{testimonial.body}}</h6>
-                                    <button class="btn btn-outline-success edit edit-testimonial">Edit</button>
-                                    <button class="btn btn-outline-danger delete-testimonial delete">Delete</button>
+                                    <button type="button" class="btn btn-outline-success" data-toggle="modal" [attr.data-target]="'#editModal' + testimonial._id">
+                                        Edit
+                                    </button>
+
+                                     <!-- edit modal -->
+                
+                                     <div class="modal fade" [id]="'editModal' + testimonial._id" tabindex="-1" role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-body">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <div aria-hidden="true">&times;</div>
+                                                    </button>
+                                                    <div class="edit-form">
+                                                        <div class="row">
+                                                            <div class="col-lg">
+                                                              <label for="titleInput">Author</label>
+                                                              <input type="text" class="form-control" id="titleInput" value={{testimonial.author}}>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg">
+                                                              <label for="dateInput">Body</label>
+                                                              <input type="text" class="form-control" id="dateInput" value={{testimonial.body}}>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="container d-flex justify-content-center">
+                                                                <button data-title={{testimonial._id}} class="btn btn-outline-danger delete delete-testimonial" data-dismiss="modal">Delete</button>
+                                                                <button class="btn btn-outline-primary">Save changes</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- modal -->
                                 </div>
                             </ng-container>
                         </div>

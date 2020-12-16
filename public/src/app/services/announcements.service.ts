@@ -20,7 +20,7 @@ export class AnnouncementService {
 
   // tslint:disable-next-line:typedef
   deleteAnnouncement(id) {
-    return this.http.delete('http://localhost:3000/api/announcements/' + id)
+    return this.http.delete('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/announcements/' + id)
     .toPromise();
   }
 }

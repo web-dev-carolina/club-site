@@ -1,10 +1,10 @@
 export class Testimonial {
     // tslint:disable-next-line:variable-name
     _id: string;
-    title: string;
+    author: string;
     body: string;
-    constructor(title, body){
-        this.title = title;
+    constructor(author, body){
+        this.author = author;
         this.body = body;
     }
     setId(id): void {
