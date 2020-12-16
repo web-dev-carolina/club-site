@@ -79,7 +79,6 @@ export class CreateComponent implements OnInit {
           this.upcomingEvents = this.upcomingEvents.filter(event => { if (event._id !== curr._id) { return event; } });
         } else if (clas.includes('delete-announcement')){
           const curr = this.announcements.filter((i) => i._id === element.title)[0];
-          console.log(curr);
           this.annoucementService.deleteAnnouncement(curr._id);
           this.announcements = this.announcements.filter(announcement => { if (announcement._id !== curr._id) { return announcement; } });
         }
