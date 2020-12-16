@@ -119,13 +119,13 @@
                                         <h5 class="event-title">{{upcomingEvent.title}}</h5>
                                         <h6>{{upcomingEvent.body}}</h6>
 
-                                        <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#editModal">
+                                        <button type="button" class="btn btn-outline-success" data-toggle="modal" [attr.data-target]="'#editModal' + upcomingEvent._id">
                                             Edit
                                         </button>
 
                                         <!-- edit modal -->
                     
-                                        <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                        <div class="modal fade" [id]="'editModal' + upcomingEvent._id" tabindex="-1" role="dialog" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-body">
@@ -216,7 +216,7 @@
                                                         </div>
                                                         <div class="row">
                                                             <div class="container d-flex justify-content-center">
-                                                                <button class="btn btn-outline-danger">Delete</button>
+                                                                <button data-title={{announcement._id}} class="btn btn-outline-danger delete delete-announcement" data-dismiss="modal">Delete</button>
                                                                 <button class="btn btn-outline-primary">Save changes</button>
                                                             </div>
                                                         </div>

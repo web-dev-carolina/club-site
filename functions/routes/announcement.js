@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const getClient = require("../db"); 
+var mongodb = require('mongodb');
 
 router.get('/announcements', async function(req, res, next){
     try {
@@ -37,5 +38,17 @@ router.post('/announcements', async function(req, res, next){
   }
 
 })
+
+router.delete('/announcements/:id', async function (req, res, next) {
+  try {
+    const client = await getClient();
+    const db = client.db("club-site");
+    const collection = db.collection("announcements");
+
+    collection.deleteOne({_id: new mongodb.ObjectID(req.params.id)});
+  } catch (err) {
+    res.status(500).send('Something broke!');
+  }
+});
 
 module.exports = router;

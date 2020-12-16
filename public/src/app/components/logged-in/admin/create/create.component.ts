@@ -75,6 +75,11 @@ export class CreateComponent {
           const curr = this.upcomingEvents.filter((i) => i._id === element.title)[0];
           this.upcomingEventService.deleteEvent(curr._id);
           this.upcomingEvents = this.upcomingEvents.filter(event => { if (event._id !== curr._id) { return event; } });
+        } else if (clas.includes('delete-announcement')){
+          const curr = this.announcements.filter((i) => i._id === element.title)[0];
+          console.log(curr);
+          this.annoucementService.deleteAnnouncement(curr._id);
+          this.announcements = this.announcements.filter(announcement => { if (announcement._id !== curr._id) { return announcement; } });
         }
       } else if (clas.includes('edit')) {
         if (clas.includes('edit-event')) {

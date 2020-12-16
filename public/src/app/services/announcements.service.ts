@@ -17,4 +17,10 @@ export class AnnouncementService {
     return this.http.post('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/announcements', announcement)
     .toPromise();
   }
+
+  // tslint:disable-next-line:typedef
+  deleteAnnouncement(id) {
+    return this.http.delete('http://localhost:3000/api/announcements/' + id)
+    .toPromise();
+  }
 }
