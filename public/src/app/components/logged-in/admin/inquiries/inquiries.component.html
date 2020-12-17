@@ -23,34 +23,139 @@
                     <ng-container *ngFor="let memberForm of memberForms">
                         <div class="col-lg-4">
                             <div class="inquiry">
-                                <h5>{{memberForm.firstName}} {{memberForm.lastName}}</h5>
+                                <div class="d-flex justify-content-between">
+                                    <h5>{{memberForm.firstName}} {{memberForm.lastName}}</h5>
+                                    <div class="icon"><i class="fas fa-user-graduate"></i></div>
+                                </div>
+                                
                                 <h6 class="text-muted">Student</h6>
                                 <p>{{memberForm.message}}</p>
                                 <p class="text-muted">{{memberForm.email}}</p>
-                                <p class="icon"><i class="fas fa-user-graduate"></i><span>Student</span></p>
+                                <button type="button" class="btn btn-theme" data-toggle="modal" data-target="#viewStudentModal">
+                                    View
+                                </button>
+
+                                <!-- student modal -->
+                                <div class="modal fade" id="viewStudentModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <div aria-hidden="true">&times;</div>
+                                                </button>
+                                                <div class="row">
+                                                    <div class="container">
+                                                        <p class="icon"><i class="fas fa-user-graduate"></i><span>Student</span></p>
+                                                        <h5>{{memberForm.firstName}} {{memberForm.lastName}}</h5>
+                                                        <p class="text-muted">{{memberForm.email}}</p>
+                                                        <p>{{memberForm.message}}</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="container d-flex justify-content-between">
+                                                        <button class="btn delete delete-event btn-theme" data-dismiss="modal"><i class="fas fa-reply"></i>Reply</button>
+                                                        <button class="btn btn-theme"><i class="fas fa-envelope-open"></i>Mark as read</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- student modal -->
+
                             </div>
                         </div>
                     </ng-container>
                     <ng-container *ngFor="let clientForm of clientForms">
                         <div class="col-lg-4">
                             <div class="inquiry">
-                                <h5>{{clientForm.name}}</h5>
+                                <div class="d-flex justify-content-between">
+                                    <h5>{{clientForm.name}}</h5>
+                                    <div class="icon"><i class="fas fa-briefcase"></i></div>
+                                </div>
+                                
                                 <h6 class="text-muted">{{clientForm.business}}</h6>
                                 <p>{{clientForm.message}}</p>
                                 <p class="text-muted">{{clientForm.email}}</p>
-                                <button class="text-capitalize btn service">{{clientForm.service}}</button>
-                                <p class="icon mt-3"><i class="fas fa-briefcase"></i><span>Client</span></p>
+                                <button type="button" class="btn btn-theme" data-toggle="modal" data-target="#viewClientModal">
+                                    View
+                                </button>
+
+                                <!-- client modal -->
+                                <div class="modal fade" id="viewClientModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <div aria-hidden="true">&times;</div>
+                                                </button>
+                                                <div class="row">
+                                                    <div class="container">
+                                                        <p class="icon"><i class="fas fa-briefcase"></i><span>Client</span></p>
+                                                        <h5>{{clientForm.name}}</h5>
+                                                        <p class="text-muted">{{clientForm.email}}</p>
+                                                        <p>{{clientForm.message}}</p>
+                                                        <button class="text-capitalize btn service">{{clientForm.service}}</button>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="container d-flex justify-content-between">
+                                                        <button class="btn delete delete-event btn-theme" data-dismiss="modal"><i class="fas fa-reply"></i>Reply</button>
+                                                        <button class="btn btn-theme"><i class="fas fa-envelope-open"></i>Mark as read</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- client modal -->
+
                             </div>
                         </div>
                     </ng-container>
                     <ng-container *ngFor="let generalForm of generalForms">
                         <div class="col-lg-4">
                             <div class="inquiry">
-                                <h5>{{generalForm.name}}</h5>
+                                <div class="d-flex justify-content-between">
+                                    <h5>{{generalForm.name}}</h5>
+                                    <div class="icon"><i class="fas fa-question-circle"></i></div>
+                                </div>
+                                
                                 <h6 class="text-muted">{{generalForm.affiliation}}</h6>
                                 <p>{{generalForm.message}}</p>
                                 <p class="text-muted">{{generalForm.email}}</p>
-                                <p class="icon"><i class="fas fa-question-circle"></i><span>General</span></p>
+                                <button type="button" class="btn btn-theme" data-toggle="modal" data-target="#viewGeneralModal">
+                                    View
+                                </button>
+
+                                <!-- general modal -->
+                                <div class="modal fade" id="viewGeneralModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <div aria-hidden="true">&times;</div>
+                                                </button>
+                                                <div class="row">
+                                                    <div class="container">
+                                                        <p class="icon"><i class="fas fa-question-circle"></i><span>General</span></p>
+                                                        <h5>{{generalForm.name}}</h5>
+                                                        <p class="text-muted">{{generalForm.email}}</p>
+                                                        <p>{{generalForm.message}}</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="container d-flex justify-content-between">
+                                                        <button class="btn delete delete-event btn-theme" data-dismiss="modal"><i class="fas fa-reply"></i>Reply</button>
+                                                        <button class="btn btn-theme"><i class="fas fa-envelope-open"></i>Mark as read</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- general modal -->
+
                             </div>
                         </div>
                     </ng-container>
@@ -60,11 +165,46 @@
                         <ng-container *ngFor="let memberForm of memberForms">
                             <div class="col-lg-4">
                                 <div class="inquiry">
-                                    <h5>{{memberForm.firstName}} {{memberForm.lastName}}</h5>
+                                    <div class="d-flex justify-content-between">
+                                        <h5>{{memberForm.firstName}} {{memberForm.lastName}}</h5>
+                                        <div class="icon"><i class="fas fa-user-graduate"></i></div>
+                                    </div>
+                                    
                                     <h6 class="text-muted">Student</h6>
                                     <p>{{memberForm.message}}</p>
                                     <p class="text-muted">{{memberForm.email}}</p>
-                                    <p class="icon"><i class="fas fa-user-graduate"></i><span>Student</span></p>
+                                    <button type="button" class="btn btn-theme" data-toggle="modal" data-target="#viewStudentModal">
+                                        View
+                                    </button>
+    
+                                    <!-- student modal -->
+                                    <div class="modal fade" id="viewStudentModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-body">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <div aria-hidden="true">&times;</div>
+                                                    </button>
+                                                    <div class="row">
+                                                        <div class="container">
+                                                            <p class="icon"><i class="fas fa-user-graduate"></i><span>Student</span></p>
+                                                            <h5>{{memberForm.firstName}} {{memberForm.lastName}}</h5>
+                                                            <p class="text-muted">{{memberForm.email}}</p>
+                                                            <p>{{memberForm.message}}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="container d-flex justify-content-between">
+                                                            <button class="btn delete delete-event btn-theme" data-dismiss="modal"><i class="fas fa-reply"></i>Reply</button>
+                                                            <button class="btn btn-theme"><i class="fas fa-envelope-open"></i>Mark as read</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- student modal -->
+    
                                 </div>
                             </div>
                         </ng-container>
@@ -74,12 +214,47 @@
                         <ng-container *ngFor="let clientForm of clientForms">
                             <div class="col-lg-4">
                                 <div class="inquiry">
-                                    <h5>{{clientForm.name}}</h5>
+                                    <div class="d-flex justify-content-between">
+                                        <h5>{{clientForm.name}}</h5>
+                                        <div class="icon"><i class="fas fa-briefcase"></i></div>
+                                    </div>
+                                    
                                     <h6 class="text-muted">{{clientForm.business}}</h6>
                                     <p>{{clientForm.message}}</p>
                                     <p class="text-muted">{{clientForm.email}}</p>
-                                    <button class="text-capitalize btn service">{{clientForm.service}}</button>
-                                    <p class="icon mt-3"><i class="fas fa-briefcase"></i><span>Client</span></p>
+                                    <button type="button" class="btn btn-theme" data-toggle="modal" data-target="#viewClientModal">
+                                        View
+                                    </button>
+    
+                                    <!-- client modal -->
+                                    <div class="modal fade" id="viewClientModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-body">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <div aria-hidden="true">&times;</div>
+                                                    </button>
+                                                    <div class="row">
+                                                        <div class="container">
+                                                            <p class="icon"><i class="fas fa-briefcase"></i><span>Client</span></p>
+                                                            <h5>{{clientForm.name}}</h5>
+                                                            <p class="text-muted">{{clientForm.email}}</p>
+                                                            <p>{{clientForm.message}}</p>
+                                                            <button class="text-capitalize btn service">{{clientForm.service}}</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="container d-flex justify-content-between">
+                                                            <button class="btn delete delete-event btn-theme" data-dismiss="modal"><i class="fas fa-reply"></i>Reply</button>
+                                                            <button class="btn btn-theme"><i class="fas fa-envelope-open"></i>Mark as read</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- client modal -->
+    
                                 </div>
                             </div>
                         </ng-container>
@@ -89,15 +264,51 @@
                         <ng-container *ngFor="let generalForm of generalForms">
                             <div class="col-lg-4">
                                 <div class="inquiry">
-                                    <h5>{{generalForm.name}}</h5>
+                                    <div class="d-flex justify-content-between">
+                                        <h5>{{generalForm.name}}</h5>
+                                        <div class="icon"><i class="fas fa-question-circle"></i></div>
+                                    </div>
+                                    
                                     <h6 class="text-muted">{{generalForm.affiliation}}</h6>
                                     <p>{{generalForm.message}}</p>
                                     <p class="text-muted">{{generalForm.email}}</p>
-                                    <p class="icon"><i class="fas fa-question-circle"></i><span>General</span></p>
+                                    <button type="button" class="btn btn-theme" data-toggle="modal" data-target="#viewGeneralModal">
+                                        View
+                                    </button>
+    
+                                    <!-- general modal -->
+                                    <div class="modal fade" id="viewGeneralModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-body">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <div aria-hidden="true">&times;</div>
+                                                    </button>
+                                                    <div class="row">
+                                                        <div class="container">
+                                                            <p class="icon"><i class="fas fa-question-circle"></i><span>General</span></p>
+                                                            <h5>{{generalForm.name}}</h5>
+                                                            <p class="text-muted">{{generalForm.email}}</p>
+                                                            <p>{{generalForm.message}}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="container d-flex justify-content-between">
+                                                            <button class="btn delete delete-event btn-theme" data-dismiss="modal"><i class="fas fa-reply"></i>Reply</button>
+                                                            <button class="btn btn-theme"><i class="fas fa-envelope-open"></i>Mark as read</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- general modal -->
+    
                                 </div>
                             </div>
                         </ng-container>
                 </ng-container>
+                
             </div>
             
             
