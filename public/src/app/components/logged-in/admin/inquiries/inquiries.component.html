@@ -31,12 +31,12 @@
                                 <h6 class="text-muted">Student</h6>
                                 <p>{{memberForm.message}}</p>
                                 <p class="text-muted">{{memberForm.email}}</p>
-                                <button type="button" class="btn btn-theme" data-toggle="modal" data-target="#viewStudentModal">
+                                <button type="button" class="btn btn-theme" data-toggle="modal" [attr.data-target]="'#studentModal' + memberForm._id">
                                     View
                                 </button>
 
                                 <!-- student modal -->
-                                <div class="modal fade" id="viewStudentModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal fade" [id]="'studentModal' + memberForm._id" tabindex="-1" role="dialog" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
                                             <div class="modal-body">
@@ -77,12 +77,12 @@
                                 <h6 class="text-muted">{{clientForm.business}}</h6>
                                 <p>{{clientForm.message}}</p>
                                 <p class="text-muted">{{clientForm.email}}</p>
-                                <button type="button" class="btn btn-theme" data-toggle="modal" data-target="#viewClientModal">
+                                <button type="button" class="btn btn-theme" data-toggle="modal" [attr.data-target]="'#clientModal' + clientForm._id">
                                     View
                                 </button>
 
                                 <!-- client modal -->
-                                <div class="modal fade" id="viewClientModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal fade" [id]="'clientModal' + clientForm._id" tabindex="-1" role="dialog" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
                                             <div class="modal-body">
@@ -124,12 +124,12 @@
                                 <h6 class="text-muted">{{generalForm.affiliation}}</h6>
                                 <p>{{generalForm.message}}</p>
                                 <p class="text-muted">{{generalForm.email}}</p>
-                                <button type="button" class="btn btn-theme" data-toggle="modal" data-target="#viewGeneralModal">
+                                <button type="button" class="btn btn-theme" data-toggle="modal" [attr.data-target]="'#generalModal' + generalForm._id">
                                     View
                                 </button>
 
                                 <!-- general modal -->
-                                <div class="modal fade" id="viewGeneralModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal fade" [id]="'generalModal' + generalForm._id" tabindex="-1" role="dialog" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
                                             <div class="modal-body">
@@ -173,12 +173,12 @@
                                     <h6 class="text-muted">Student</h6>
                                     <p>{{memberForm.message}}</p>
                                     <p class="text-muted">{{memberForm.email}}</p>
-                                    <button type="button" class="btn btn-theme" data-toggle="modal" data-target="#viewStudentModal">
+                                    <button type="button" class="btn btn-theme" data-toggle="modal" [attr.data-target]="'#studentModal' + memberForm._id">
                                         View
                                     </button>
     
                                     <!-- student modal -->
-                                    <div class="modal fade" id="viewStudentModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal fade" [id]="'studentModal' + memberForm._id" tabindex="-1" role="dialog" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-body">
@@ -222,12 +222,12 @@
                                     <h6 class="text-muted">{{clientForm.business}}</h6>
                                     <p>{{clientForm.message}}</p>
                                     <p class="text-muted">{{clientForm.email}}</p>
-                                    <button type="button" class="btn btn-theme" data-toggle="modal" data-target="#viewClientModal">
+                                    <button type="button" class="btn btn-theme" data-toggle="modal" [attr.data-target]="'#clientModal' + clientForm._id">
                                         View
                                     </button>
     
                                     <!-- client modal -->
-                                    <div class="modal fade" id="viewClientModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal fade" [id]="'clientModal' + clientForm._id" tabindex="-1" role="dialog" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-body">
@@ -272,12 +272,12 @@
                                     <h6 class="text-muted">{{generalForm.affiliation}}</h6>
                                     <p>{{generalForm.message}}</p>
                                     <p class="text-muted">{{generalForm.email}}</p>
-                                    <button type="button" class="btn btn-theme" data-toggle="modal" data-target="#viewGeneralModal">
+                                    <button type="button" class="btn btn-theme" data-toggle="modal" [attr.data-target]="'#generalModal' + generalForm._id">
                                         View
                                     </button>
     
                                     <!-- general modal -->
-                                    <div class="modal fade" id="viewGeneralModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal fade" [id]="'generalModal' + generalForm._id" tabindex="-1" role="dialog" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-body">
