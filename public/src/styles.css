@@ -53,3 +53,13 @@
     border-radius: 30px;
     padding: 1em;
 }
+
+.btn-theme {
+    border: 1px solid #5262AD;
+    color: #5262AD;
+    background-color: transparent;
+}
+
+.btn-theme:hover {
+    background-color: #eee0fd;
+}
