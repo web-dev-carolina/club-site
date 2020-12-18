@@ -45,6 +45,7 @@ router.delete('/upcomingEvents/:id', async function (req, res, next) {
     const collection = db.collection("upcomingEvents");
 
     collection.deleteOne({_id: new mongodb.ObjectID(req.params.id)});
+    res.send(true);
   } catch (err) {
     res.status(500).send('Something broke!');
   }
@@ -56,13 +57,9 @@ router.put("/upcomingEvents/:id", async function (req, res, next) {
     const db = client.db("club-site");
     const collection = db.collection("upcomingEvents");
 
-    const item = req.body;
-    const event = await collection.findById(req.params._id);
-    event.title = item.title;
-    event.body = item.body;
-    event.day = item.day;
-    event.month = item.month;
-    event.save();
+    const newDoc = req.body;
+    collection.updateOne({_id: new mongodb.ObjectID(req.params.id)}, {$set: {title: newDoc.title, body: newDoc.body, day: newDoc.day, month: newDoc.month}});
+    res.json(true);
   } catch (err) {
     res.status(500).json(err);
   }

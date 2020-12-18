@@ -76,13 +76,18 @@ export class CreateComponent implements OnInit {
           this.testimonialService.deleteTestimonial(curr._id);
           this.testimonials = this.testimonials.filter(testimonial => { if (testimonial._id !== curr._id) { return testimonial; } });
         }
-      } else if (clas.includes('edit')) {
-        if (clas.includes('edit-event')) {
-          // get the current state of the event
-          const curr = this.upcomingEvents.filter((i) => i._id === element.title)[0];
-          // render edit form in overlay
-          // save the modified state
-          this.upcomingEventService.updateEvent(curr);
+      } else if (clas.includes('save')) {
+        if (clas.includes('save-event')) {
+          const title = (document.getElementById('titleInputEditEvent' + element.title) as HTMLInputElement).value;
+          const body = (document.getElementById('bodyInputEditEvent' + element.title) as HTMLInputElement).value;
+          const day = (document.getElementById('dayInputEditEvent' +  element.title) as HTMLInputElement).value;
+          const month = (document.getElementById('monthInputEditEvent' + element.title) as HTMLInputElement).value;
+          const newEvent = new UpcomingEvent(title, body, day, month);
+          this.upcomingEventService.updateEvent(element.title, newEvent);
+          const newEvents = this.upcomingEvents.filter((i) => i._id !== element.title);
+          newEvent.setId(element.title);
+          newEvents.push(newEvent);
+          this.upcomingEvents = newEvents;
         }
       }
     });
@@ -123,10 +128,5 @@ export class CreateComponent implements OnInit {
       div.appendChild(del);
       document.getElementById('createForm').appendChild(div);
     }
-  }
-
-  renderEditForm(curr): void {
-    // create overlay with form pre-filled with curr values
-    return;
   }
 }

@@ -136,29 +136,29 @@
                                                             <div class="row">
                                                                 <div class="col-md-3">
                                                                 <label for="monthInput">Month</label>
-                                                                <input type="text" class="form-control" id="monthInput" value={{upcomingEvent.month}}>
+                                                                <input type="text" class="form-control" [id]="'monthInputEditEvent' + upcomingEvent._id" value={{upcomingEvent.month}}>
                                                                 </div>
                                                                 <div class="col-md-3">
                                                                 <label for="dayInput">Day</label>
-                                                                <input type="text" class="form-control" id="dayInput" value={{upcomingEvent.day}}>
+                                                                <input type="text" class="form-control" [id]="'dayInputEditEvent' + upcomingEvent._id" value={{upcomingEvent.day}}>
                                                                 </div>
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-lg">
                                                                 <label for="titleInput">Title</label>
-                                                                <input type="text" class="form-control" id="titleInput" value={{upcomingEvent.title}}>
+                                                                <input type="text" class="form-control" [id]="'titleInputEditEvent' + upcomingEvent._id" value={{upcomingEvent.title}}>
                                                                 </div>
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-lg">
                                                                 <label for="bodyInput">Body</label>
-                                                                <textarea type="text" class="form-control" id="bodyInput" value={{upcomingEvent.body}}></textarea>
+                                                                <textarea type="text" class="form-control" [id]="'bodyInputEditEvent' + upcomingEvent._id" value={{upcomingEvent.body}}></textarea>
                                                                 </div>
                                                             </div>
                                                             <div class="row">
                                                                 <div class="container d-flex justify-content-center">
                                                                     <button data-title={{upcomingEvent._id}} class="btn btn-outline-danger delete delete-event" data-dismiss="modal">Delete</button>
-                                                                    <button class="btn btn-outline-primary">Save changes</button>
+                                                                    <button data-title={{upcomingEvent._id}} class="btn btn-outline-primary save save-event" data-dismiss="modal">Save changes</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -199,19 +199,19 @@
                                                         <div class="row">
                                                             <div class="col-lg">
                                                               <label for="titleInput">Title</label>
-                                                              <input type="text" class="form-control" id="titleInput" value={{announcement.title}}>
+                                                              <input type="text" class="form-control" id="titleInputEditAnnouncement" value={{announcement.title}}>
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-lg">
                                                               <label for="dateInput">Date</label>
-                                                              <input type="text" class="form-control" id="dateInput" value={{announcement.date}}>
+                                                              <input type="text" class="form-control" id="dateInputEditAnnouncement" value={{announcement.date}}>
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-lg">
                                                               <label for="bodyInput">Body</label>
-                                                              <textarea type="text" class="form-control" id="bodyInput" value={{announcement.body}}></textarea>
+                                                              <textarea type="text" class="form-control" id="bodyInputEditAnnouncement" value={{announcement.body}}></textarea>
                                                             </div>
                                                         </div>
                                                         <div class="row">
@@ -256,13 +256,13 @@
                                                         <div class="row">
                                                             <div class="col-lg">
                                                               <label for="titleInput">Author</label>
-                                                              <input type="text" class="form-control" id="titleInput" value={{testimonial.author}}>
+                                                              <input type="text" class="form-control" id="authorInputEditTestimonial" value={{testimonial.author}}>
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-lg">
                                                               <label for="dateInput">Body</label>
-                                                              <input type="text" class="form-control" id="dateInput" value={{testimonial.body}}>
+                                                              <input type="text" class="form-control" id="bodyInputEditTestimonial" value={{testimonial.body}}>
                                                             </div>
                                                         </div>
                                                         <div class="row">
