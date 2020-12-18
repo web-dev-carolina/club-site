@@ -51,16 +51,16 @@ export class InquiriesComponent implements OnInit {
               const curr = this.clientForms.filter(form => { if (form._id === element.title) {return form; } })[0];
               const newForm = new ClientForm(curr.name, curr.business, curr.email, curr.message, curr.service);
               newForm.setRead();
-              // this.memberFormService.updateForm(element.title, newForm);
-              // this.memberForms = this.memberForms.filter(form => { if (form._id !== element.title) { return form; } });
-              // this.memberForms.push(newForm);
+              this.clientFormService.updateForm(element.title, newForm);
+              this.clientForms = this.clientForms.filter(form => { if (form._id !== element.title) { return form; } });
+              this.clientForms.push(newForm);
             } else if (clas.includes('read-general')) {
               const curr = this.generalForms.filter(form => { if (form._id === element.title) {return form; } })[0];
               const newForm = new GeneralForm(curr.name, curr.affiliation, curr.email, curr.message);
               newForm.setRead();
-              // this.memberFormService.updateForm(element.title, newForm);
-              // this.memberForms = this.memberForms.filter(form => { if (form._id !== element.title) { return form; } });
-              // this.memberForms.push(newForm);
+              this.generalFormService.updateForm(element.title, newForm);
+              this.generalForms = this.generalForms.filter(form => { if (form._id !== element.title) { return form; } });
+              this.generalForms.push(newForm);
             }
           }
         });
