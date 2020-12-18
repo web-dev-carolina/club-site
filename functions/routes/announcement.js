@@ -51,4 +51,18 @@ router.delete('/announcements/:id', async function (req, res, next) {
   }
 });
 
+router.put("/announcements/:id", async function (req, res, next) {
+  try {
+    const client = await getClient();
+    const db = client.db("club-site");
+    const collection = db.collection("announcements");
+
+    const newDoc = req.body;
+    collection.updateOne({_id: new mongodb.ObjectID(req.params.id)}, {$set: {title: newDoc.title, body: newDoc.body, date: newDoc.date}});
+    res.json(true);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;

@@ -88,6 +88,16 @@ export class CreateComponent implements OnInit {
           newEvent.setId(element.title);
           newEvents.push(newEvent);
           this.upcomingEvents = newEvents;
+        } else if (clas.includes('save-announcement')) {
+          const title = (document.getElementById('titleInputEditAnnouncement' + element.title) as HTMLInputElement).value;
+          const body = (document.getElementById('bodyInputEditAnnouncement' + element.title) as HTMLInputElement).value;
+          const date = (document.getElementById('dateInputEditAnnouncement' +  element.title) as HTMLInputElement).value;
+          const newAnnouncement = new Announcement(title, body, date);
+          this.annoucementService.updateAnnouncement(element.title, newAnnouncement);
+          const newAnnouncements = this.announcements.filter((i) => i._id !== element.title);
+          newAnnouncement.setId(element.title);
+          newAnnouncements.push(newAnnouncement);
+          this.announcements = newAnnouncements;
         }
       }
     });
