@@ -19,6 +19,6 @@ export class ClientFormService {
 
   // tslint:disable-next-line:typedef
   updateForm(id, newForm) {
-    return this.http.put('http://localhost:3000/api/clientForm/' + id, newForm).toPromise();
+    return this.http.put('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/clientForm/' + id, newForm).toPromise();
   }
 }

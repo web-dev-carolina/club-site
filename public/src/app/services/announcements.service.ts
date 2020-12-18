@@ -26,6 +26,6 @@ export class AnnouncementService {
 
   // tslint:disable-next-line:typedef
   updateAnnouncement(id, newAnnouncement) {
-    return this.http.put('http://localhost:3000/api/announcements/' + id, newAnnouncement).toPromise();
+    return this.http.put('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/announcements/' + id, newAnnouncement).toPromise();
   }
 }

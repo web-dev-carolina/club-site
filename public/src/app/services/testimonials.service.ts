@@ -26,6 +26,6 @@ export class TestimonialService {
 
   // tslint:disable-next-line:typedef
   updateTestimonial(id, newTestimonial) {
-    return this.http.put('http://localhost:3000/api/testimonials/' + id, newTestimonial).toPromise();
+    return this.http.put('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/testimonials/' + id, newTestimonial).toPromise();
   }
 }

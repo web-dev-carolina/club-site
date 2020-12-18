@@ -27,6 +27,6 @@ export class UpcomingEventsService {
 
   // tslint:disable-next-line:typedef
   updateEvent(id, newEvent) {
-    return this.http.put('http://localhost:3000/api/upcomingEvents/' + id, newEvent).toPromise();
+    return this.http.put('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/upcomingEvents/' + id, newEvent).toPromise();
   }
 }
