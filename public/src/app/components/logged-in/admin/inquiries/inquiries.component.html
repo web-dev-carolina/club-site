@@ -24,6 +24,9 @@
                         <div class="col-lg-4">
                             <div class="inquiry">
                                 <div class="d-flex justify-content-between">
+                                    <div *ngIf="memberForm.read === true; then thenBlock else elseBlock"></div>
+                                    <ng-template #thenBlock><h4 class="text-muted">Read</h4></ng-template>
+                                    <ng-template #elseBlock><h4 class="text-danger">New</h4></ng-template>
                                     <h5>{{memberForm.firstName}} {{memberForm.lastName}}</h5>
                                     <div class="icon"><i class="fas fa-user-graduate"></i></div>
                                 </div>

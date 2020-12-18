@@ -33,6 +33,9 @@ export class CreateComponent implements OnInit {
       const element = (e.target as HTMLElement);
       const clas = element.getAttribute('class');
       const id = element.id;
+      if (clas === null || clas === undefined){
+        return;
+      }
       if (id === 'createButton') {
         if (this.display === 'upcomingEvent') {
           const title = (document.getElementById('titleInputUpcomingEvent') as HTMLInputElement).value;
@@ -116,7 +119,7 @@ export class CreateComponent implements OnInit {
       const element = (e.target as HTMLElement);
       const clas = element.getAttribute('class');
       const id = element.id;
-      if (clas.length === 0 || clas === null || clas === undefined){
+      if (clas === null || clas === undefined){
         return;
       }
       if (clas.includes('createToggle')) {
