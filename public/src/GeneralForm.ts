@@ -5,11 +5,13 @@ export class GeneralForm {
     affiliation: string;
     email: string;
     message: string;
+    read: boolean;
     constructor(name, affiliation, email, message){
         this.name = name;
         this.affiliation = affiliation;
         this.email = email;
         this.message = message;
+        this.read = false;
     }
     setId(id): void {
         this._id = id;
