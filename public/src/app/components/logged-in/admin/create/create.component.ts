@@ -116,6 +116,9 @@ export class CreateComponent implements OnInit {
       const element = (e.target as HTMLElement);
       const clas = element.getAttribute('class');
       const id = element.id;
+      if (clas.length === 0 || clas === null || clas === undefined){
+        return;
+      }
       if (clas.includes('createToggle')) {
         if (id === 'upcomingEvent') {
           this.display = 'upcomingEvent';
