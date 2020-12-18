@@ -45,7 +45,8 @@ export class InquiriesComponent implements OnInit {
               const newForm = new MemberForm(curr.firstName, curr.lastName, curr.email, curr.message);
               newForm.setRead();
               this.memberFormService.updateForm(element.title, newForm);
-              this.memberForms.map(form => { if (form._id === element.title) { form = newForm; } });
+              this.memberForms = this.memberForms.filter(form => { if (form._id !== element.title) { return form; } });
+              this.memberForms.push(newForm);
             }
           }
         });
