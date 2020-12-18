@@ -23,4 +23,9 @@ export class TestimonialService {
     return this.http.delete('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/testimonials/' + id)
     .toPromise();
   }
+
+  // tslint:disable-next-line:typedef
+  updateTestimonial(id, newTestimonial) {
+    return this.http.put('http://localhost:3000/api/testimonials/' + id, newTestimonial).toPromise();
+  }
 }

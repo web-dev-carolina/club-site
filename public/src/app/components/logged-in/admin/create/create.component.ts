@@ -98,6 +98,15 @@ export class CreateComponent implements OnInit {
           newAnnouncement.setId(element.title);
           newAnnouncements.push(newAnnouncement);
           this.announcements = newAnnouncements;
+        } else if (clas.includes('save-testimonial')) {
+          const author = (document.getElementById('authorInputEditTestimonial' + element.title) as HTMLInputElement).value;
+          const body = (document.getElementById('bodyInputEditTestimonial' + element.title) as HTMLInputElement).value;
+          const newTestimonial = new Testimonial(author, body);
+          this.testimonialService.updateTestimonial(element.title, newTestimonial);
+          const newTestimonials = this.testimonials.filter((i) => i._id !== element.title);
+          newTestimonial.setId(element.title);
+          newTestimonials.push(newTestimonial);
+          this.testimonials = newTestimonials;
         }
       }
     });
