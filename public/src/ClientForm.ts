@@ -18,4 +18,7 @@ export class ClientForm {
     setId(id): void {
         this._id = id;
     }
+    setRead(): void {
+        this.read = true;
+    }
 }
