@@ -11,7 +11,7 @@ export class TopBarLoggedInComponent {
   constructor(private logoutService: LogoutService, private router: Router) {
     window.addEventListener('click', (e) => {
       const element = (e.target as HTMLElement);
-      if (element.id === 'largeContact'){
+      if (element.id === 'largeContact' || element.id === 'smallContact'){
         this.logoutService.logout();
         sessionStorage.removeItem('user');
         this.router.navigateByUrl('/');
