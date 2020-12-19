@@ -9,7 +9,6 @@
                 <button id="memberForm" type="button" class="formToggle filter my-1" data-toggle="button" aria-pressed="false" autocomplete="off">
                     Student
                 </button>
-            
                 <button id="clientForm" type="button" class="formToggle filter my-1" data-toggle="button" aria-pressed="false" autocomplete="off">
                     Client
                 </button>
@@ -25,18 +24,16 @@
                             <div class="inquiry">
                                 <div class="d-flex justify-content-between">
                                     <div *ngIf="memberForm.read === true; then thenBlock else elseBlock"></div>
-                                    <ng-template #thenBlock><h4 class="text-muted">Read</h4></ng-template>
-                                    <ng-template #elseBlock><h4 class="text-danger">New</h4></ng-template>
-                                    <h5>{{memberForm.firstName}} {{memberForm.lastName}}</h5>
-                                    <div class="icon"><i class="fas fa-user-graduate"></i></div>
+                                    <ng-template #thenBlock><small class="text-muted"><i class="fas fa-circle"></i>READ</small></ng-template>
+                                    <ng-template #elseBlock><small class="text-danger"><i class="fas fa-circle"></i>NEW</small></ng-template>
+                                    <p class="icon"><i class="fas fa-user-graduate"></i><span>Student</span></p>
                                 </div>
-                                
-                                <h6 class="text-muted">Student</h6>
+                                <h5>{{memberForm.firstName}} {{memberForm.lastName}}</h5>
                                 <p>{{memberForm.message}}</p>
-                                <p class="text-muted">{{memberForm.email}}</p>
                                 <button type="button" class="btn btn-theme" data-toggle="modal" [attr.data-target]="'#studentModal' + memberForm._id">
                                     View
                                 </button>
+                                
 
                                 <!-- student modal -->
                                 <div class="modal fade" [id]="'studentModal' + memberForm._id" tabindex="-1" role="dialog" aria-hidden="true">
@@ -74,18 +71,18 @@
                             <div class="inquiry">
                                 <div class="d-flex justify-content-between">
                                     <div *ngIf="clientForm.read === true; then thenBlock else elseBlock"></div>
-                                    <ng-template #thenBlock><h4 class="text-muted">Read</h4></ng-template>
-                                    <ng-template #elseBlock><h4 class="text-danger">New</h4></ng-template>
-                                    <h5>{{clientForm.name}}</h5>
-                                    <div class="icon"><i class="fas fa-briefcase"></i></div>
+                                    <ng-template #thenBlock><small class="text-muted"><i class="fas fa-circle"></i>READ</small></ng-template>
+                                    <ng-template #elseBlock><small class="text-danger"><i class="fas fa-circle"></i>NEW</small></ng-template>
+                                    <p class="icon"><i class="fas fa-briefcase"></i><span>Client</span></p>
                                 </div>
-                                
+                                <h5>{{clientForm.name}}</h5>
                                 <h6 class="text-muted">{{clientForm.business}}</h6>
                                 <p>{{clientForm.message}}</p>
-                                <p class="text-muted">{{clientForm.email}}</p>
+                                
                                 <button type="button" class="btn btn-theme" data-toggle="modal" [attr.data-target]="'#clientModal' + clientForm._id">
                                     View
                                 </button>
+                                
 
                                 <!-- client modal -->
                                 <div class="modal fade" [id]="'clientModal' + clientForm._id" tabindex="-1" role="dialog" aria-hidden="true">
@@ -124,15 +121,13 @@
                             <div class="inquiry">
                                 <div class="d-flex justify-content-between">
                                     <div *ngIf="generalForm.read === true; then thenBlock else elseBlock"></div>
-                                    <ng-template #thenBlock><h4 class="text-muted">Read</h4></ng-template>
-                                    <ng-template #elseBlock><h4 class="text-danger">New</h4></ng-template>
-                                    <h5>{{generalForm.name}}</h5>
-                                    <div class="icon"><i class="fas fa-question-circle"></i></div>
+                                    <ng-template #thenBlock><small class="text-muted"><i class="fas fa-circle"></i>READ</small></ng-template>
+                                    <ng-template #elseBlock><small class="text-danger"><i class="fas fa-circle"></i>NEW</small></ng-template>
+                                    <p class="icon"><i class="fas fa-question-circle"></i><span>General</span></p>
                                 </div>
-                                
+                                <h5>{{generalForm.name}}</h5>
                                 <h6 class="text-muted">{{generalForm.affiliation}}</h6>
                                 <p>{{generalForm.message}}</p>
-                                <p class="text-muted">{{generalForm.email}}</p>
                                 <button type="button" class="btn btn-theme" data-toggle="modal" [attr.data-target]="'#generalModal' + generalForm._id">
                                     View
                                 </button>
@@ -176,15 +171,12 @@
                                 <div class="inquiry">
                                     <div class="d-flex justify-content-between">
                                         <div *ngIf="memberForm.read === true; then thenBlock else elseBlock"></div>
-                                        <ng-template #thenBlock><h4 class="text-muted">Read</h4></ng-template>
-                                        <ng-template #elseBlock><h4 class="text-danger">New</h4></ng-template>
-                                        <h5>{{memberForm.firstName}} {{memberForm.lastName}}</h5>
-                                        <div class="icon"><i class="fas fa-user-graduate"></i></div>
+                                        <ng-template #thenBlock><small class="text-muted"><i class="fas fa-circle"></i>READ</small></ng-template>
+                                        <ng-template #elseBlock><small class="text-danger"><i class="fas fa-circle"></i>NEW</small></ng-template>
+                                        <p class="icon"><i class="fas fa-user-graduate"></i><span>Student</span></p>
                                     </div>
-                                    
-                                    <h6 class="text-muted">Student</h6>
+                                    <h5>{{memberForm.firstName}} {{memberForm.lastName}}</h5>
                                     <p>{{memberForm.message}}</p>
-                                    <p class="text-muted">{{memberForm.email}}</p>
                                     <button type="button" class="btn btn-theme" data-toggle="modal" [attr.data-target]="'#studentModal' + memberForm._id">
                                         View
                                     </button>
@@ -228,15 +220,14 @@
                                 <div class="inquiry">
                                     <div class="d-flex justify-content-between">
                                         <div *ngIf="clientForm.read === true; then thenBlock else elseBlock"></div>
-                                        <ng-template #thenBlock><h4 class="text-muted">Read</h4></ng-template>
-                                        <ng-template #elseBlock><h4 class="text-danger">New</h4></ng-template>
-                                        <h5>{{clientForm.name}}</h5>
-                                        <div class="icon"><i class="fas fa-briefcase"></i></div>
+                                        <ng-template #thenBlock><small class="text-muted"><i class="fas fa-circle"></i>READ</small></ng-template>
+                                        <ng-template #elseBlock><small class="text-danger"><i class="fas fa-circle"></i>NEW</small></ng-template>
+                                        <p class="icon"><i class="fas fa-briefcase"></i><span>Client</span></p>
                                     </div>
-                                    
+                                    <h5>{{clientForm.name}}</h5>
                                     <h6 class="text-muted">{{clientForm.business}}</h6>
                                     <p>{{clientForm.message}}</p>
-                                    <p class="text-muted">{{clientForm.email}}</p>
+                                    
                                     <button type="button" class="btn btn-theme" data-toggle="modal" [attr.data-target]="'#clientModal' + clientForm._id">
                                         View
                                     </button>
@@ -281,15 +272,13 @@
                                 <div class="inquiry">
                                     <div class="d-flex justify-content-between">
                                         <div *ngIf="generalForm.read === true; then thenBlock else elseBlock"></div>
-                                        <ng-template #thenBlock><h4 class="text-muted">Read</h4></ng-template>
-                                        <ng-template #elseBlock><h4 class="text-danger">New</h4></ng-template>
-                                        <h5>{{generalForm.name}}</h5>
-                                        <div class="icon"><i class="fas fa-question-circle"></i></div>
+                                        <ng-template #thenBlock><small class="text-muted"><i class="fas fa-circle"></i>READ</small></ng-template>
+                                        <ng-template #elseBlock><small class="text-danger"><i class="fas fa-circle"></i>NEW</small></ng-template>
+                                        <p class="icon"><i class="fas fa-question-circle"></i><span>General</span></p>
                                     </div>
-                                    
+                                    <h5>{{generalForm.name}}</h5>
                                     <h6 class="text-muted">{{generalForm.affiliation}}</h6>
                                     <p>{{generalForm.message}}</p>
-                                    <p class="text-muted">{{generalForm.email}}</p>
                                     <button type="button" class="btn btn-theme" data-toggle="modal" [attr.data-target]="'#generalModal' + generalForm._id">
                                         View
                                     </button>

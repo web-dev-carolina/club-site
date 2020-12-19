@@ -87,7 +87,7 @@ input, textarea {
 
 .contact {
   font-family: 'Lato', sans-serif;
-  background-color: #81386e;
+  background-color:#944781;
   color: white;
   border: none;
   padding-left: 25px;
@@ -98,8 +98,8 @@ input, textarea {
 }
 
 .contact:hover {
-  background-color: #944781;
-  color: white;
+  background-color: #81386e;
+  
 }
 
 .icon {
