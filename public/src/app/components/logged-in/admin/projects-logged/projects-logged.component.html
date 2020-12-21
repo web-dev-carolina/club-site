@@ -1,20 +1,18 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<div class="row form">
-    <ng-container *ngFor="let project of projects">
-        <div class="col-lg-4">
-            <div class="project">
-                <h5>{{project.name}}</h5>
-                <h6>{{project.client}}</h6>
-                <p class="text-muted">{{project.meet}}</p>
-                <p>{{project.desc}}</p>
-                <a (click)="goToLink([project.github])">Github</a><br>
-                <a (click)="goToLink([project.zoom])">Zoom (All of these are N/a atm)</a>
-            </div>
+<body>
+    <div class="body">
+        <div class="row form">
+            <ng-container *ngFor="let project of projects">
+                <div class="col-lg-4">
+                    <div class="project">
+                        <h5>{{project.name}}</h5>
+                        <h6>{{project.client}}</h6>
+                        <p class="text-muted">{{project.meet}}</p>
+                        <p>{{project.desc}}</p>
+                        <a (click)="goToLink([project.github])">Github</a><br>
+                        <a (click)="goToLink([project.zoom])">Zoom (All of these are N/a atm)</a>
+                    </div>
+                </div>
+            </ng-container>
         </div>
-    </ng-container>
-</div>
+    </div>
+</body>
