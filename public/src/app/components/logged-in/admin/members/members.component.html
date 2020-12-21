@@ -1,3 +1,5 @@
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 <body>
     <div class="body">
         <div class="container">
@@ -105,6 +107,14 @@
                     <div class="scoll">
                         <ng-container *ngFor="let user of users">
                             <div class="bg-white event p-4 mb-4">
+                                <div *ngIf="user.type === 'admin'; else elseBlockNotAdmin"><h5 class="fas fa-briefcase">{{user.type}}</h5></div>
+                                <ng-template #elseBlockNotAdmin>
+                                    <div *ngIf="user.type === 'project'; else elseBlockNotProject"><h5 class="">{{user.type}}</h5></div>
+                                    <ng-template #elseBlockNotProject>
+                                        <h5 class="">{{user.type}}</h5>
+                                    </ng-template>
+                                </ng-template>
+                                <h5>{{user.type}}</h5>
                                 <h4>Username: {{user.username}}</h4>
                                 <span class="text-muted">Privilege: {{user.type}}</span>
                                 <button type="button" class="btn btn-outline-success" data-toggle="modal" [attr.data-target]="'#editModal' + user._id">

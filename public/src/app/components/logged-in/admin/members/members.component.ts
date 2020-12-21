@@ -26,6 +26,9 @@ export class MembersComponent {
             const element = (e.target as HTMLElement);
             const clas = element.getAttribute('class');
             const id = element.id;
+            if (clas === null || clas === undefined){
+              return;
+            }
             if (clas.includes('memberToggle')) {
               if (id === 'add') {
                 this.display = 'add';
