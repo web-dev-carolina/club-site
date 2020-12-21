@@ -39,7 +39,7 @@ export class MembersComponent {
               const lastName = (document.getElementById('lnameInput') as HTMLInputElement).value;
               const email = (document.getElementById('emailInput') as HTMLInputElement).value;
               const team = (document.getElementById('placementInput') as HTMLInputElement).value;
-              const newUser = new User(firstName + lastName, '', this.getType(team));
+              const newUser = new User(firstName + lastName, '', this.getType(team), team);
               const respEvent = await this.usersService.newUser(newUser);
               this.users.push(newUser);
               this.addSuccessDiv();
