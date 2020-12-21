@@ -107,6 +107,55 @@
                             <div class="bg-white event p-4 mb-4">
                                 <h4>Username: {{user.username}}</h4>
                                 <span class="text-muted">Privilege: {{user.type}}</span>
+                                <button type="button" class="btn btn-outline-success" data-toggle="modal" [attr.data-target]="'#editModal' + user._id">
+                                    Edit
+                                </button>
+
+                                <!-- edit modal -->
+                                                    
+                                <div class="modal fade" [id]="'editModal' + user._id" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <div aria-hidden="true">&times;</div>
+                                                </button>
+                                                <div class="edit-form">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                        <label for="fnameInput">First Name</label>
+                                                        <input type="text" class="form-control" [id]="'fnameInputEditUser' + user._id" value={{user.username}}>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                        <label for="dayInput">Last Name</label>
+                                                        <input type="text" class="form-control" [id]="'lnametInputEditUser' + user._id" value={{user.username}}>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg">
+                                                        <label for="emailInput">Email</label>
+                                                        <input type="text" class="form-control" [id]="'emailInputEditUser' + user._id" value={{user.username}}>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg">
+                                                        <label for="bodyInput">Project</label>
+                                                        <textarea type="text" class="form-control" [id]="'bodyInputEditEvent' + user._id" value={{user}}></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="container d-flex justify-content-center">
+                                                            <button data-title={{user._id}} class="btn btn-outline-danger delete delete-user" data-dismiss="modal">Delete</button>
+                                                            <button data-title={{user._id}} class="btn btn-outline-primary save save-user" data-dismiss="modal">Save changes</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- modal -->
                             </div>
                         </ng-container>
                     </div>
