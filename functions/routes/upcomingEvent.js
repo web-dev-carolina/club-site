@@ -27,7 +27,7 @@ router.post('/upcomingEvents', async function (req, res, next) {
     const db = client.db("club-site");
     const collection = db.collection("upcomingEvents");
 
-    collection.insert(req.body, function (err, upcomingEvent) {
+    collection.insertOne(req.body, function (err, upcomingEvent) {
       if (err) {
         res.send(err);
       }

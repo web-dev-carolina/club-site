@@ -26,7 +26,7 @@ router.post('/testimonials', async function(req, res, next){
       const db = client.db("club-site");
       const collection = db.collection("testimonials");
     
-      collection.insert(req.body, function (err, testimonial){
+      collection.insertOne(req.body, function (err, testimonial){
         if(err){
           res.send(err);
         }

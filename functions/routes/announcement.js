@@ -27,7 +27,7 @@ router.post('/announcements', async function(req, res, next){
       const db = client.db("club-site");
       const collection = db.collection("announcements");
     
-      collection.insert(req.body, function (err, announcement){
+      collection.insertOne(req.body, function (err, announcement){
         if(err){
           res.send(err);
         }

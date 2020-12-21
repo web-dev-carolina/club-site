@@ -35,7 +35,7 @@ router.post('/signup', async (req,res) => {
       const db = client.db("club-site");
       const collection = db.collection("users");
     
-      collection.insert(req.body, function (err, user){
+      collection.insertOne(req.body, function (err, user){
         if(err){
           res.send(err);
         }
