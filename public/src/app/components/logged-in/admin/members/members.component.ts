@@ -40,10 +40,34 @@ export class MembersComponent {
               const email = (document.getElementById('emailInput') as HTMLInputElement).value;
               const team = (document.getElementById('placementInput') as HTMLInputElement).value;
               const newUser = new User(firstName + lastName, '', this.getType(team));
+              const respEvent = await this.usersService.newUser(newUser);
+              this.users.push(newUser);
+              this.addSuccessDiv();
             }
         });
     }
     getType(team): any {
       this.projects.filter(project => { if (project.name === team) { return project.type; } });
+    }
+
+    addSuccessDiv(): void {
+      if (!document.getElementById('divSuccess')) {
+        const div = document.createElement('div');
+        const del = document.createElement('button');
+        const span = document.createElement('span');
+        div.setAttribute('class', 'alert alert-success alert-dismissible fade show');
+        div.setAttribute('id', 'divSuccess');
+        div.innerHTML = 'Success!';
+        del.setAttribute('type', 'button');
+        del.setAttribute('class', 'close');
+        del.setAttribute('data-dismiss', 'alert');
+        del.setAttribute('aria-label', 'Close');
+        del.setAttribute('id', 'delNoti');
+        span.setAttribute('aria-hidden', 'true');
+        span.innerHTML = '&times;';
+        del.appendChild(span);
+        div.appendChild(del);
+        document.getElementById('newUserForm').appendChild(div);
+      }
     }
 }
