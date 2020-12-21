@@ -12,6 +12,6 @@ export class UsersService {
   }
 
   newUser(user): any {
-    return this.http.post('localhost://3000/api/signup', user);
+    return this.http.post('http://localhost:3000/api/signup', user).toPromise();
   }
 }
