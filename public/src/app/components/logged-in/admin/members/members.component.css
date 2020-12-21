@@ -2,9 +2,9 @@
     font-family: 'Lato', 'sans-serif';
 }
 
-.bg {
+body {
     background-color: #F3F3FA;
-    height: 1000px;
+    padding-bottom: 150px;
 }
 
 .body {
