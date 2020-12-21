@@ -29,7 +29,6 @@ router.get('/users', async function(req, res, next){
 router.post('/signup', async (req,res) => {
     // let salt = await bcrypt.genSalt();
     // let pswdHash = await bcrypt.hash(password, salt);
-    console.log('here');
     try {
       const client = await getClient();
       const db = client.db("club-site");
