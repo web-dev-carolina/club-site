@@ -107,13 +107,8 @@
                     <div class="scoll">
                         <ng-container *ngFor="let user of users">
                             <div class="bg-white event p-4 mb-4">
-                                <div *ngIf="user.type === 'admin'; else elseBlockNotAdmin"><h5 class="fas fa-briefcase">{{user.type}}</h5></div>
-                                <ng-template #elseBlockNotAdmin>
-                                    <div *ngIf="user.type === 'project'; else elseBlockNotProject"><h5 class="">{{user.type}}</h5></div>
-                                    <ng-template #elseBlockNotProject>
-                                        <h5 class="">{{user.type}}</h5>
-                                    </ng-template>
-                                </ng-template>
+                                <ng-container *ngIf="user.type === 'admin'"><i class="fas fa-briefcase"></i></ng-container>
+                                <ng-container *ngIf="user.type === 'student'"><i class="fas fa-user-graduate"></i></ng-container>
                                 <h5>{{user.type}}</h5>
                                 <h4>Username: {{user.username}}</h4>
                                 <span class="text-muted">Privilege: {{user.type}}</span>
