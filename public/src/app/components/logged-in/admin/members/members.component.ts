@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { UsersService } from '../../../../services/users.service';
 import { User } from '../../../../../User';
+import { Project } from '../../../../../Project';
+import { ProjectService } from '../../../../services/projects.service';
 
 @Component({
     selector: 'app-members',
@@ -10,11 +12,15 @@ import { User } from '../../../../../User';
 export class MembersComponent {
     users: User[];
     display: string;
+    projects: Project[];
 
-    constructor(private usersService: UsersService){
+    constructor(private usersService: UsersService, private projectsService: ProjectService){
         this.display = 'add';
         this.usersService.getUsers().subscribe((users: any[]) => {
             this.users = users;
+        });
+        this.projectsService.getProjects().subscribe((projects: any[]) => {
+          this.projects = projects;
         });
         window.addEventListener('click', async (e) => {
             const element = (e.target as HTMLElement);

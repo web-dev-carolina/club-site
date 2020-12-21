@@ -38,11 +38,9 @@
                                     <div class="col-lg">
                                         <label for="placementInput">Team placement</label>
                                         <select class="form-control" id="placementInput">
-                                            <option>Club Site</option>
-                                            <option>Client 1</option>
-                                            <option>Student Org 1</option>
-                                            <option>Client 2</option>
-                                            <option>Wherever members are needed</option>
+                                            <ng-container *ngFor="let project of projects">
+                                                <option>{{project.name}}</option>
+                                            </ng-container>
                                         </select>
                                     </div>
                                 </div>
