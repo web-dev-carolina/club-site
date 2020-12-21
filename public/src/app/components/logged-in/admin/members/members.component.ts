@@ -47,7 +47,7 @@ export class MembersComponent {
         });
     }
     getType(team): any {
-      this.projects.filter(project => { if (project.name === team) { return project.type; } });
+      return (this.projects.filter(project => { if (project.name === team) { return project.type; } })[0]).type;
     }
 
     addSuccessDiv(): void {
