@@ -111,7 +111,6 @@
                                 <ng-container *ngIf="user.type === 'student'"><i class="fas fa-user-graduate"></i></ng-container>
                                 <h5>{{user.type}}</h5>
                                 <h4>Username: {{user.username}}</h4>
-                                <span class="text-muted">Privilege: {{user.type}}</span>
                                 <button type="button" class="btn btn-outline-success" data-toggle="modal" [attr.data-target]="'#editModal' + user._id">
                                     Edit
                                 </button>
