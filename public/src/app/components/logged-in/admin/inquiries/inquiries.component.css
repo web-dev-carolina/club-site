@@ -5,6 +5,7 @@
 body {
     background-color: #F3F3FA;
     padding-bottom: 150px;
+    min-height:100vh;
 }
 
 .body {
