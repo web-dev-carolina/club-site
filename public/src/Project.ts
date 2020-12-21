@@ -7,6 +7,7 @@ export class Project {
     meet: string;
     github: string;
     zoom: string;
+    type: string;
     constructor(name, client, desc, meet, github, zoom){
         this.name = name;
         this.client = client;
@@ -17,5 +18,8 @@ export class Project {
     }
     setId(id): void {
         this._id = id;
+    }
+    getType(): any {
+        return this.type;
     }
 }

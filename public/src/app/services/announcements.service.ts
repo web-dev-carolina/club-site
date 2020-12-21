@@ -7,25 +7,21 @@ export class AnnouncementService {
       console.log('Announcement service working');
   }
 
-  // tslint:disable-next-line:typedef
-  getAnnouncements(){
+  getAnnouncements(): any{
      return this.http.get('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/announcements');
   }
 
-  // tslint:disable-next-line:typedef
-  newAnnouncement(announcement){
+  newAnnouncement(announcement): any {
     return this.http.post('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/announcements', announcement)
     .toPromise();
   }
 
-  // tslint:disable-next-line:typedef
-  deleteAnnouncement(id) {
+  deleteAnnouncement(id): any {
     return this.http.delete('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/announcements/' + id)
     .toPromise();
   }
 
-  // tslint:disable-next-line:typedef
-  updateAnnouncement(id, newAnnouncement) {
+  updateAnnouncement(id, newAnnouncement): any {
     return this.http.put('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/announcements/' + id, newAnnouncement).toPromise();
   }
 }

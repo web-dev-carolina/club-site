@@ -7,8 +7,7 @@ export class LoginService {
       console.log('Login service working');
   }
 
-  // tslint:disable-next-line:typedef
-  login(u, p){
+  login(u, p): any {
     return this.http.post('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/login',
     {user: u, password: p}).toPromise().catch(err => {
       return false;

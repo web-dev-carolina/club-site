@@ -7,8 +7,11 @@ export class UsersService {
       console.log('Users service working');
   }
 
-  // tslint:disable-next-line:typedef
-  getUsers(){
+  getUsers(): any {
      return this.http.get('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/users');
+  }
+
+  newUser(user): any {
+    return this.http.post('localhost://3000/api/signup', user);
   }
 }

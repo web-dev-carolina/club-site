@@ -34,7 +34,16 @@ export class MembersComponent {
               } else if (id === 'edit') {
                 this.display = 'edit';
               }
+            } else if (id === 'createButton') {
+              const firstName = (document.getElementById('fnameInput') as HTMLInputElement).value;
+              const lastName = (document.getElementById('lnameInput') as HTMLInputElement).value;
+              const email = (document.getElementById('emailInput') as HTMLInputElement).value;
+              const team = (document.getElementById('placementInput') as HTMLInputElement).value;
+              const newUser = new User(firstName + lastName, '', this.getType(team));
             }
         });
+    }
+    getType(team): any {
+      this.projects.filter(project => { if (project.name === team) { return project.type; } });
     }
 }

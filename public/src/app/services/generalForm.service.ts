@@ -7,18 +7,16 @@ export class GeneralFormService {
       console.log('General Form service working');
   }
 
-  // tslint:disable-next-line:typedef
-  postForm(generalForm){
+  postForm(generalForm): any {
     return this.http.post('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/generalForm', generalForm)
     .toPromise();
   }
-  // tslint:disable-next-line:typedef
-  getForms(){
+
+  getForms(): any{
     return this.http.get('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/generalForm');
   }
 
-  // tslint:disable-next-line:typedef
-  updateForm(id, newForm) {
+  updateForm(id, newForm): any {
     return this.http.put('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/generalForm/' + id, newForm).toPromise();
   }
 }

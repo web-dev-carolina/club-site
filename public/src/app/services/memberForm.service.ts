@@ -7,18 +7,15 @@ export class MemberFormService {
       console.log('Member Form service working');
   }
 
-  // tslint:disable-next-line:typedef
-  postForm(memberForm){
+  postForm(memberForm): any {
     return this.http.post('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/memberForm', memberForm).toPromise();
   }
 
-  // tslint:disable-next-line:typedef
-  getForms(){
+  getForms(): any {
     return this.http.get('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/memberForm');
   }
 
-  // tslint:disable-next-line:typedef
-  updateForm(id, newForm) {
+  updateForm(id, newForm): any {
     return this.http.put('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/memberForm/' + id, newForm).toPromise();
   }
 }

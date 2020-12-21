@@ -7,8 +7,7 @@ export class LogoutService {
       console.log('Logout service working');
   }
 
-  // tslint:disable-next-line:typedef
-  logout(){
+  logout(): any {
     return this.http.get('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/logout');
   }
 }

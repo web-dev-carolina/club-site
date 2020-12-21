@@ -7,8 +7,7 @@ export class ProjectService {
       console.log('Project service working');
   }
 
-  // tslint:disable-next-line:typedef
-  getProjects(){
+  getProjects(): any {
      return this.http.get('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/projects');
   }
 }

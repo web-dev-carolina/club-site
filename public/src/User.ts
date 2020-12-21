@@ -4,6 +4,7 @@ export class User {
     username: string;
     password: string;
     type: string;
+    teams: string[];
     constructor(username, password, type){
         this.username = username;
         this.password = password;
@@ -11,5 +12,8 @@ export class User {
     }
     setId(id): void {
         this._id = id;
+    }
+    setTeam(team): void {
+        this.teams.push(team);
     }
 }
