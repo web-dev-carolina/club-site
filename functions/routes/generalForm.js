@@ -10,7 +10,7 @@ router.post('/generalForm', bodyParser.json(), async function(req, res, next){
         const db = client.db("club-site");
         const collection = db.collection("generalForm");
       
-      collection.insert(req.body, function(err, generalForm){
+      collection.insertOne(req.body, function(err, generalForm){
         if(err){
             res.send(err);
         }
