@@ -1,7 +1,9 @@
 * {
     background-color: #F3F3FA;
 }
-
+body {
+    min-height:100vh;
+}
 .signInContain {
     position: relative;
     top: 150px;
