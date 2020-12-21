@@ -12,6 +12,6 @@ export class UsersService {
   }
 
   newUser(user): any {
-    return this.http.post('http://localhost:3000/api/signup', user).toPromise();
+    return this.http.post('https://us-central1-home-c6ab1.cloudfunctions.net/app/api/signup', user).toPromise();
   }
 }
