@@ -141,7 +141,7 @@ If nodemon is giving you a command not found error... Run this command in the cl
 sudo npm install -g --force nodemon
 ```
 
-To get the frontend running, type the following command in the my-app directory.
+To get the frontend running, type the following command in the app directory.
 ```bash
 ng build --watch
 ```
