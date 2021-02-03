@@ -143,9 +143,12 @@ sudo npm install -g --force nodemon
 
 To get the frontend running, type the following command in the app directory.
 ```bash
+ng serve --open
+```
+... or if you are working on the backend as well run this command in the app directory (or if you want to build and use the server to test for production).
+```bash
 ng build --watch
 ```
-This will build what you have currently in the angular code and watch for changes and display them if you refresh.  
 
 ## Production Mode
 Run this command in the public directory to deploy the hosting.
