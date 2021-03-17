@@ -10,6 +10,7 @@
                         <p>{{project.desc}}</p>
                         <a (click)="goToLink([project.github])">Github</a><br>
                         <a (click)="goToLink([project.zoom])">Zoom (All of these are N/a atm)</a>
+                        <br>
                         <button type="button" class="btn btn-outline-success" data-toggle="modal" [attr.data-target]="'#editModal' + project._id">
                             Edit
                         </button>
@@ -25,10 +26,40 @@
                                         </button>
                                         <div class="edit-form">
                                             <div class="row">
+                                                <div class="col-lg">
+                                                    <label for="nameInput">Name</label>
+                                                    <input type="text" class="form-control" [id]="'nameInputEditEvent' + project._id" value={{project.name}}>
+                                                </div>
                                             </div>
                                             <div class="row">
+                                                <div class="col-lg">
+                                                    <label for="clientInput">Client</label>
+                                                    <input type="text" class="form-control" [id]="'clientInputEditEvent' + project._id" value={{project.client}}>
+                                                </div>
                                             </div>
                                             <div class="row">
+                                                <div class="col-lg">
+                                                    <label for="nameInput">Description</label>
+                                                    <input type="text" class="form-control" [id]="'descInputEditEvent' + project._id" value={{project.desc}}>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg">
+                                                    <label for="nameInput">Meeting</label>
+                                                    <input type="text" class="form-control" [id]="'meetInputEditEvent' + project._id" value={{project.meet}}>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg">
+                                                    <label for="gitInput">GitHub</label>
+                                                    <input type="text" class="form-control" [id]="'gitInputEditEvent' + project._id" value={{project.github}}>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg">
+                                                    <label for="zoomInput">Zoom</label>
+                                                    <input type="text" class="form-control" [id]="'zoomInputEditEvent' + project._id" value={{project.zoom}}>
+                                                </div>
                                             </div>
                                             <div class="row">
                                                 <div class="container d-flex justify-content-center">
