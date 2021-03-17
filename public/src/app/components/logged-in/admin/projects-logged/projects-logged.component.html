@@ -10,6 +10,40 @@
                         <p>{{project.desc}}</p>
                         <a (click)="goToLink([project.github])">Github</a><br>
                         <a (click)="goToLink([project.zoom])">Zoom (All of these are N/a atm)</a>
+                        <button type="button" class="btn btn-outline-success" data-toggle="modal" [attr.data-target]="'#editModal' + project._id">
+                            Edit
+                        </button>
+
+                        <!-- edit modal -->
+    
+                        <div class="modal fade" [id]="'editModal' + project._id" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <div aria-hidden="true">&times;</div>
+                                        </button>
+                                        <div class="edit-form">
+                                            <div class="row">
+                                            </div>
+                                            <div class="row">
+                                            </div>
+                                            <div class="row">
+                                            </div>
+                                            <div class="row">
+                                                <div class="container d-flex justify-content-center">
+                                                    <button data-title={{project._id}} class="btn btn-outline-danger delete delete-event" data-dismiss="modal">Delete</button>
+                                                    <button data-title={{project._id}} class="btn btn-outline-primary save save-event" data-dismiss="modal">Save changes</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- modal -->
+
                     </div>
                 </div>
             </ng-container>
