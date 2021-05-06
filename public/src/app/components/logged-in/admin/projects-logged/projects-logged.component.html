@@ -1,6 +1,24 @@
 <body>
     <div class="body">
+        <form id="newProjectForm">
+            <label for="newProjectName">Name:</label>
+            <input type="text" id="newProjectName" name="newProjectName"><br>
+            <label for="newProjectClient">Client:</label>
+            <input type="text" id="newProjectClient" name="newProjectClient"><br>
+            <label for="newProjectDesc">Description:</label>
+            <input type="text" id="newProjectDesc" name="newProjectDesc"><br>
+            <label for="newProjectMeet">Meet:</label>
+            <input type="text" id="newProjectMeet" name="newProjectMeet"><br>
+            <label for="newProjectGithub">Github:</label>
+            <input type="text" id="newProjectGithub" name="newProjectGithub"><br>
+            <label for="newProjectZoom">Zoom:</label>
+            <input type="text" id="newProjectZoom" name="newProjectZoom"><br>
+            <label for="newProjectType">Type:</label>
+            <input type="text" id="newProjectType" name="newProjectType"><br>
+            <button class="btn btn-outline-primary">Submit</button>
+        </form>
         <div class="row form">
+            
             <ng-container *ngFor="let project of projects">
                 <div class="col-lg-4">
                     <div class="project">

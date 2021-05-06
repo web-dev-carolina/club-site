@@ -110,7 +110,8 @@
                                 <ng-container *ngIf="user.type === 'admin'"><i class="fas fa-briefcase"></i></ng-container>
                                 <ng-container *ngIf="user.type === 'student'"><i class="fas fa-user-graduate"></i></ng-container>
                                 <h5>{{user.type}}</h5>
-                                <h4>Username: {{user.username}}</h4>
+                                <h5>Username: {{user.username}}</h5>
+                                <h5>Project: {{user.teams[0]}}</h5>
                                 <button type="button" class="btn btn-outline-success" data-toggle="modal" [attr.data-target]="'#editModal' + user._id">
                                     Edit
                                 </button>
@@ -143,8 +144,28 @@
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-lg">
-                                                        <label for="bodyInput">Project</label>
-                                                        <textarea type="text" class="form-control" [id]="'bodyInputEditEvent' + user._id" value={{user}}></textarea>
+                                                        <label for="projectInput">Project</label><br />
+                                                        <select name="project">
+                                                            <option>{{user.teams[0]}}</option>
+                                                            <ng-container *ngFor="let project of projects">
+                                                                <option *ngIf="user.teams[0] !== project.name" value="{{project.name}}">{{project.name}}</option>
+                                                            </ng-container>
+                                                        </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg">
+                                                        <label for="typeInput">Type</label><br />
+                                                        <select name="type">
+                                                            <ng-container *ngIf="user.type === 'admin'">
+                                                                <option value="admin">Admin</option>
+                                                                <option value="student">Student</option>
+                                                            </ng-container>
+                                                            <ng-container *ngIf="user.type === 'student'">
+                                                                <option value="student">Student</option>
+                                                                <option value="admin">Admin</option>
+                                                            </ng-container>
+                                                        </select>
                                                         </div>
                                                     </div>
                                                     <div class="row">

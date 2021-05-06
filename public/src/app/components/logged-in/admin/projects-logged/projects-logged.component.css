@@ -112,3 +112,12 @@ body {
     }
 }
 
+#newProjectForm {
+    margin: 3em;
+    /* padding: 5px; */
+}
+
+#newProjectForm label {
+    padding: 5px;
+}
+
